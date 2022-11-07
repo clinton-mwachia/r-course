@@ -34,7 +34,8 @@
 |        | User-Defined Fuctions          |
 |        | Apply Functions                |
 | 5      | ***R Operators***              |
-|        |                                |
-|        |                                |
-|        |                                |
-|        |                                |
+|        | Arithmetic                     |
+|        | Relational                     |
+|        | Assignment                     |
+|        | Logical                        |
+|        | Miscellaneous                  |
