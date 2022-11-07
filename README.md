@@ -1,2 +1,18 @@
-# r-course
-an r course materials
+# R Course Curriculum
+
+## Beginner
+
+|     | Item              |
+|-----|-------------------|
+| 1   | Introduction To R |
+|     |                   |
+|     |                   |
+|     |                   |
+|     |                   |
+|     |                   |
+|     |                   |
+|     |                   |
+|     |                   |
+|     |                   |
+
+: Beginner
