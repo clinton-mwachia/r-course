@@ -14,3 +14,15 @@
     -   R Files.
 
     -   Why R?
+2.  Data Types
+    -   Vectors.
+
+    -   Lists.
+
+    -   Matrices.
+
+    -   Arrays.
+
+    -   Data Frames.
+
+    -   Factors.
