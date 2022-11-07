@@ -17,8 +17,10 @@
 |        | Arrays                         |
 |        | Data Frames                    |
 |        | Factors                        |
+|        | **Bonus**                      |
 |        | Comments                       |
 |        | Variables                      |
+|        | Strings                        |
 | 3      | ***Conditional Statements***   |
 |        | If Statement                   |
 |        | If else Statement              |
@@ -27,5 +29,12 @@
 |        | Break Statement                |
 |        | While Loop                     |
 |        | For Loops                      |
-| 4      |                                |
+| 4      | ***Functions***                |
+|        | Build-in Functions             |
+|        | User-Defined Fuctions          |
+|        | Apply Functions                |
+| 5      | ***R Operators***              |
+|        |                                |
+|        |                                |
+|        |                                |
 |        |                                |
