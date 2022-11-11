@@ -54,6 +54,7 @@
 |     | read.delim                                                                                    |
 |     | RData                                                                                         |
 |     | JSON                                                                                          |
+|     | Joining data                                                                                  |
 |     | **Assignment**: *read_xlsx, joining data (cbind,rbind)*                                       |
 |     | **Bonus**                                                                                     |
 |     | writing to files.                                                                             |
@@ -92,4 +93,19 @@
 |     | Survival and hazard functions                                                                 |
 |     | Kaplan-Meier survival estimate                                                                |
 |     | Cox proportional hazard model                                                                 |
-|     | Assignement:                                                                                  |
+|     | **Assignement:**                                                                              |
+
+# **Advanced**
+
+| Col1 | Col2 |
+|------|------|
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
+|      |      |
