@@ -2,7 +2,7 @@
 
 ## Beginner
 
-| ![]()1 |  Introduction to R & RStudio   |
+| ![]()1 | Introduction to R & RStudio    |
 |--------|--------------------------------|
 |        | History Of R.                  |
 |        | Installation of R and RStudio. |
@@ -10,6 +10,7 @@
 |        | RStudio Interface.             |
 |        | R Files.                       |
 |        | Why R?                         |
+|        | R Help                         |
 | 2      | ***Data Structures***          |
 |        | Vectors                        |
 |        | Lists                          |
@@ -39,3 +40,18 @@
 |        | Assignment                     |
 |        | Logical                        |
 |        | Miscellaneous                  |
+
+# Intermediate
+
+| 1   | **Statistical Analysis** |
+|-----|--------------------------|
+|     | In Build Data            |
+|     | User-created Data        |
+|     | Mean, Mode and Median    |
+|     | Min And Max              |
+|     | Quatiles                 |
+|     | Summary Statistics       |
+|     |                          |
+|     |                          |
+|     |                          |
+|     |                          |
