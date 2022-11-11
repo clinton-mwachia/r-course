@@ -43,15 +43,23 @@
 
 # Intermediate
 
-| 1   | **Statistical Analysis** |
-|-----|--------------------------|
-|     | In Build Data            |
-|     | User-created Data        |
-|     | Mean, Mode and Median    |
-|     | Min And Max              |
-|     | Quatiles                 |
-|     | Summary Statistics       |
-|     |                          |
-|     |                          |
-|     |                          |
-|     |                          |
+| 1   | Data                        |
+|-----|-----------------------------|
+|     | In Build Data               |
+|     | User-created Data           |
+|     | working directory           |
+|     | read.table                  |
+|     | read.csv                    |
+|     | read.delim                  |
+|     | RData                       |
+|     | JSON                        |
+|     | **Assignment**: *read_xlsx* |
+|     | **Bonus**                   |
+|     | writing to files.           |
+| 2   | **Statistical Analysis**    |
+|     | Mean, Mode and Median       |
+|     | Min And Max                 |
+|     | Quatiles                    |
+|     | Summary Statistics          |
+|     |                             |
+|     |                             |
