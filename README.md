@@ -63,4 +63,7 @@
 |     | Quatiles                                                                                     |
 |     | Summary Statistics                                                                           |
 |     | frequency distribution                                                                       |
-|     | **assignement:** correlation coef, variance, skewness, Range, Kurtosis, interquatile range.  |
+|     | **Assignement:** correlation coef, variance, skewness, Range, Kurtosis, interquatile range.  |
+|     |                                                                                              |
+|     |                                                                                              |
+|     |                                                                                              |
