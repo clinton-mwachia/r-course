@@ -78,4 +78,13 @@
 |     | Sign Test (non-parametric)                                                                    |
 |     | Wilcoxon Signed-Rank Test (non-parametric)                                                    |
 |     | Kruskal-Wallis Rank Sum Test (non-parametric)                                                 |
+| 5   | **DataViz Intro**                                                                             |
+|     | Scatter Plots                                                                                 |
+|     | Line Plots                                                                                    |
+|     | Pie Charts                                                                                    |
+|     | Bar Plots                                                                                     |
+|     | Box Plot                                                                                      |
+|     | **Assignement: connected scatter plots.**                                                     |
+|     |                                                                                               |
+|     |                                                                                               |
 |     |                                                                                               |
