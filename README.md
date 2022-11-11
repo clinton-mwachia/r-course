@@ -97,15 +97,15 @@
 
 # **Advanced**
 
-| Col1 | Col2 |
-|------|------|
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
-|      |      |
+| 1   | Data Cleaning                     |
+|-----|-----------------------------------|
+|     | Handling Missing data             |
+|     | Handling duplicate Data           |
+|     | Handling data types               |
+|     | Multi-collinearity                |
+|     | Removing unnecessary columns/rows |
+|     |                                   |
+|     |                                   |
+|     |                                   |
+|     |                                   |
+|     |                                   |
