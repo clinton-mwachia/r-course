@@ -74,6 +74,7 @@
 | 4   | **Hypothesis Testing**                                                                        |
 |     | One-sample t test                                                                             |
 |     | Two-sample t test                                                                             |
+|     | Normality Test                                                                                |
 |     | Confidence Interval                                                                           |
 |     | Sign Test (non-parametric)                                                                    |
 |     | Wilcoxon Signed-Rank Test (non-parametric)                                                    |
@@ -85,6 +86,16 @@
 |     | Bar Plots                                                                                     |
 |     | Box Plot                                                                                      |
 |     | **Assignement: connected scatter plots.**                                                     |
+| 6   | **Survival Analysis**                                                                         |
+|     | Survival Time and event                                                                       |
+|     | Censoring                                                                                     |
+|     | Survival and hazard functions                                                                 |
+|     | Kaplan-Meier survival estimate                                                                |
+|     | Cox proportional hazard model                                                                 |
+|     |                                                                                               |
+|     |                                                                                               |
+|     |                                                                                               |
+|     |                                                                                               |
 |     |                                                                                               |
 |     |                                                                                               |
 |     |                                                                                               |
