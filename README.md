@@ -71,11 +71,11 @@
 |     | Exponential                                                                                   |
 |     | Chi-square                                                                                    |
 |     | **Assignement**: Uniform distribution.                                                        |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
+| 4   | **Hypothesis Testing**                                                                        |
+|     | One-sample t test                                                                             |
+|     | Two-sample t test                                                                             |
+|     | Confidence Interval                                                                           |
+|     | Sign Test (non-parametric)                                                                    |
+|     | Wilcoxon Signed-Rank Test (non-parametric)                                                    |
+|     | Kruskal-Wallis Rank Sum Test (non-parametric)                                                 |
 |     |                                                                                               |
