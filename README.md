@@ -92,10 +92,4 @@
 |     | Survival and hazard functions                                                                 |
 |     | Kaplan-Meier survival estimate                                                                |
 |     | Cox proportional hazard model                                                                 |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
-|     |                                                                                               |
+|     | Assignement:                                                                                  |
