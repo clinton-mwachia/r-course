@@ -104,8 +104,11 @@
 |     | Handling data types               |
 |     | Multi-collinearity                |
 |     | Removing unnecessary columns/rows |
-|     |                                   |
-|     |                                   |
-|     |                                   |
+| 2   | **Data Transformation**           |
+|     | Normalization                     |
+|     | Standardization                   |
+|     | Aggregation                       |
+|     | One data type to another          |
+|     | Mutating columns.                 |
 |     |                                   |
 |     |                                   |
