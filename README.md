@@ -115,8 +115,13 @@
 |     | Merging Data Frames               |
 |     | Melting Data Frames               |
 |     | Casting Data Frames               |
-|     |                                   |
-|     |                                   |
-|     |                                   |
+| 3   | **Exploratory Data Analysis**     |
+|     | Correlation (Scatter plot etc)    |
+|     | Distribution                      |
+|     | Ranking (Bar Plot)                |
+|     | Grouped                           |
+|     | Time Series                       |
+|     | Map                               |
+|     | Network                           |
 |     |                                   |
 |     |                                   |
