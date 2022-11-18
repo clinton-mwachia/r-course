@@ -32,7 +32,7 @@
 |        | For Loops                      |
 | 4      | ***Functions***                |
 |        | Build-in Functions             |
-|        | User-Defined Fuctions          |
+|        | User-Defined Functions         |
 |        | Apply Functions                |
 |        | R Packages                     |
 | 5      | ***R Operators***              |
@@ -45,7 +45,7 @@
 # Intermediate
 
 | 1   | Data                                                                                         |
-|-----|----------------------------------------------------------------------------------------------|
+|------------|------------------------------------------------------------|
 |     | In Build Data                                                                                |
 |     | User-created Data                                                                            |
 |     | working directory                                                                            |
@@ -110,5 +110,13 @@
 |     | Aggregation                       |
 |     | One data type to another          |
 |     | Mutating columns.                 |
+|     | **Reshaping Data**                |
+|     | Joining Rows and Columns.         |
+|     | Merging Data Frames               |
+|     | Melting Data Frames               |
+|     | Casting Data Frames               |
+|     |                                   |
+|     |                                   |
+|     |                                   |
 |     |                                   |
 |     |                                   |
