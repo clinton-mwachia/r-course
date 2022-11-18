@@ -153,8 +153,13 @@
 |     | Control number of rules output        |
 |     | Remove redundant rules                |
 |     | Find rules related to certain items   |
-|     |                                       |
-|     |                                       |
+| 6   | **Dimensional Reduction**             |
+|     | Introduction to PCA                   |
+|     | EigenValues and EigenVectors          |
+|     | Loading the data                      |
+|     | Compute the Principal Components      |
+|     | Plotting PCA                          |
+|     | Interpretation of results             |
 |     |                                       |
 |     |                                       |
 |     |                                       |
