@@ -97,47 +97,58 @@
 
 # **Advanced**
 
-| 1   | Data Cleaning                     |
-|-----|-----------------------------------|
-|     | Handling Missing data             |
-|     | Handling duplicate Data           |
-|     | Handling data types               |
-|     | Multi-collinearity                |
-|     | Removing unnecessary columns/rows |
-| 2   | **Data Transformation**           |
-|     | Normalization                     |
-|     | Standardization                   |
-|     | Aggregation                       |
-|     | One data type to another          |
-|     | Mutating columns.                 |
-|     | **Reshaping Data**                |
-|     | Joining Rows and Columns.         |
-|     | Merging Data Frames               |
-|     | Melting Data Frames               |
-|     | Casting Data Frames               |
-| 3   | **Exploratory Data Analysis**     |
-|     | Correlation (Scatter plot etc)    |
-|     | Distribution                      |
-|     | Ranking (Bar Plot)                |
-|     | Grouped                           |
-|     | Time Series                       |
-|     | Map                               |
-|     | Network                           |
-|     | Missing Data                      |
-| 4   |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
-|     |                                   |
+| 1   | Data Cleaning                         |
+|-----|---------------------------------------|
+|     | Handling Missing data                 |
+|     | Handling duplicate Data               |
+|     | Handling data types                   |
+|     | Multi-collinearity                    |
+|     | Removing unnecessary columns/rows     |
+| 2   | **Data Transformation**               |
+|     | Normalization                         |
+|     | Standardization                       |
+|     | Aggregation                           |
+|     | One data type to another              |
+|     | Mutating columns.                     |
+|     | **Reshaping Data**                    |
+|     | Joining Rows and Columns.             |
+|     | Merging Data Frames                   |
+|     | Melting Data Frames                   |
+|     | Casting Data Frames                   |
+| 3   | **Exploratory Data Analysis**         |
+|     | Correlation (Scatter plot etc)        |
+|     | Distribution                          |
+|     | Ranking (Bar Plot)                    |
+|     | Grouped                               |
+|     | Time Series                           |
+|     | Map                                   |
+|     | Network                               |
+|     | Missing Data                          |
+| 4   | **Machine Learning**                  |
+|     | Loading the Data                      |
+|     | EDA                                   |
+|     | Data Preparation/Cleaning             |
+|     | Data Splitting                        |
+|     | Model Training                        |
+|     | Predictions and Evaluation (roc, auc) |
+|     | Model Tuning                          |
+|     | Model Re-Training.                    |
+|     | Final Model                           |
+|     | Prediction using Test Data.           |
+|     | **Models**                            |
+|     | Linear Model                          |
+|     | Logistic Regression                   |
+|     | Random Forest                         |
+|     | Decision Tree                         |
+|     | Support Vector Machines               |
+|     | Clustering                            |
+|     | **Ensemble Models**                   |
+|     | Bagging                               |
+|     | Boosting                              |
+|     |                                       |
+|     |                                       |
+|     |                                       |
+|     |                                       |
+|     |                                       |
+|     |                                       |
+|     |                                       |
