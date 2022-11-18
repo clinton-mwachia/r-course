@@ -44,56 +44,56 @@
 
 # Intermediate
 
-| 1   | Data                                                                                          |
-|-------------------------------|-----------------------------------------|
-|     | In Build Data                                                                                 |
-|     | User-created Data                                                                             |
-|     | working directory                                                                             |
-|     | read.table                                                                                    |
-|     | read.csv                                                                                      |
-|     | read.delim                                                                                    |
-|     | RData                                                                                         |
-|     | JSON                                                                                          |
-|     | Joining data                                                                                  |
-|     | **Assignment**: *read_xlsx, joining data (cbind,rbind)*                                       |
-|     | **Bonus**                                                                                     |
-|     | writing to files.                                                                             |
-| 2   | **Statistical Analysis**                                                                      |
-|     | Mean, Mode and Median                                                                         |
-|     | Min, Max, SD.                                                                                 |
-|     | Quartiles                                                                                     |
-|     | Summary Statistics                                                                            |
-|     | frequency distribution                                                                        |
-|     | **Assignement:** correlation coef, variance, skewness, Range, Kurtosis, inter-quatile range.  |
-| 3   | **Probability Distributions**                                                                 |
-|     | Normal                                                                                        |
-|     | Binomial                                                                                      |
-|     | Poisson                                                                                       |
-|     | Exponential                                                                                   |
-|     | Chi-square                                                                                    |
-|     | **Assignement**: Uniform distribution.                                                        |
-| 4   | **Hypothesis Testing**                                                                        |
-|     | One-sample t test                                                                             |
-|     | Two-sample t test                                                                             |
-|     | Normality Test                                                                                |
-|     | Confidence Interval                                                                           |
-|     | Sign Test (non-parametric)                                                                    |
-|     | Wilcoxon Signed-Rank Test (non-parametric)                                                    |
-|     | Kruskal-Wallis Rank Sum Test (non-parametric)                                                 |
-| 5   | **DataViz Intro**                                                                             |
-|     | Scatter Plots                                                                                 |
-|     | Line Plots                                                                                    |
-|     | Pie Charts                                                                                    |
-|     | Bar Plots                                                                                     |
-|     | Box Plot                                                                                      |
-|     | **Assignement: connected scatter plots.**                                                     |
-| 6   | **Survival Analysis**                                                                         |
-|     | Survival Time and event                                                                       |
-|     | Censoring                                                                                     |
-|     | Survival and hazard functions                                                                 |
-|     | Kaplan-Meier survival estimate                                                                |
-|     | Cox proportional hazard model                                                                 |
-|     | **Assignement:**                                                                              |
+| 1   | Data                                                                                         |
+|-----|----------------------------------------------------------------------------------------------|
+|     | In Build Data                                                                                |
+|     | User-created Data                                                                            |
+|     | working directory                                                                            |
+|     | read.table                                                                                   |
+|     | read.csv                                                                                     |
+|     | read.delim                                                                                   |
+|     | RData                                                                                        |
+|     | JSON                                                                                         |
+|     | Joining data                                                                                 |
+|     | **Assignment**: *read_xlsx, joining data (cbind,rbind)*                                      |
+|     | **Bonus**                                                                                    |
+|     | writing to files.                                                                            |
+| 2   | **Statistical Analysis**                                                                     |
+|     | Mean, Mode and Median                                                                        |
+|     | Min, Max, SD.                                                                                |
+|     | Quartiles                                                                                    |
+|     | Summary Statistics                                                                           |
+|     | frequency distribution                                                                       |
+|     | **Assignement:** correlation coef, variance, skewness, Range, Kurtosis, inter-quatile range. |
+| 3   | **Probability Distributions**                                                                |
+|     | Normal                                                                                       |
+|     | Binomial                                                                                     |
+|     | Poisson                                                                                      |
+|     | Exponential                                                                                  |
+|     | Chi-square                                                                                   |
+|     | **Assignement**: Uniform distribution.                                                       |
+| 4   | **Hypothesis Testing**                                                                       |
+|     | One-sample t test                                                                            |
+|     | Two-sample t test                                                                            |
+|     | Normality Test                                                                               |
+|     | Confidence Interval                                                                          |
+|     | Sign Test (non-parametric)                                                                   |
+|     | Wilcoxon Signed-Rank Test (non-parametric)                                                   |
+|     | Kruskal-Wallis Rank Sum Test (non-parametric)                                                |
+| 5   | **DataViz Intro**                                                                            |
+|     | Scatter Plots                                                                                |
+|     | Line Plots                                                                                   |
+|     | Pie Charts                                                                                   |
+|     | Bar Plots                                                                                    |
+|     | Box Plot                                                                                     |
+|     | **Assignement: connected scatter plots.**                                                    |
+| 6   | **Survival Analysis**                                                                        |
+|     | Survival Time and event                                                                      |
+|     | Censoring                                                                                    |
+|     | Survival and hazard functions                                                                |
+|     | Kaplan-Meier survival estimate                                                               |
+|     | Cox proportional hazard model                                                                |
+|     | **Assignement:**                                                                             |
 
 # **Advanced**
 
