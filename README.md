@@ -163,3 +163,9 @@
 |     |                                       |
 |     |                                       |
 |     |                                       |
+
+**Later On:**
+
+1.  Comprehensive Tidyverse.
+2.  Comprehensive TidyModels.
+3.  Comprehensive Shiny.
