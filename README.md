@@ -145,8 +145,14 @@
 |     | **Ensemble Models**                   |
 |     | Bagging                               |
 |     | Boosting                              |
-|     |                                       |
-|     |                                       |
+| 5   | **Association mining**                |
+|     | The Data                              |
+|     | Measuring strength of a rule          |
+|     | Most frequent item                    |
+|     | Recommendation rules                  |
+|     | Control number of rules output        |
+|     | Remove redundant rules                |
+|     | Find rules related to certain items   |
 |     |                                       |
 |     |                                       |
 |     |                                       |
