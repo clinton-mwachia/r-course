@@ -16,13 +16,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction To R & RSUDIO
 
-R is statistical programming language designed by **Ross Ihaka** and **Robert Gentleman** and developed by the **R Core Team**. R is an open source software and is mainly used by analysts in many fields including but not limited to *Data mining*, *statistics*, *bio-statistics*, *machine learning*, and *time series analysis*.
+R is statistical programming language designed by **Ross Ihaka** and **Robert Gentleman** and developed by the **R Core Team**. R is open source and is mainly used by analysts in many fields including, but not limited to *Data mining*, *statistics*, *bio-statistics*, *machine learning*, and *time series analysis*.
 
-In recent years, R has been gaining popularity due to its ease of analyzing and documenting results. R has a Comprehensive R Archive Network (CRAN), responsible for hosting thousands of packages that help extend the functionalities of R.
+In recent years, R has been gaining popularity due to its ease of analyzing and documenting results. It has a Comprehensive R Archive Network (CRAN), responsible for hosting thousands of packages that help extend its functionality.
 
-RSTUDIO is an Integrated Development Environment (IDE) designed and developed for the purpose of writing, debugging, and testing code in R. It comes with many features like generating reports, and visualizing data that will help you a lot as you use R in your analysis. It was developed in *C++*, *Java* and *JavaScript* and supports all operating systems.
+**RSTUDIO** is an Integrated Development Environment (IDE) designed and developed for the purpose of writing, debugging, and testing code in R. It comes with many features like generating reports, and visualizing data that will help you a lot as you use R. It was developed in *C++*, *Java* and *JavaScript* and supports all operating systems.
 
-RSTUDIO comes in two versions, RSTUDIO cloud, which we will use for this course and the RSTUDIO server, can be accessed in the web browser.
+**RSTUDIO** comes in two versions, RSTUDIO Desktop, which we will use for this course and the RSTUDIO server, can be accessed in the web browser.
 
 # What can I do with R?
 
@@ -61,6 +61,38 @@ The RSTUDIO interface consists of one screen split into 4 sub-screens: -
        directory, plots and packages will be in this screen.
        
 
-![RSTUDIO INTERFACE](images/rsudio-interface.png)
+![](images/rsudio-interface.png)
 
 **NOTE: THIS ARRANGEMENT CAN BE CUSTOMIZED**
+
+# R files
+
+You can create a lot of files within the RStudio IDE but in this course, we will mainly focus with R script, R Markdown and R Notebook. To create an R script, follow the following instructions.
+
+In the toolbar, `FILE > NEW FILE > R SCRIPT` or you can use the shortcut `CTRL + SHIFT + N` and then save the script **Test.R**.
+
+![](images/Screenshot%20(40).png)
+
+# Testing the installation
+
+Using the **Test.R** script created above, copy the code below and run it.
+
+```{r test-installation}
+print("hello RSTUDIO")
+```
+
+If you see the text, `[1] "hello RSTUDIO"`, congratulations, you have installed R and RSTUDIO successfully, Otherwise, follow the instructions above or contact me for further assistance.
+
+# R HELP
+
+    1. Help tab in the Files screen (Bottom right screen, Screen D as shown 
+        in the RSTUDIO Interface section).
+    2. Cheatsheets (`Help > Cheat Sheets`).
+    3. Google.
+    
+    
+# Course Organization
+
+In this course, you will receive *4* files, ***.RMD** containing the course materials and example codes with its equivalent **html** file, an **.RMD/.R** assignment file and a **README.md** file for further instructions.
+    
+CONGRATULATIONS, YOU HAVE SUCCESSFULLY SET UP R AND RSTUDIO, LETS GET CODING IN THE NEXT SESSION.
