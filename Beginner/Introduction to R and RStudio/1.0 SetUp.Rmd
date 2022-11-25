@@ -1,0 +1,50 @@
+---
+title: "Beginner: Fundermentals Of R"
+subtitle: "1.0 Setting UP The Development Environment"
+author: "Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output:
+  html_document: 
+    toc: true
+  pdf_document: 
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction To R & RSUDIO
+
+R is statistical programming language designed by **Ross Ihaka** and **Robert Gentleman** and developed by the **R Core Team**. R is an open source software and is mainly used by analysts in many fields including but not limited to *Data mining*, *statistics*, *bio-statistics*, *machine learning*, and *time series analysis*.
+
+In recent years, R has been gaining popularity due to its ease of analyzing and documenting results. R has a Comprehensive R Archive Network (CRAN), responsible for hosting thousands of packages that help extend the functionalities of R.
+
+RSTUDIO is an Integrated Development Environment (IDE) designed and developed for the purpose of writing, debugging, and testing code in R. It comes with many features like generating reports, and visualizing data that will help you a lot as you use R in your analysis. It was developed in *C++*, *Java* and *JavaScript* and supports all operating systems.
+
+RSTUDIO comes in two versions, RSTUDIO cloud, which we will use for this course and the RSTUDIO server, can be accessed in the web browser. 
+
+# What can I do with R?
+
+    1. Data Mining.
+    2. Develop web apps using shiny.
+    3. Statistical tests.
+    4. Make forecatsing using machine learning.
+    5. Generate reports.
+    6. Create data analysis and visualization Dashboards.
+    7. Testing Hypothesis.
+    8. Many more.
+    
+# Why Learn R?
+
+    1. Awesome packages for analysis.
+    2. Big community support.
+    3. Developed by statistians for statistics.
+    4. It supports all Operating Systems.
+    5. Easy to create your own package.
+    6. Many more.
+
+
+
+
+
