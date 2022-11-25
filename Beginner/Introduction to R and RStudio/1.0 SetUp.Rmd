@@ -22,7 +22,7 @@ In recent years, R has been gaining popularity due to its ease of analyzing and 
 
 RSTUDIO is an Integrated Development Environment (IDE) designed and developed for the purpose of writing, debugging, and testing code in R. It comes with many features like generating reports, and visualizing data that will help you a lot as you use R in your analysis. It was developed in *C++*, *Java* and *JavaScript* and supports all operating systems.
 
-RSTUDIO comes in two versions, RSTUDIO cloud, which we will use for this course and the RSTUDIO server, can be accessed in the web browser. 
+RSTUDIO comes in two versions, RSTUDIO cloud, which we will use for this course and the RSTUDIO server, can be accessed in the web browser.
 
 # What can I do with R?
 
@@ -34,7 +34,7 @@ RSTUDIO comes in two versions, RSTUDIO cloud, which we will use for this course 
     6. Create data analysis and visualization Dashboards.
     7. Testing Hypothesis.
     8. Many more.
-    
+
 # Why Learn R?
 
     1. Awesome packages for analysis.
@@ -44,7 +44,23 @@ RSTUDIO comes in two versions, RSTUDIO cloud, which we will use for this course 
     5. Easy to create your own package.
     6. Many more.
 
+# Installing R and R studio.
 
+Choose your Operating System and Download [R](https://cran.r-project.org/ "Download R") and [Rstudio](https://posit.co/download/rstudio-desktop/ "RStudio for desktop"). After downloading, install R and then RStudio.
 
+# RSTUDIO Interface
 
+The RSTUDIO interface consists of one screen split into 4 sub-screens: -
 
+    A. scripts screen: This is where you will right your scripts and 
+        markdown files.
+    B. Console & Terminal screen: All code output will be displayed here.
+    C. Environment Screen: the variables loaded in the current working 
+       environment will be diplayed here.
+    D. Files, Plots, Packages, Help screen: All files in the current working
+       directory, plots and packages will be in this screen.
+       
+
+![RSTUDIO INTERFACE](images/rsudio-interface.png)
+
+**NOTE: THIS ARRANGEMENT CAN BE CUSTOMIZED**
