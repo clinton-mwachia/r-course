@@ -4,7 +4,7 @@
 
 | ![]()1 | Introduction to R & RStudio    |
 |--------|--------------------------------|
-|        | History Of R.                  |
+|        | Introduction to R.             |
 |        | Installation of R and RStudio. |
 |        | Testing The Installation.      |
 |        | RStudio Interface.             |
@@ -45,7 +45,7 @@
 # Intermediate
 
 | 1   | Data                                                                                         |
-|-----|----------------------------------------------------------------------------------------------|
+|------------|------------------------------------------------------------|
 |     | In Build Data                                                                                |
 |     | User-created Data                                                                            |
 |     | working directory                                                                            |
