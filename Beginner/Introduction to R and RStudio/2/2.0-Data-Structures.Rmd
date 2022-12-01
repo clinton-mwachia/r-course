@@ -14,6 +14,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
+Data structure is the format in which data is organized, managed and stored for easy storage and access. In R, there are many formats in which data can be stored, some of them include: 
+
+    1. Vectors.
+    2. Lists.
+    3. Matrices.
+    4. Arrays.
+    5. Data Frames.
+
+In this lesson, we will discuss the above data structures and as a bonus, we will also cover **Factors**, **Strings**, **comments** and **variables**.
+
 ```{r}
 ```
 
