@@ -24,7 +24,83 @@ Data structure is the format in which data is organized, managed and stored for 
 
 In this lesson, we will discuss the above data structures and as a bonus, we will also cover **Factors**, **Strings**, **comments** and **variables**.
 
+# Vectors
+
+A vector is a data structure that is used to store data elements of the same data type. They are arrays with one-dimension.
+
+## Creating Vectors
+
+In R, the following methods can be used to create vectors: -
+
+1. Using the c() function.
+2. Using the seq() function.
+3. Using the colon (:) for numerical values
+
+### Using the c() function.
+
+To create vectors using the concatenate function (c()), you will use the format `vec_name = c(sequency of numbers/strings)` as illustrated in the code chunkS below.
+
 ```{r}
+# creating a numerical vectors
+vec = c(1,2,3,4)
+vec
+```
+
+`Hint: To run a code chunk, click on the green play button at the top right of the code chunk.`
+
+```{r}
+# creating a vector with character data types
+vec2 = c("R","Python","C++","JavaScript")
+vec2
+```
+
+
+```{r}
+# creating a vector with logical data types
+vec3 = c(TRUE,FALSE,FALSE,TRUE)
+vec3
+```
+
+### Using the seq() function.
+
+```{r}
+# creating numerical vector with seq
+vec4 = seq(0,5)
+vec4
+
+# creating numerical vector with seq with a difference of 2 between each values
+vec5 = seq(0,5, by=2)
+vec5
+
+# creating a vector with a defined length
+# trying changing the length.out and observe
+vec6 = seq(0,5, length.out=10)
+vec6
+```
+
+### Using the colon operator
+
+```{r}
+# creating a numerical vector with values from 1 to 10
+vec7 = 1:10
+vec7
+
+# creating a numerical vector with values from -1 to 10
+vec8 = -1:10
+vec8
+```
+
+
+`TIP: WHEN YOU LOOK oN YOUR ENVIRONMENT TAB, YOU SHOULS BE ABLE TO SEE ALL THE VECTORS WE HAVE CREATED`
+
+# Bonus
+
+## Comments
+
+To write comments in R, you will use `#` followed by the code. The code chunk below illustrates how to write code. 
+
+```{r}
+# this is a comment, it will not be executed.
 ```
 
 
