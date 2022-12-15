@@ -345,6 +345,39 @@ new_list
 
 # Matrices
 
+Matrix is a data structure in R that can stores data in rows and columns. It is 2-dimensional. They are mostly used for mathematical calculations.
+
+## Creating matrices
+
+```{r}
+# creating matrices
+mat = matrix(data = c(1,2,3,4), nrow = 2, ncol = 2)
+
+mat
+
+# creating a matrix with text data
+mat1 = matrix(data = c("Male","Female","Female", "Male"), nrow = 2, ncol = 2)
+
+mat1
+
+# creating a matrix containing random numbers
+mat2 = matrix(data = rnorm(9), nrow = 3, ncol = 3)
+
+mat2
+```
+
+## Naming matrices
+
+```{r}
+# naming rows and cols of mat
+rownames(mat)
+colnames(mat)
+
+rownames(mat) = c("row1","row2")
+colnames(mat) = c("col1","col2")
+
+mat
+```
 
 
 # Bonus

@@ -399,7 +399,13 @@ the list</a></li>
 lists</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#matrices" id="toc-matrices">Matrices</a></li>
+<li><a href="#matrices" id="toc-matrices">Matrices</a>
+<ul>
+<li><a href="#creating-matrices" id="toc-creating-matrices">Creating
+matrices</a></li>
+<li><a href="#naming-matrices" id="toc-naming-matrices">Naming
+matrices</a></li>
+</ul></li>
 <li><a href="#bonus" id="toc-bonus">Bonus</a>
 <ul>
 <li><a href="#comments" id="toc-comments">Comments</a></li>
@@ -769,6 +775,49 @@ new_list</code></pre>
 </div>
 <div id="matrices" class="section level1">
 <h1>Matrices</h1>
+<p>Matrix is a data structure in R that can stores data in rows and
+columns. It is 2-dimensional. They are mostly used for mathematical
+calculations.</p>
+<div id="creating-matrices" class="section level2">
+<h2>Creating matrices</h2>
+<pre class="r"><code># creating matrices
+mat = matrix(data = c(1,2,3,4), nrow = 2, ncol = 2)
+
+mat</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4</code></pre>
+<pre class="r"><code># creating a matrix with text data
+mat1 = matrix(data = c(&quot;Male&quot;,&quot;Female&quot;,&quot;Female&quot;, &quot;Male&quot;), nrow = 2, ncol = 2)
+
+mat1</code></pre>
+<pre><code>##      [,1]     [,2]    
+## [1,] &quot;Male&quot;   &quot;Female&quot;
+## [2,] &quot;Female&quot; &quot;Male&quot;</code></pre>
+<pre class="r"><code># creating a matrix containing random numbers
+mat2 = matrix(data = rnorm(9), nrow = 3, ncol = 3)
+
+mat2</code></pre>
+<pre><code>##             [,1]       [,2]      [,3]
+## [1,] -1.40956484  0.3973654 0.4339318
+## [2,] -0.52666288 -0.8735504 2.0691486
+## [3,]  0.05443996  0.3541625 0.2479376</code></pre>
+</div>
+<div id="naming-matrices" class="section level2">
+<h2>Naming matrices</h2>
+<pre class="r"><code># naming rows and cols of mat
+rownames(mat)</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>colnames(mat)</code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>rownames(mat) = c(&quot;row1&quot;,&quot;row2&quot;)
+colnames(mat) = c(&quot;col1&quot;,&quot;col2&quot;)
+
+mat</code></pre>
+<pre><code>##      col1 col2
+## row1    1    3
+## row2    2    4</code></pre>
+</div>
 </div>
 <div id="bonus" class="section level1">
 <h1>Bonus</h1>
