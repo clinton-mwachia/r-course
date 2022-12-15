@@ -382,6 +382,24 @@ arithmetics</a></li>
 Vectors</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#lists" id="toc-lists">Lists</a>
+<ul>
+<li><a href="#creating-lists" id="toc-creating-lists">Creating
+Lists</a></li>
+<li><a href="#list-operations." id="toc-list-operations.">List
+Operations.</a>
+<ul>
+<li><a href="#naming-lists" id="toc-naming-lists">Naming Lists</a></li>
+<li><a href="#accessing-items-in-a-list" id="toc-accessing-items-in-a-list">Accessing items in a list</a></li>
+<li><a href="#update-a-list" id="toc-update-a-list">Update a
+list</a></li>
+<li><a href="#length-of-the-list" id="toc-length-of-the-list">Length of
+the list</a></li>
+<li><a href="#merging-lists" id="toc-merging-lists">Merging
+lists</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#matrices" id="toc-matrices">Matrices</a></li>
 <li><a href="#bonus" id="toc-bonus">Bonus</a>
 <ul>
 <li><a href="#comments" id="toc-comments">Comments</a></li>
@@ -558,6 +576,199 @@ sort(vec, decreasing = TRUE)</code></pre>
 <pre><code>## [1] 100  56  20   4</code></pre>
 </div>
 </div>
+</div>
+<div id="lists" class="section level1">
+<h1>Lists</h1>
+<p>A list is an R data structure that can store items of different data
+types. A list can contain strings, factors, vectors and many more.
+Proceed to the next sections where you will create lists.</p>
+<div id="creating-lists" class="section level2">
+<h2>Creating Lists</h2>
+<p>To create a list in R, we will use the <code>list</code> function, to
+understand this, lets create a different kinds of lists below.</p>
+<pre class="r"><code># creating a simple list with character and numeric data types
+my_list = list(10, TRUE, &quot;R&quot;)
+
+my_list</code></pre>
+<pre><code>## [[1]]
+## [1] 10
+## 
+## [[2]]
+## [1] TRUE
+## 
+## [[3]]
+## [1] &quot;R&quot;</code></pre>
+<pre class="r"><code># creating list from vectors
+# we will use the vectors we created earlier
+my_list2 = list(vec, vec2, vec3)
+
+my_list2</code></pre>
+<pre><code>## [[1]]
+## [1]  20   4 100  56
+## 
+## [[2]]
+## [1] &quot;R&quot;          &quot;Python&quot;     &quot;C++&quot;        &quot;JavaScript&quot;
+## 
+## [[3]]
+## [1]  TRUE FALSE FALSE  TRUE</code></pre>
+</div>
+<div id="list-operations." class="section level2">
+<h2>List Operations.</h2>
+<p>The following operations can be performed to a list: -</p>
+<pre><code>o Naming lists.
+o Access items in a list.
+o Update a list (remove, add, modify).
+o Length of a list.
+o Merging lists.</code></pre>
+<div id="naming-lists" class="section level3">
+<h3>Naming Lists</h3>
+<p>The lists created a not named by default, to change this, we can
+assign names to our lists created above as shown in the code chunks
+below.</p>
+<pre class="r"><code># naming my_list
+names(my_list) = c(&quot;One&quot;,&quot;Two&quot;,&quot;Three&quot;)
+
+my_list</code></pre>
+<pre><code>## $One
+## [1] 10
+## 
+## $Two
+## [1] TRUE
+## 
+## $Three
+## [1] &quot;R&quot;</code></pre>
+<pre class="r"><code># naming my_list2
+names(my_list2) = c(&quot;vec&quot;,&quot;vec2&quot;,&quot;vec3&quot;)
+
+my_list2</code></pre>
+<pre><code>## $vec
+## [1]  20   4 100  56
+## 
+## $vec2
+## [1] &quot;R&quot;          &quot;Python&quot;     &quot;C++&quot;        &quot;JavaScript&quot;
+## 
+## $vec3
+## [1]  TRUE FALSE FALSE  TRUE</code></pre>
+</div>
+<div id="accessing-items-in-a-list" class="section level3">
+<h3>Accessing items in a list</h3>
+<p>The items of a list can be accessed using the index of the item and
+the data can be accessed using the <em>double quote</em>
+<code>[[]]</code>. Run the code chunks below</p>
+<pre class="r"><code># extract the first item of the list
+my_list[1]</code></pre>
+<pre><code>## $One
+## [1] 10</code></pre>
+<pre class="r"><code># extract the last item of the list
+my_list[3]</code></pre>
+<pre><code>## $Three
+## [1] &quot;R&quot;</code></pre>
+<pre class="r"><code># extract the data of my_list
+my_list[[1]]</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code># extract the first item of the data of my_list
+my_list[[1]][3]</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code># extract the first item of the list2
+my_list2[1]</code></pre>
+<pre><code>## $vec
+## [1]  20   4 100  56</code></pre>
+<pre class="r"><code># extract the last item of the list2
+my_list2[3]</code></pre>
+<pre><code>## $vec3
+## [1]  TRUE FALSE FALSE  TRUE</code></pre>
+<pre class="r"><code># extract the data of my_list2
+my_list2[[1]]</code></pre>
+<pre><code>## [1]  20   4 100  56</code></pre>
+<pre class="r"><code># extract the first item of the data of my_list2
+my_list2[[1]][3]</code></pre>
+<pre><code>## [1] 100</code></pre>
+<pre class="r"><code># extract list items by name
+my_list$One</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code>my_list2$vec2</code></pre>
+<pre><code>## [1] &quot;R&quot;          &quot;Python&quot;     &quot;C++&quot;        &quot;JavaScript&quot;</code></pre>
+<pre class="r"><code># extract data from list item
+my_list2$vec2[1]</code></pre>
+<pre><code>## [1] &quot;R&quot;</code></pre>
+</div>
+<div id="update-a-list" class="section level3">
+<h3>Update a list</h3>
+<div id="remove-an-item-from-a-list" class="section level4">
+<h4>Remove an item from a list</h4>
+<pre class="r"><code># view the list
+my_list</code></pre>
+<pre><code>## $One
+## [1] 10
+## 
+## $Two
+## [1] TRUE
+## 
+## $Three
+## [1] &quot;R&quot;</code></pre>
+<pre class="r"><code># remove 1st item from the list
+my_list = my_list[-1]
+
+# new updated list
+my_list</code></pre>
+<pre><code>## $Two
+## [1] TRUE
+## 
+## $Three
+## [1] &quot;R&quot;</code></pre>
+</div>
+<div id="add-an-item-into-a-list" class="section level4">
+<h4>Add an item into a list</h4>
+<pre class="r"><code># add an item into the list
+my_list = append(my_list, c(100))
+
+# updated list
+my_list</code></pre>
+<pre><code>## $Two
+## [1] TRUE
+## 
+## $Three
+## [1] &quot;R&quot;
+## 
+## [[3]]
+## [1] 100</code></pre>
+<pre class="r"><code># find a way to rename the new added item</code></pre>
+</div>
+</div>
+<div id="length-of-the-list" class="section level3">
+<h3>Length of the list</h3>
+<pre class="r"><code># length of the list
+length(my_list)</code></pre>
+<pre><code>## [1] 3</code></pre>
+</div>
+<div id="merging-lists" class="section level3">
+<h3>Merging lists</h3>
+<pre class="r"><code># merging lists
+new_list = c(my_list, my_list2)
+
+new_list</code></pre>
+<pre><code>## $Two
+## [1] TRUE
+## 
+## $Three
+## [1] &quot;R&quot;
+## 
+## [[3]]
+## [1] 100
+## 
+## $vec
+## [1]  20   4 100  56
+## 
+## $vec2
+## [1] &quot;R&quot;          &quot;Python&quot;     &quot;C++&quot;        &quot;JavaScript&quot;
+## 
+## $vec3
+## [1]  TRUE FALSE FALSE  TRUE</code></pre>
+</div>
+</div>
+</div>
+<div id="matrices" class="section level1">
+<h1>Matrices</h1>
 </div>
 <div id="bonus" class="section level1">
 <h1>Bonus</h1>
