@@ -95,14 +95,17 @@ vec8
 
 ## Vector Operations.
 
-There are various operations that can applied to vectors, they include **vector length**, **vector arithmetics**, **combining vector** and **vector indexing**
+There are various operations that can applied to vectors, they include **vector length**, **vector arithmetic**, **combining vector** and **vector indexing**
 
 ### Vector Length
 
 To find out the number of items in a vector, we use the `length()` function. For instance, we can use this function to find out how many items in the vectors we have created above as shown below, run the code chunk below to get the length of the vectors.
 
 ```{r}
-
+# length of vec, vec4 and vec8
+paste0("Length of vec: ", length(vec))
+paste0("Length of vec2: ", length(vec4))
+paste0("Length of vec8: ", length(vec8))
 ```
 
 
