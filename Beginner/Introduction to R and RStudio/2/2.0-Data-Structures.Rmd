@@ -428,6 +428,34 @@ mat - 1
 result2
 ```
 
+## Matrix multiplication
+
+```{r}
+# multiply matrix with a value k
+mat * 2
+
+# multiply two matrices
+mat * mat2
+```
+
+## Matrix Division
+
+```{r}
+# dividing matrix with a value k
+mat / 2
+
+# dividing two matrices
+mat / mat2
+```
+
+## Matrix Transpose
+
+The transpose of a matrix is constructed in R by using the `t` function. It changes the rows into columns and vice versa.
+
+```{r}
+# transpose of a matrix
+t(mat)
+```
 
 # Bonus
 

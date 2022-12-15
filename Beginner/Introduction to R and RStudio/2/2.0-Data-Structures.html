@@ -411,6 +411,11 @@ matrices</a></li>
 Addition</a></li>
 <li><a href="#matrix-subtraction" id="toc-matrix-subtraction">Matrix
 Subtraction</a></li>
+<li><a href="#matrix-multiplication" id="toc-matrix-multiplication">Matrix multiplication</a></li>
+<li><a href="#matrix-division" id="toc-matrix-division">Matrix
+Division</a></li>
+<li><a href="#matrix-transpose" id="toc-matrix-transpose">Matrix
+Transpose</a></li>
 </ul></li>
 <li><a href="#bonus" id="toc-bonus">Bonus</a>
 <ul>
@@ -804,10 +809,10 @@ mat1</code></pre>
 mat2 = matrix(data = rnorm(9), nrow = 3, ncol = 3)
 
 mat2</code></pre>
-<pre><code>##            [,1]       [,2]        [,3]
-## [1,]  0.1729248 -0.5241186  0.77683549
-## [2,] -0.5158979 -0.1408762 -0.52716992
-## [3,]  1.0959675 -0.6901063  0.00655902</code></pre>
+<pre><code>##            [,1]       [,2]      [,3]
+## [1,] -0.6685011 -0.1332775 1.0301268
+## [2,]  0.3289258 -1.2241183 0.8243254
+## [3,] -0.7940387  0.5135380 0.3059678</code></pre>
 </div>
 <div id="naming-matrices" class="section level2">
 <h2>Naming matrices</h2>
@@ -835,14 +840,14 @@ mat[1,2]</code></pre>
 <pre><code>## [1] 3</code></pre>
 <pre class="r"><code># extract row 2 and 3 and all columns
 mat2[2:3,1:3]</code></pre>
-<pre><code>##            [,1]       [,2]        [,3]
-## [1,] -0.5158979 -0.1408762 -0.52716992
-## [2,]  1.0959675 -0.6901063  0.00655902</code></pre>
+<pre><code>##            [,1]      [,2]      [,3]
+## [1,]  0.3289258 -1.224118 0.8243254
+## [2,] -0.7940387  0.513538 0.3059678</code></pre>
 <pre class="r"><code># extract row 1 and 3 and column 2 and 3
 mat2[c(1,3),c(2,3)]</code></pre>
-<pre><code>##            [,1]       [,2]
-## [1,] -0.5241186 0.77683549
-## [2,] -0.6901063 0.00655902</code></pre>
+<pre><code>##            [,1]      [,2]
+## [1,] -0.1332775 1.0301268
+## [2,]  0.5135380 0.3059678</code></pre>
 </div>
 <div id="matrix-addition" class="section level2">
 <h2>Matrix Addition</h2>
@@ -886,6 +891,44 @@ mat - 1</code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    0    0    0
 ## [2,]    0    0    0</code></pre>
+</div>
+<div id="matrix-multiplication" class="section level2">
+<h2>Matrix multiplication</h2>
+<pre class="r"><code># multiply matrix with a value k
+mat * 2</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    2    6   10
+## [2,]    4    8   12</code></pre>
+<pre class="r"><code># multiply two matrices
+mat * mat2</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    9   25
+## [2,]    4   16   36</code></pre>
+</div>
+<div id="matrix-division" class="section level2">
+<h2>Matrix Division</h2>
+<pre class="r"><code># dividing matrix with a value k
+mat / 2</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]  0.5  1.5  2.5
+## [2,]  1.0  2.0  3.0</code></pre>
+<pre class="r"><code># dividing two matrices
+mat / mat2</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    1    1
+## [2,]    1    1    1</code></pre>
+</div>
+<div id="matrix-transpose" class="section level2">
+<h2>Matrix Transpose</h2>
+<p>The transpose of a matrix is constructed in R by using the
+<code>t</code> function. It changes the rows into columns and vice
+versa.</p>
+<pre class="r"><code># transpose of a matrix
+t(mat)</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    3    4
+## [3,]    5    6</code></pre>
 </div>
 </div>
 <div id="bonus" class="section level1">
