@@ -395,6 +395,26 @@ mat2[2:3,1:3]
 mat2[c(1,3),c(2,3)]
 ```
 
+## Matrix Addition
+
+In order to perform any matrix to matrix operations, they should have the same dimensions. The code chunks below create two matrices, `mat and mat2`, and then use them to perform various matrices operations.
+
+```{r}
+# creating matrix mat
+mat = matrix(data = c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+
+mat
+
+# creating matrix mat2
+mat2 = matrix(data = c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+
+mat2
+
+# adding matrices
+result = mat + mat2
+
+result
+```
 
 
 # Bonus
