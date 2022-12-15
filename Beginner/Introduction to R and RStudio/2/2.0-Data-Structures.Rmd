@@ -194,6 +194,105 @@ sort(vec, decreasing = TRUE)
 ```
 
 
+# Lists
+
+A list is an R data structure that can store items of different data types. A list can contain strings, factors, vectors and many more. Proceed to the next sections where you will create lists.
+
+## Creating Lists
+
+To create a list in R, we will use the `list` function, to understand this, lets create a different kinds of lists below.
+
+```{r}
+# creating a simple list with character and numeric data types
+my_list = list(10, TRUE, "R")
+
+my_list
+```
+
+
+```{r}
+# creating list from vectors
+# we will use the vectors we created earlier
+my_list2 = list(vec, vec2, vec3)
+
+my_list2
+```
+
+## List Operations.
+
+The following operations can be performed to a list: -
+
+    o Naming lists.
+    o Access items in a list.
+    o Update a list (remove, add, modify).
+    o Length of a list.
+    o Merging lists.
+    
+### Naming Lists
+
+The lists created a not named by default, to change this, we can assign names to our lists created above as shown in the code chunks below.
+
+```{r}
+# naming my_list
+names(my_list) = c("One","Two","Three")
+
+my_list
+```
+
+
+```{r}
+
+# naming my_list2
+names(my_list2) = c("vec","vec2","vec3")
+
+my_list2
+```
+
+
+### Accessing items in a list
+
+The items of a list can be accessed using the index of the item and the data can be accessed using the *double quote* `[[]]`. Run the code chunks below
+
+```{r}
+# extract the first item of the list
+my_list[1]
+
+# extract the last item of the list
+my_list[3]
+
+# extract the data of my_list
+my_list[[1]]
+
+# extract the first item of the data of my_list
+my_list[[1]][3]
+```
+
+
+```{r}
+# extract the first item of the list2
+my_list2[1]
+
+# extract the last item of the list2
+my_list2[3]
+
+# extract the data of my_list2
+my_list2[[1]]
+
+# extract the first item of the data of my_list2
+my_list2[[1]][3]
+```
+
+```{r}
+# extract list items by name
+my_list$One
+
+my_list2$vec2
+
+# extract data from list item
+my_list2$vec2[1]
+```
+
+
 # Bonus
 
 ## Comments
