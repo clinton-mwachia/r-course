@@ -378,6 +378,8 @@ Length</a></li>
 Indexing</a></li>
 <li><a href="#vector-arithmetics" id="toc-vector-arithmetics">Vector
 arithmetics</a></li>
+<li><a href="#sorting-vectors" id="toc-sorting-vectors">Sorting
+Vectors</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#bonus" id="toc-bonus">Bonus</a>
@@ -537,6 +539,23 @@ vec6 * vec7</code></pre>
 vec6 / vec7</code></pre>
 <pre><code>##  [1] 0.0000000 0.2777778 0.3703704 0.4166667 0.4444444 0.4629630 0.4761905
 ##  [8] 0.4861111 0.4938272 0.5000000</code></pre>
+</div>
+<div id="sorting-vectors" class="section level3">
+<h3>Sorting Vectors</h3>
+<p>The elements of a vector can be arranged in either ascending or
+descending order. The code chunks below show how sorting can be in
+vectors, Run the code chunks below.</p>
+<pre class="r"><code># creating anew vector
+vec = c(20, 4, 100, 56)
+
+vec</code></pre>
+<pre><code>## [1]  20   4 100  56</code></pre>
+<pre class="r"><code># sorting the vector vec in ascending order
+sort(vec)</code></pre>
+<pre><code>## [1]   4  20  56 100</code></pre>
+<pre class="r"><code># sorting the vector vec in descending order
+sort(vec, decreasing = TRUE)</code></pre>
+<pre><code>## [1] 100  56  20   4</code></pre>
 </div>
 </div>
 </div>
