@@ -416,6 +416,18 @@ result = mat + mat2
 result
 ```
 
+## Matrix Subtraction
+
+```{r}
+# subtracting matrices
+result2 = mat - mat2
+
+# subtract a certain term from a matrix
+mat - 1
+
+result2
+```
+
 
 # Bonus
 
