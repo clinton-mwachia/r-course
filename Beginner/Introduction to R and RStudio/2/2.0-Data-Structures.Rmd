@@ -137,6 +137,44 @@ vec7[c(1,length(vec7))]
 vec2[c(2:4)]
 ```
 
+### Vector arithmetics
+
+Vectors in R can be added can be added, subtracted, divided and multiplied provided they have the same length. The items of a vector can be multiplied, subtracted, divided and added by a certain value,k.
+
+Run the code chunks below to see the vector arithmetics in action.
+
+```{r}
+# add 5 to vec
+vec + 5
+```
+
+
+```{r}
+# subtract 5 from vec
+vec - 5
+```
+
+
+```{r}
+# multiply 5 to vec
+vec * 5
+```
+
+
+```{r}
+# adding vec and vec4
+vec6 + vec7
+
+# subtract vec and vec4
+vec6 - vec7
+
+# multiply vec and vec4
+vec6 * vec7
+
+# divide vec and vec4
+vec6 / vec7
+```
+
 # Bonus
 
 ## Comments

@@ -376,6 +376,8 @@ Operations.</a>
 Length</a></li>
 <li><a href="#vector-indexing" id="toc-vector-indexing">Vector
 Indexing</a></li>
+<li><a href="#vector-arithmetics" id="toc-vector-arithmetics">Vector
+arithmetics</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#bonus" id="toc-bonus">Bonus</a>
@@ -502,6 +504,39 @@ vec7[c(1,length(vec7))]</code></pre>
 # extract 2nd to 3rd values
 vec2[c(2:4)]</code></pre>
 <pre><code>## [1] &quot;Python&quot;     &quot;C++&quot;        &quot;JavaScript&quot;</code></pre>
+</div>
+<div id="vector-arithmetics" class="section level3">
+<h3>Vector arithmetics</h3>
+<p>Vectors in R can be added can be added, subtracted, divided and
+multiplied provided they have the same length. The items of a vector can
+be multiplied, subtracted, divided and added by a certain value,k.</p>
+<p>Run the code chunks below to see the vector arithmetics in
+action.</p>
+<pre class="r"><code># add 5 to vec
+vec + 5</code></pre>
+<pre><code>## [1] 6 7 8 9</code></pre>
+<pre class="r"><code># subtract 5 from vec
+vec - 5</code></pre>
+<pre><code>## [1] -4 -3 -2 -1</code></pre>
+<pre class="r"><code># multiply 5 to vec
+vec * 5</code></pre>
+<pre><code>## [1]  5 10 15 20</code></pre>
+<pre class="r"><code># adding vec and vec4
+vec6 + vec7</code></pre>
+<pre><code>##  [1]  1.000000  2.555556  4.111111  5.666667  7.222222  8.777778 10.333333
+##  [8] 11.888889 13.444444 15.000000</code></pre>
+<pre class="r"><code># subtract vec and vec4
+vec6 - vec7</code></pre>
+<pre><code>##  [1] -1.000000 -1.444444 -1.888889 -2.333333 -2.777778 -3.222222 -3.666667
+##  [8] -4.111111 -4.555556 -5.000000</code></pre>
+<pre class="r"><code># multiply vec and vec4
+vec6 * vec7</code></pre>
+<pre><code>##  [1]  0.000000  1.111111  3.333333  6.666667 11.111111 16.666667 23.333333
+##  [8] 31.111111 40.000000 50.000000</code></pre>
+<pre class="r"><code># divide vec and vec4
+vec6 / vec7</code></pre>
+<pre><code>##  [1] 0.0000000 0.2777778 0.3703704 0.4166667 0.4444444 0.4629630 0.4761905
+##  [8] 0.4861111 0.4938272 0.5000000</code></pre>
 </div>
 </div>
 </div>
