@@ -107,7 +107,35 @@ paste0("Length of vec: ", length(vec))
 paste0("Length of vec2: ", length(vec4))
 paste0("Length of vec8: ", length(vec8))
 ```
+### Vector Indexing
 
+The items of a vector can be accessed by referring to its index. The index of a vector start from index 1 which extracts the first item. *Tip: you can use the `length` function to get the index of the last item*
+
+Run the following code chunks to access various items from the vector.
+
+```{r}
+# access the first item of vec
+vec[1]
+```
+
+
+```{r}
+# access the last item of vec
+vec[4]
+```
+
+
+```{r}
+# access the first and last item of vec
+vec7[c(1,length(vec7))]
+```
+
+
+```{r}
+# range indexing
+# extract 2nd to 3rd values
+vec2[c(2:4)]
+```
 
 # Bonus
 

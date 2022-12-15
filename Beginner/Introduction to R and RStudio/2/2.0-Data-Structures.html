@@ -374,6 +374,8 @@ Operations.</a>
 <ul>
 <li><a href="#vector-length" id="toc-vector-length">Vector
 Length</a></li>
+<li><a href="#vector-indexing" id="toc-vector-indexing">Vector
+Indexing</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#bonus" id="toc-bonus">Bonus</a>
@@ -478,6 +480,28 @@ paste0(&quot;Length of vec: &quot;, length(vec))</code></pre>
 <pre><code>## [1] &quot;Length of vec2: 6&quot;</code></pre>
 <pre class="r"><code>paste0(&quot;Length of vec8: &quot;, length(vec8))</code></pre>
 <pre><code>## [1] &quot;Length of vec8: 12&quot;</code></pre>
+</div>
+<div id="vector-indexing" class="section level3">
+<h3>Vector Indexing</h3>
+<p>The items of a vector can be accessed by referring to its index. The
+index of a vector start from index 1 which extracts the first item.
+<em>Tip: you can use the <code>length</code> function to get the index
+of the last item</em></p>
+<p>Run the following code chunks to access various items from the
+vector.</p>
+<pre class="r"><code># access the first item of vec
+vec[1]</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code># access the last item of vec
+vec[4]</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code># access the first and last item of vec
+vec7[c(1,length(vec7))]</code></pre>
+<pre><code>## [1]  1 10</code></pre>
+<pre class="r"><code># range indexing
+# extract 2nd to 3rd values
+vec2[c(2:4)]</code></pre>
+<pre><code>## [1] &quot;Python&quot;     &quot;C++&quot;        &quot;JavaScript&quot;</code></pre>
 </div>
 </div>
 </div>
