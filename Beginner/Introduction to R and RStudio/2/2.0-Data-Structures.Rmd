@@ -486,7 +486,18 @@ df3 = data.frame(letters = letters)
 df3
 ```
 
-##
+## Naming data frames
+
+```{r}
+# renaming column a to A in data frame df
+colnames(df)[1] <- "A"
+
+# renaming both columns to capital letters
+colnames(df) <- c("A","B")
+
+colnames(df)
+```
+
 
 # Bonus
 
