@@ -11,7 +11,7 @@
 
 <meta name="author" content="Clinton Moshe Mwachia" />
 
-<meta name="date" content="2022-12-15" />
+<meta name="date" content="2022-12-16" />
 
 <title>Beginner: Fundermentals Of R</title>
 
@@ -353,7 +353,7 @@ display: none;
 <h1 class="title toc-ignore">Beginner: Fundermentals Of R</h1>
 <h3 class="subtitle">2.0 Data Structures</h3>
 <h4 class="author">Clinton Moshe Mwachia</h4>
-<h4 class="date">2022-12-15</h4>
+<h4 class="date">2022-12-16</h4>
 
 </div>
 
@@ -809,10 +809,10 @@ mat1</code></pre>
 mat2 = matrix(data = rnorm(9), nrow = 3, ncol = 3)
 
 mat2</code></pre>
-<pre><code>##            [,1]       [,2]      [,3]
-## [1,] -0.6685011 -0.1332775 1.0301268
-## [2,]  0.3289258 -1.2241183 0.8243254
-## [3,] -0.7940387  0.5135380 0.3059678</code></pre>
+<pre><code>##           [,1]       [,2]       [,3]
+## [1,] -0.878706  0.9348304  0.1292305
+## [2,] -1.002632 -0.7338052  0.9794694
+## [3,] -1.224435  0.9578038 -1.9870557</code></pre>
 </div>
 <div id="naming-matrices" class="section level2">
 <h2>Naming matrices</h2>
@@ -840,14 +840,14 @@ mat[1,2]</code></pre>
 <pre><code>## [1] 3</code></pre>
 <pre class="r"><code># extract row 2 and 3 and all columns
 mat2[2:3,1:3]</code></pre>
-<pre><code>##            [,1]      [,2]      [,3]
-## [1,]  0.3289258 -1.224118 0.8243254
-## [2,] -0.7940387  0.513538 0.3059678</code></pre>
+<pre><code>##           [,1]       [,2]       [,3]
+## [1,] -1.002632 -0.7338052  0.9794694
+## [2,] -1.224435  0.9578038 -1.9870557</code></pre>
 <pre class="r"><code># extract row 1 and 3 and column 2 and 3
 mat2[c(1,3),c(2,3)]</code></pre>
-<pre><code>##            [,1]      [,2]
-## [1,] -0.1332775 1.0301268
-## [2,]  0.5135380 0.3059678</code></pre>
+<pre><code>##           [,1]       [,2]
+## [1,] 0.9348304  0.1292305
+## [2,] 0.9578038 -1.9870557</code></pre>
 </div>
 <div id="matrix-addition" class="section level2">
 <h2>Matrix Addition</h2>

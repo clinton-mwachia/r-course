@@ -19,8 +19,7 @@ Data structure is the format in which data is organized, managed and stored for 
     1. Vectors.
     2. Lists.
     3. Matrices.
-    4. Arrays.
-    5. Data Frames.
+    4. Data Frames.
 
 In this lesson, we will discuss the above data structures and as a bonus, we will also cover **Factors**, **Strings**, **comments** and **variables**.
 
@@ -450,12 +449,44 @@ mat / mat2
 
 ## Matrix Transpose
 
-The transpose of a matrix is constructed in R by using the `t` function. It changes the rows into columns and vice versa.
+The transpose of a matrix is constructed in R by using the `t` function. It changes the rows into columns and vice versa. 
 
 ```{r}
 # transpose of a matrix
 t(mat)
 ```
+
+# DATA FRAMES
+
+A data frame is a data structure in R that can be used to store data in 2 dimensions. It can accommodate different types of data. Lets proceed to the next section and create data frames.
+
+## Creating data frames.
+
+To create data frames in R, we will use the format `name <- data.frame(our data)`. The code below will create three data frames namely *df, df2 and df3*, run the code chunks below.
+
+```{r}
+# creating data frame with columns a and b
+df = data.frame(a = c(1,2,3,4), b = c("a","b","c","d"))
+
+df
+
+# creating data frame with columns Norm and  sample
+df2 = data.frame(Norm = rnorm(10), Sample=sample(1:20,10))
+
+df2
+
+# creating data frame with columns Name and gender
+df2 = data.frame(Norm = rnorm(10), Sample=sample(1:20,10))
+
+df2
+
+# creating data frame with column letter
+df3 = data.frame(letters = letters)
+
+df3
+```
+
+##
 
 # Bonus
 
