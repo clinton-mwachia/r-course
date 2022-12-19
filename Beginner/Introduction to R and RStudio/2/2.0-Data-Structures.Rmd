@@ -603,4 +603,10 @@ To write comments in R, you will use `#` followed by the code. The code chunk be
 # this is a comment, it will not be executed.
 ```
 
+## Variables
 
+There are two ways you can define variables in R: -
+
+METHOD 1: **USING = SIGN;** `name = c("fname","lname")`.
+
+METHOD 2: **USING <= SIGN;** `name <= c("fname","lname")`.
