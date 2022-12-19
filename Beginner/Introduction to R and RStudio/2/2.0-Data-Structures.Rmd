@@ -553,6 +553,46 @@ df[1,2]
 ```
 
 
+## Adding columns
+
+```{r}
+# adding column C to data frame df
+df$C = c(10,20,30,40)
+
+df
+```
+
+## Adding Rows
+
+```{r}
+# adding rows
+new_df = rbind(df, c(5,"e",50))
+
+new_df
+```
+
+*NOTE: OBSERVER WHAT HAPPENNED TO THE DATA TYPES*
+
+## Combining data frames
+
+```{r}
+# create df1 and df11
+df1 = data.frame(fname=c("james","clinton"), lname=c("andrew","moshe"), gender=c("MALE","MALE"))
+
+df1
+
+df11 = data.frame(fname=c("veroh","ashley"), lname=c("mbithi","hamisi"), gender=c("FEMALE","FEMALE"))
+
+df11
+
+# COMBING THE TWO COLUMNS
+# take note they have similar names
+rbind(df1, df11)
+# try using cbind and observe
+```
+
+WE HAVE FINALLY COME TO THE END OF THE LESSON, PROCEED TO **2.0-Data-Strutures-Assignement.Rmd** and practice what you have learned.
+
 # Bonus
 
 ## Comments
