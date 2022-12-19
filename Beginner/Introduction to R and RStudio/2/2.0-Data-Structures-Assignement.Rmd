@@ -1,0 +1,34 @@
+---
+title: 'Beginner: Fundermentals of R'
+subtitle: '2.0 Data Structures Assignement'
+author: "Prepared By Clinton Moshe Mwachia"
+date: '`r Sys.Date()`'
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Vectors
+
+```{r}
+
+```
+
+# Lists
+
+```{r}
+
+```
+
+# Matrices
+
+```{r}
+
+```
+
+# Data Frames
+
