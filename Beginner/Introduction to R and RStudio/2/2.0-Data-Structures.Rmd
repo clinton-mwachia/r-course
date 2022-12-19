@@ -486,6 +486,36 @@ df3 = data.frame(letters = letters)
 df3
 ```
 
+## Structure of the data frame
+
+```{r}
+# get the structure of the data frame
+str(df)
+
+str(df2)
+```
+
+## Dimensions of the data frame
+
+```{r}
+# dimensions
+# 4 rows, 2 columns
+dim(df)
+
+# 26 rows, 1 column
+dim(df2)
+```
+
+## Summary statistics of a data frame
+
+```{r}
+# summary stat
+summary(df)
+
+summary(df2)
+```
+
+
 ## Naming data frames
 
 ```{r}
@@ -496,6 +526,30 @@ colnames(df)[1] <- "A"
 colnames(df) <- c("A","B")
 
 colnames(df)
+```
+
+## Accessing data
+
+To access data items in a data frame, we will follow the format `df[row,col]`index.
+
+
+```{r}
+# accessing columns by index
+# access column 1
+df[,1]
+
+df2[,1]
+
+# accessing rows by index
+# access row 1
+df[1,]
+
+df2[1,]
+
+# access row 1 column 2
+df[1,2]
+
+df[1,2]
 ```
 
 
