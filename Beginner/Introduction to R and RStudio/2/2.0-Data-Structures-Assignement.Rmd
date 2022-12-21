@@ -82,6 +82,7 @@ What is the length of the list you have created above?
 ```{r}
 
 ```
+
 ## Question 2
 
 create a new vector, **vec** containing numbers 100 and 200 and append it to **my_list**.
@@ -117,6 +118,7 @@ create a 2 by 3 matrix **A** containing the data, `1,2,3,4,5,6`, filed by row. P
 ```{r}
 
 ```
+
 ## Question 1
 
 What are the dimensions of matrix A?
@@ -124,6 +126,7 @@ What are the dimensions of matrix A?
 ```{r}
 
 ```
+
 ## Question 2
 
 Matrix A does not have column and row names, using appropriate functions, confirm this and name both the rows and columns of the matrix. Print the matrix
@@ -163,4 +166,6 @@ What is the transpose of matrix A?
 ```{r}
 
 ```
+
+# Data Frames
 
