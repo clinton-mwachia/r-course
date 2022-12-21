@@ -65,3 +65,46 @@ What is the highest math score of the candidates?
 
 ```
 
+# Lists
+
+## Preparation.
+
+create a list, **my_list** that contains the two vectors you created earlier.
+
+```{r}
+
+```
+
+## Question 1
+
+What is the length of the list you have created above?
+
+```{r}
+
+```
+## Question 2
+
+create a new vector, **vec** containing numbers 100 and 200 and append it to **my_list**.
+
+What is the length of the new list?
+
+```{r}
+
+```
+
+## Question 3
+
+The new list created above does not have names.Proceed to the code chunk below and appropriately name the items. Print the new list.
+
+```{r}
+
+```
+
+## Question 4
+
+Extract the 1st, 3rd and 5th animals from the list above and print them to the console
+
+```{r}
+
+```
+
