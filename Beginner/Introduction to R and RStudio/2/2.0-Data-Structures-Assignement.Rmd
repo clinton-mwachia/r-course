@@ -12,23 +12,56 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Instrictions.
+
+      1. Comment on what your code does.
+      2. Make sure the code only prints the answer.
+
 # Vectors
 
+## PREPARATION.
+
+Create two vectors, **animals**, containing the big five animals in KENYA and **marks** containing the math scores of five candidates. Use the code chunk below. 
+
+```{r prep}
+
+```
+
+## Question 1
+
+What is the length of the vector **animals**?
+
+write your code below.
+
 ```{r}
 
 ```
 
-# Lists
+## Question 2
+
+What is the length of the vector **marks**?
+
+write your code below.
 
 ```{r}
 
 ```
 
-# Matrices
+## Question 3
+
+Extract the 1st, 3rd and 5th animals and print them to the console.
 
 ```{r}
 
 ```
 
-# Data Frames
+## Question 4
+
+What is the highest math score of the candidates?
+
+*hint: sort the marks in descending order and extract the first item*
+
+```{r}
+
+```
 
