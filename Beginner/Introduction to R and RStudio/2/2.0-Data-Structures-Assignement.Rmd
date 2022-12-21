@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Instrictions.
+# Instructions.
 
       1. Comment on what your code does.
       2. Make sure the code only prints the answer.
@@ -103,6 +103,62 @@ The new list created above does not have names.Proceed to the code chunk below a
 ## Question 4
 
 Extract the 1st, 3rd and 5th animals from the list above and print them to the console
+
+```{r}
+
+```
+
+# Matrices
+
+## Preparation
+
+create a 2 by 3 matrix **A** containing the data, `1,2,3,4,5,6`, filed by row. Print the matrix
+
+```{r}
+
+```
+## Question 1
+
+What are the dimensions of matrix A?
+
+```{r}
+
+```
+## Question 2
+
+Matrix A does not have column and row names, using appropriate functions, confirm this and name both the rows and columns of the matrix. Print the matrix
+
+```{r}
+
+```
+
+## Question 3
+
+What is A + A? Print the matrix
+
+```{r}
+
+```
+
+## Question 4
+
+What is A - A? Print the matrix
+
+```{r}
+
+```
+
+## Question 5
+
+What is A + 2A? Print the matrix
+
+```{r}
+
+```
+
+## Question 6
+
+What is the transpose of matrix A?
 
 ```{r}
 
