@@ -1,0 +1,612 @@
+---
+title: 'Beginner: Fundermentals Of R'
+subtitle: '2.0 Data Structures'
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Data structure is the format in which data is organized, managed and stored for easy storage and access. In R, there are many formats in which data can be stored, some of them include: 
+
+    1. Vectors.
+    2. Lists.
+    3. Matrices.
+    4. Data Frames.
+
+In this lesson, we will discuss the above data structures and as a bonus, we will also cover **Factors**, **Strings**, **comments** and **variables**.
+
+# Vectors
+
+A vector is a data structure that is used to store data elements of the same data type. They are arrays with one-dimension.
+
+## Creating Vectors
+
+In R, the following methods can be used to create vectors: -
+
+1. Using the c() function.
+2. Using the seq() function.
+3. Using the colon (:) for numerical values
+
+### Using the c() function.
+
+To create vectors using the concatenate function (c()), you will use the format `vec_name = c(sequency of numbers/strings)` as illustrated in the code chunkS below.
+
+```{r}
+# creating a numerical vectors
+vec = c(1,2,3,4)
+vec
+```
+
+`Hint: To run a code chunk, click on the green play button at the top right of the code chunk.`
+
+```{r}
+# creating a vector with character data types
+vec2 = c("R","Python","C++","JavaScript")
+vec2
+```
+
+
+```{r}
+# creating a vector with logical data types
+vec3 = c(TRUE,FALSE,FALSE,TRUE)
+vec3
+```
+
+### Using the seq() function.
+
+```{r}
+# creating numerical vector with seq
+vec4 = seq(0,5)
+vec4
+
+# creating numerical vector with seq with a difference of 2 between each values
+vec5 = seq(0,5, by=2)
+vec5
+
+# creating a vector with a defined length
+# trying changing the length.out and observe
+vec6 = seq(0,5, length.out=10)
+vec6
+```
+
+### Using the colon operator
+
+```{r}
+# creating a numerical vector with values from 1 to 10
+vec7 = 1:10
+vec7
+
+# creating a numerical vector with values from -1 to 10
+vec8 = -1:10
+vec8
+```
+
+
+`TIP: WHEN YOU LOOK oN YOUR ENVIRONMENT TAB, YOU SHOULS BE ABLE TO SEE ALL THE VECTORS WE HAVE CREATED`
+
+## Vector Operations.
+
+There are various operations that can applied to vectors, they include **vector length**, **vector arithmetic**, **combining vector** and **vector indexing**
+
+### Vector Length
+
+To find out the number of items in a vector, we use the `length()` function. For instance, we can use this function to find out how many items in the vectors we have created above as shown below, run the code chunk below to get the length of the vectors.
+
+```{r}
+# length of vec, vec4 and vec8
+paste0("Length of vec: ", length(vec))
+paste0("Length of vec2: ", length(vec4))
+paste0("Length of vec8: ", length(vec8))
+```
+### Vector Indexing
+
+The items of a vector can be accessed by referring to its index. The index of a vector start from index 1 which extracts the first item. *Tip: you can use the `length` function to get the index of the last item*
+
+Run the following code chunks to access various items from the vector.
+
+```{r}
+# access the first item of vec
+vec[1]
+```
+
+
+```{r}
+# access the last item of vec
+vec[4]
+```
+
+
+```{r}
+# access the first and last item of vec
+vec7[c(1,length(vec7))]
+```
+
+
+```{r}
+# range indexing
+# extract 2nd to 3rd values
+vec2[c(2:4)]
+```
+
+### Vector arithmetics
+
+Vectors in R can be added can be added, subtracted, divided and multiplied provided they have the same length. The items of a vector can be multiplied, subtracted, divided and added by a certain value,k.
+
+Run the code chunks below to see the vector arithmetics in action.
+
+```{r}
+# add 5 to vec
+vec + 5
+```
+
+
+```{r}
+# subtract 5 from vec
+vec - 5
+```
+
+
+```{r}
+# multiply 5 to vec
+vec * 5
+```
+
+
+```{r}
+# adding vec and vec4
+vec6 + vec7
+
+# subtract vec and vec4
+vec6 - vec7
+
+# multiply vec and vec4
+vec6 * vec7
+
+# divide vec and vec4
+vec6 / vec7
+```
+
+
+### Sorting Vectors
+
+The elements of a vector can be arranged in either ascending or descending order. The code chunks below show how sorting can be in vectors, Run the code chunks below.
+
+```{r}
+# creating anew vector
+vec = c(20, 4, 100, 56)
+
+vec
+
+# sorting the vector vec in ascending order
+sort(vec)
+
+# sorting the vector vec in descending order
+sort(vec, decreasing = TRUE)
+```
+
+
+# Lists
+
+A list is an R data structure that can store items of different data types. A list can contain strings, factors, vectors and many more. Proceed to the next sections where you will create lists.
+
+## Creating Lists
+
+To create a list in R, we will use the `list` function, to understand this, lets create a different kinds of lists below.
+
+```{r}
+# creating a simple list with character and numeric data types
+my_list = list(10, TRUE, "R")
+
+my_list
+```
+
+
+```{r}
+# creating list from vectors
+# we will use the vectors we created earlier
+my_list2 = list(vec, vec2, vec3)
+
+my_list2
+```
+
+## List Operations.
+
+The following operations can be performed to a list: -
+
+    o Naming lists.
+    o Access items in a list.
+    o Update a list (remove, add, modify).
+    o Length of a list.
+    o Merging lists.
+    
+### Naming Lists
+
+The lists created a not named by default, to change this, we can assign names to our lists created above as shown in the code chunks below.
+
+```{r}
+# naming my_list
+names(my_list) = c("One","Two","Three")
+
+my_list
+```
+
+
+```{r}
+
+# naming my_list2
+names(my_list2) = c("vec","vec2","vec3")
+
+my_list2
+```
+
+
+### Accessing items in a list
+
+The items of a list can be accessed using the index of the item and the data can be accessed using the *double quote* `[[]]`. Run the code chunks below
+
+```{r}
+# extract the first item of the list
+my_list[1]
+
+# extract the last item of the list
+my_list[3]
+
+# extract the data of my_list
+my_list[[1]]
+
+# extract the first item of the data of my_list
+my_list[[1]][3]
+```
+
+
+```{r}
+# extract the first item of the list2
+my_list2[1]
+
+# extract the last item of the list2
+my_list2[3]
+
+# extract the data of my_list2
+my_list2[[1]]
+
+# extract the first item of the data of my_list2
+my_list2[[1]][3]
+```
+
+
+```{r}
+# extract list items by name
+my_list$One
+
+my_list2$vec2
+
+# extract data from list item
+my_list2$vec2[1]
+```
+
+
+### Update a list
+
+#### Remove an item from a list
+
+```{r}
+# view the list
+my_list
+```
+
+
+```{r}
+# remove 1st item from the list
+my_list = my_list[-1]
+
+# new updated list
+my_list
+
+```
+
+
+#### Add an item into a list
+
+```{r}
+# add an item into the list
+my_list = append(my_list, c(100))
+
+# updated list
+my_list
+
+# find a way to rename the new added item
+```
+
+
+### Length of the list
+
+```{r}
+# length of the list
+length(my_list)
+```
+### Merging lists
+
+```{r}
+# merging lists
+new_list = c(my_list, my_list2)
+
+new_list
+```
+
+
+# Matrices
+
+Matrix is a data structure in R that can stores data in rows and columns. It is 2-dimensional. They are mostly used for mathematical calculations.
+
+## Creating matrices
+
+```{r}
+# creating matrices
+mat = matrix(data = c(1,2,3,4), nrow = 2, ncol = 2)
+
+mat
+
+# creating a matrix with text data
+mat1 = matrix(data = c("Male","Female","Female", "Male"), nrow = 2, ncol = 2)
+
+mat1
+
+# creating a matrix containing random numbers
+mat2 = matrix(data = rnorm(9), nrow = 3, ncol = 3)
+
+mat2
+```
+
+## Naming matrices
+
+```{r}
+# naming rows and cols of mat
+rownames(mat)
+colnames(mat)
+
+rownames(mat) = c("row1","row2")
+colnames(mat) = c("col1","col2")
+
+mat
+```
+
+## Accessing items in matrices
+
+TO Access data from a matrix, we use the format `matrix[row,column]`. Proceed to the next section where we write some code to access data.
+
+```{r}
+# access the value 3 from matrix mat
+# it has a reference of [1,2]
+mat[1,2]
+
+# extract row 2 and 3 and all columns
+mat2[2:3,1:3]
+
+# extract row 1 and 3 and column 2 and 3
+mat2[c(1,3),c(2,3)]
+```
+
+## Matrix Addition
+
+In order to perform any matrix to matrix operations, they should have the same dimensions. The code chunks below create two matrices, `mat and mat2`, and then use them to perform various matrices operations.
+
+```{r}
+# creating matrix mat
+mat = matrix(data = c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+
+mat
+
+# creating matrix mat2
+mat2 = matrix(data = c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+
+mat2
+
+# adding matrices
+result = mat + mat2
+
+result
+```
+
+## Matrix Subtraction
+
+```{r}
+# subtracting matrices
+result2 = mat - mat2
+
+# subtract a certain term from a matrix
+mat - 1
+
+result2
+```
+
+## Matrix multiplication
+
+```{r}
+# multiply matrix with a value k
+mat * 2
+
+# multiply two matrices
+mat * mat2
+```
+
+## Matrix Division
+
+```{r}
+# dividing matrix with a value k
+mat / 2
+
+# dividing two matrices
+mat / mat2
+```
+
+## Matrix Transpose
+
+The transpose of a matrix is constructed in R by using the `t` function. It changes the rows into columns and vice versa. 
+
+```{r}
+# transpose of a matrix
+t(mat)
+```
+
+# DATA FRAMES
+
+A data frame is a data structure in R that can be used to store data in 2 dimensions. It can accommodate different types of data. Lets proceed to the next section and create data frames.
+
+## Creating data frames.
+
+To create data frames in R, we will use the format `name <- data.frame(our data)`. The code below will create three data frames namely *df, df2 and df3*, run the code chunks below.
+
+```{r}
+# creating data frame with columns a and b
+df = data.frame(a = c(1,2,3,4), b = c("a","b","c","d"))
+
+df
+
+# creating data frame with columns Norm and  sample
+df2 = data.frame(Norm = rnorm(10), Sample=sample(1:20,10))
+
+df2
+
+# creating data frame with columns Name and gender
+df2 = data.frame(Norm = rnorm(10), Sample=sample(1:20,10))
+
+df2
+
+# creating data frame with column letter
+df3 = data.frame(letters = letters)
+
+df3
+```
+
+## Structure of the data frame
+
+```{r}
+# get the structure of the data frame
+str(df)
+
+str(df2)
+```
+
+## Dimensions of the data frame
+
+```{r}
+# dimensions
+# 4 rows, 2 columns
+dim(df)
+
+# 26 rows, 1 column
+dim(df2)
+```
+
+## Summary statistics of a data frame
+
+```{r}
+# summary stat
+summary(df)
+
+summary(df2)
+```
+
+
+## Naming data frames
+
+```{r}
+# renaming column a to A in data frame df
+colnames(df)[1] <- "A"
+
+# renaming both columns to capital letters
+colnames(df) <- c("A","B")
+
+colnames(df)
+```
+
+## Accessing data
+
+To access data items in a data frame, we will follow the format `df[row,col]`index.
+
+
+```{r}
+# accessing columns by index
+# access column 1
+df[,1]
+
+df2[,1]
+
+# accessing rows by index
+# access row 1
+df[1,]
+
+df2[1,]
+
+# access row 1 column 2
+df[1,2]
+
+df[1,2]
+```
+
+
+## Adding columns
+
+```{r}
+# adding column C to data frame df
+df$C = c(10,20,30,40)
+
+df
+```
+
+## Adding Rows
+
+```{r}
+# adding rows
+new_df = rbind(df, c(5,"e",50))
+
+new_df
+```
+
+*NOTE: OBSERVER WHAT HAPPENNED TO THE DATA TYPES*
+
+## Combining data frames
+
+```{r}
+# create df1 and df11
+df1 = data.frame(fname=c("james","clinton"), lname=c("andrew","moshe"), gender=c("MALE","MALE"))
+
+df1
+
+df11 = data.frame(fname=c("veroh","ashley"), lname=c("mbithi","hamisi"), gender=c("FEMALE","FEMALE"))
+
+df11
+
+# COMBING THE TWO COLUMNS
+# take note they have similar names
+rbind(df1, df11)
+# try using cbind and observe
+```
+
+WE HAVE FINALLY COME TO THE END OF THE LESSON, PROCEED TO **2.0-Data-Strutures-Assignement.Rmd** and practice what you have learned.
+
+# Bonus
+
+## Comments
+
+To write comments in R, you will use `#` followed by the code. The code chunk below illustrates how to write code. 
+
+```{r}
+# this is a comment, it will not be executed.
+```
+
+## Variables
+
+There are two ways you can define variables in R: -
+
+METHOD 1: **USING = SIGN;** `name = c("fname","lname")`.
+
+METHOD 2: **USING <= SIGN;** `name <= c("fname","lname")`.
