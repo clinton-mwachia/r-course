@@ -123,3 +123,39 @@ if(num2 > 2){
 }
 ```
 
+# Else If Statements
+
+Else if statements helps one to handle multiple conditions before executing the else condition.
+
+The code chunk below illustrates how to make use of the else if statements, we will use the name variable.
+
+```{r}
+# check if the name is available and give access
+name = "james bond"
+
+if(name == "james bond"){
+  cat("name exists in the data base")
+} else if(name == "Clinton Bond"){
+  cat("name clinton exists")
+} else {
+  cat("name does not exists")
+}
+```
+
+In the code chunk above, condition 1 is met because the name is james bond.
+
+In the code chunk below, we change the name to clinton Bond, observe the results.
+
+```{r}
+# check if the name is available and give access
+name = "Clinton Bond"
+
+if(name == "james bond"){
+  cat("name exists in the data base")
+} else if(name == "Clinton Bond"){
+  cat("name clinton exists")
+} else {
+  cat("name does not exists")
+}
+```
+
