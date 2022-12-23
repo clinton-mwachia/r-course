@@ -169,3 +169,68 @@ What is the transpose of matrix A?
 
 # Data Frames
 
+## Preparation
+
+Create two data frames, **df & df2**. Data frame df should contain column named *one* with the data `10.5,11,23,4` and df2 with column named two containing data `1,3,5,7`.
+
+Use the code chunk below.
+
+```{r}
+df = data.frame(one=c(10.5, 11, 23, 4))
+
+df
+
+df2 = data.frame(two=c(1, 3, 5, 7))
+
+df2
+```
+
+## Question 1
+
+Print the structures of the data frames.
+
+```{r}
+str(df)
+```
+
+## Question 2
+
+What is the min, mean, max, and 3rd quartile of column one and two?
+
+*hint: get the summary of the data frames*
+
+```{r}
+
+```
+
+## Question 3
+
+Rename both column `one -> One` and column `two -> Two`.
+
+Print out the data frames.
+
+```{r}
+
+```
+
+## Question 4
+
+Add a new column to the data frame df and fill it with the data from data frame df2. The new column name be named Two.
+
+Print out the new data frame df.
+
+```{r}
+
+```
+
+## Question 5
+
+Combine the two data frames using the appropriate function and assign it to **new_df**
+
+What is new dimensions of new_df?
+
+```{r}
+
+```
+
+# THE END!!
