@@ -23,14 +23,46 @@ Conditional statements are used to  handle decisions in R. They are used to perf
     5. Break Statements.
     6. While loop.
     7. For loop.
+    
+# If statements
+
+An if statement is only executed if the condition being tested evaluates to TRUE. The code chunks below will illustrate some of the use cases.
 
 ```{r}
+# check if a number if greater than a given value and print it
 
+# lets define the variables
+num = 10
+
+# the if statement
+if(num > 10){
+  num
+}
+
+# since the num is not greater than 10 (evaluates to FALSE), the code is not 
+# executed
 ```
 
-## Including Plots
 
 ```{r}
-
+# check if num is equal to
+if(num == 10){
+  num
+}
 ```
 
+
+```{r}
+# check if num is not equal to
+if(num != 10){
+  num
+}
+```
+
+
+```{r}
+# check if num is greater than or equal to
+if(num >= 10){
+  num
+}
+```
