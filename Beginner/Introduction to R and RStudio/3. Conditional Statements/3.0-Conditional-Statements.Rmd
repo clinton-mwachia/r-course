@@ -12,7 +12,17 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Introduction
+
+Conditional statements are used to  handle decisions in R. They are used to perform certain actions if a certain criteria is met. In this session, we will cover the following :- 
+
+    1. If statements.
+    2. If else statements.
+    3. Else if statements.
+    4. Next statements.
+    5. Break Statements.
+    6. While loop.
+    7. For loop.
 
 ```{r}
 
