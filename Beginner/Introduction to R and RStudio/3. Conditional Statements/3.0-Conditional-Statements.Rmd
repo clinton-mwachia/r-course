@@ -80,3 +80,46 @@ if(num <= 10){
   num
 }
 ```
+
+# If Else Statements
+
+An if else statements is used to handle situations that are not handled by the if statement. For instance, in the if statement, if the num is not equal to 10, the code will not be executed, to solve this we will use the else statement to give the user feedback.
+
+Let use create a new variable, name, and use it to illustrate if else statements.
+
+```{r}
+# defining name
+name = "james bond"
+
+# let check if the name jane doe is equal to name
+if(name == "jane doe"){
+  cat(name)
+} else {
+  cat("name is not jane doe")
+}
+```
+
+Lets change the name from jane doe to james bond.
+
+```{r}
+if(name == "james bond"){
+  cat(name)
+} else {
+  cat("name is not jane doe")
+}
+```
+
+As seen above, if the if statement does not catch the condition, it is forwarded to the else condition. Lets try the same but with numbers.
+
+```{r}
+# declare num2
+num2 = 2
+
+# test if the number is greater than 2
+if(num2 > 2){
+  cat("number is greater than 2")
+} else {
+  cat("number is less than 2")
+}
+```
+
