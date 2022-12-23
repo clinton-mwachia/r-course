@@ -1,5 +1,5 @@
 ---
-title: 'Beginner: Fundermentals of R'
+title: 'Fundermentals of R'
 subtitle: '2.0 Data Structures Assignement'
 author: "Prepared By Clinton Moshe Mwachia"
 date: '`r Sys.Date()`'
