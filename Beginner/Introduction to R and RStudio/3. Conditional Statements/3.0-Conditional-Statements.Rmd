@@ -28,6 +28,8 @@ Conditional statements are used to  handle decisions in R. They are used to perf
 
 An if statement is only executed if the condition being tested evaluates to TRUE. The code chunks below will illustrate some of the use cases.
 
+## Greater than
+
 ```{r}
 # check if a number if greater than a given value and print it
 
@@ -43,6 +45,7 @@ if(num > 10){
 # executed
 ```
 
+## Equal to
 
 ```{r}
 # check if num is equal to
@@ -51,6 +54,7 @@ if(num == 10){
 }
 ```
 
+## Not Equal to
 
 ```{r}
 # check if num is not equal to
@@ -59,10 +63,20 @@ if(num != 10){
 }
 ```
 
+## Greater than or Equal to
 
 ```{r}
 # check if num is greater than or equal to
 if(num >= 10){
+  num
+}
+```
+
+## Less than or Equal to
+
+```{r}
+# check if num is greater than or equal to
+if(num <= 10){
   num
 }
 ```
