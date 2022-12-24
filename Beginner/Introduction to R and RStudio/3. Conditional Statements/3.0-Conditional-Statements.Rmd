@@ -21,8 +21,8 @@ Conditional statements are used to  handle decisions in R. They are used to perf
     3. Else if statements.
     4. AND and OR.
     5. For loop.
-    6. Next statements.
-    7. Break Statements.
+    6. Break Statements.
+    7. Next statements.
     8. While loop.
     
     
@@ -230,5 +230,31 @@ animals = list("Elephant", "Lion", "Leopard", "Rhino", "Cheetah")
 # print each animal
 for (animal in animals) {
   cat(paste0(animal, " ")) # to add spaces between the items
+}
+```
+
+# Break Statement
+
+The break statement is used to break the loop when a certain condition is met. The code below will break from the loop if the animal is Leopard.
+
+## List
+
+```{r}
+for (animal in animals) {
+  if(animal == "Leopard"){
+    break
+  }
+  cat(paste0(animal, " ")) # to add spaces between the items
+}
+```
+
+## Vector
+
+```{r}
+for (i in x) {
+  if(i >= 4){
+    break
+  }
+  cat(paste0(i, " ")) # to add spaces between the items
 }
 ```

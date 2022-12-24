@@ -385,6 +385,12 @@ through a vector</a></li>
 <li><a href="#loop-through-a-list" id="toc-loop-through-a-list">Loop
 through a list</a></li>
 </ul></li>
+<li><a href="#break-statement" id="toc-break-statement">Break
+Statement</a>
+<ul>
+<li><a href="#list" id="toc-list">List</a></li>
+<li><a href="#vector" id="toc-vector">Vector</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -398,8 +404,8 @@ session, we will cover the following :-</p>
 3. Else if statements.
 4. AND and OR.
 5. For loop.
-6. Next statements.
-7. Break Statements.
+6. Break Statements.
+7. Next statements.
 8. While loop.</code></pre>
 </div>
 <div id="if-statements" class="section level1">
@@ -595,6 +601,32 @@ for (animal in animals) {
   cat(paste0(animal, &quot; &quot;)) # to add spaces between the items
 }</code></pre>
 <pre><code>## Elephant Lion Leopard Rhino Cheetah</code></pre>
+</div>
+</div>
+<div id="break-statement" class="section level1">
+<h1>Break Statement</h1>
+<p>The break statement is used to break the loop when a certain
+condition is met. The code below will break from the loop if the animal
+is Leopard.</p>
+<div id="list" class="section level2">
+<h2>List</h2>
+<pre class="r"><code>for (animal in animals) {
+  if(animal == &quot;Leopard&quot;){
+    break
+  }
+  cat(paste0(animal, &quot; &quot;)) # to add spaces between the items
+}</code></pre>
+<pre><code>## Elephant Lion</code></pre>
+</div>
+<div id="vector" class="section level2">
+<h2>Vector</h2>
+<pre class="r"><code>for (i in x) {
+  if(i &gt;= 4){
+    break
+  }
+  cat(paste0(i, &quot; &quot;)) # to add spaces between the items
+}</code></pre>
+<pre><code>## 1 2 3</code></pre>
 </div>
 </div>
 
