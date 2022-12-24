@@ -258,3 +258,31 @@ for (i in x) {
   cat(paste0(i, " ")) # to add spaces between the items
 }
 ```
+
+# Next statement
+
+The next statement is used to skip an item if a certain condition in met. When the condition being tested evaluates to true, the iteration will move to the next item. The code chunks below will illustrate it's use cases.
+
+## List
+
+```{r}
+# move to next item if the animal is a Leopard
+for (animal in animals) {
+  if(animal == "Leopard"){
+    next
+  }
+  cat(paste0(animal, " ")) # to add spaces between the items
+}
+```
+
+## Vector
+
+```{r}
+# move to next item if the number is 3
+for (i in x) {
+  if(i == 3){
+    next
+  }
+  cat(paste0(i, " ")) # to add spaces between the items
+}
+```

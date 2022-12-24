@@ -391,6 +391,11 @@ Statement</a>
 <li><a href="#list" id="toc-list">List</a></li>
 <li><a href="#vector" id="toc-vector">Vector</a></li>
 </ul></li>
+<li><a href="#next-statement" id="toc-next-statement">Next statement</a>
+<ul>
+<li><a href="#list-1" id="toc-list-1">List</a></li>
+<li><a href="#vector-1" id="toc-vector-1">Vector</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -627,6 +632,35 @@ is Leopard.</p>
   cat(paste0(i, &quot; &quot;)) # to add spaces between the items
 }</code></pre>
 <pre><code>## 1 2 3</code></pre>
+</div>
+</div>
+<div id="next-statement" class="section level1">
+<h1>Next statement</h1>
+<p>The next statement is used to skip an item if a certain condition in
+met. When the condition being tested evaluates to true, the iteration
+will move to the next item. The code chunks below will illustrate it’s
+use cases.</p>
+<div id="list-1" class="section level2">
+<h2>List</h2>
+<pre class="r"><code># move to next item if the animal is a Leopard
+for (animal in animals) {
+  if(animal == &quot;Leopard&quot;){
+    next
+  }
+  cat(paste0(animal, &quot; &quot;)) # to add spaces between the items
+}</code></pre>
+<pre><code>## Elephant Lion Rhino Cheetah</code></pre>
+</div>
+<div id="vector-1" class="section level2">
+<h2>Vector</h2>
+<pre class="r"><code># move to next item if the number is 3
+for (i in x) {
+  if(i == 3){
+    next
+  }
+  cat(paste0(i, &quot; &quot;)) # to add spaces between the items
+}</code></pre>
+<pre><code>## 1 2 4 5</code></pre>
 </div>
 </div>
 
