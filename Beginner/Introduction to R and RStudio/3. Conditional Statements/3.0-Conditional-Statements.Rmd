@@ -194,5 +194,41 @@ if(a > 5 | b > 5){
 } else {
   cat("atleast one is less than")
 }
+```
 
+# For Loop
+
+A for loop is used to iterate over a given sequence and the perform given operations to individual items. The code chunks below illustrate some of the use cases.
+
+## Loop through a vector
+
+```{r}
+# define a vector
+x = c(1,2,3,4,5)
+
+# print each item of vector x
+for (i in x) {
+  cat(paste0(i, " ")) # to add spaces between the items
+}
+```
+
+What if you wanted to multiply the items by a given number? Proceed to the next chunk and find out how to do it or you can also think about first.
+
+```{r}
+# multiply by 2 and print each item of vector x 
+for (i in x) {
+  cat(paste0(i * 2, " ")) # to add spaces between the items
+}
+```
+
+## Loop through a list
+
+```{r}
+# define a list
+animals = list("Elephant", "Lion", "Leopard", "Rhino", "Cheetah")
+
+# print each animal
+for (animal in animals) {
+  cat(paste0(animal, " ")) # to add spaces between the items
+}
 ```

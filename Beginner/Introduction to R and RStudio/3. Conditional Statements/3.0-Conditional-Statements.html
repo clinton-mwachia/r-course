@@ -378,6 +378,13 @@ Statements</a></li>
 <li><a href="#and-operator" id="toc-and-operator">AND operator</a></li>
 <li><a href="#or-operator" id="toc-or-operator">OR operator</a></li>
 </ul></li>
+<li><a href="#for-loop" id="toc-for-loop">For Loop</a>
+<ul>
+<li><a href="#loop-through-a-vector" id="toc-loop-through-a-vector">Loop
+through a vector</a></li>
+<li><a href="#loop-through-a-list" id="toc-loop-through-a-list">Loop
+through a list</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -390,10 +397,10 @@ session, we will cover the following :-</p>
 2. If else statements.
 3. Else if statements.
 4. AND and OR.
-5. Next statements.
-6. Break Statements.
-7. While loop.
-8. For loop.</code></pre>
+5. For loop.
+6. Next statements.
+7. Break Statements.
+8. While loop.</code></pre>
 </div>
 <div id="if-statements" class="section level1">
 <h1>If statements</h1>
@@ -552,6 +559,42 @@ if(a &gt; 5 | b &gt; 5){
   cat(&quot;atleast one is less than&quot;)
 }</code></pre>
 <pre><code>## atleast one greater than</code></pre>
+</div>
+</div>
+<div id="for-loop" class="section level1">
+<h1>For Loop</h1>
+<p>A for loop is used to iterate over a given sequence and the perform
+given operations to individual items. The code chunks below illustrate
+some of the use cases.</p>
+<div id="loop-through-a-vector" class="section level2">
+<h2>Loop through a vector</h2>
+<pre class="r"><code># define a vector
+x = c(1,2,3,4,5)
+
+# print each item of vector x
+for (i in x) {
+  cat(paste0(i, &quot; &quot;)) # to add spaces between the items
+}</code></pre>
+<pre><code>## 1 2 3 4 5</code></pre>
+<p>What if you wanted to multiply the items by a given number? Proceed
+to the next chunk and find out how to do it or you can also think about
+first.</p>
+<pre class="r"><code># multiply by 2 and print each item of vector x 
+for (i in x) {
+  cat(paste0(i * 2, &quot; &quot;)) # to add spaces between the items
+}</code></pre>
+<pre><code>## 2 4 6 8 10</code></pre>
+</div>
+<div id="loop-through-a-list" class="section level2">
+<h2>Loop through a list</h2>
+<pre class="r"><code># define a list
+animals = list(&quot;Elephant&quot;, &quot;Lion&quot;, &quot;Leopard&quot;, &quot;Rhino&quot;, &quot;Cheetah&quot;)
+
+# print each animal
+for (animal in animals) {
+  cat(paste0(animal, &quot; &quot;)) # to add spaces between the items
+}</code></pre>
+<pre><code>## Elephant Lion Leopard Rhino Cheetah</code></pre>
 </div>
 </div>
 
