@@ -20,10 +20,11 @@ Conditional statements are used to  handle decisions in R. They are used to perf
     2. If else statements.
     3. Else if statements.
     4. AND and OR.
-    5. Next statements.
-    6. Break Statements.
-    7. While loop.
-    8. For loop.
+    5. For loop.
+    6. Next statements.
+    7. Break Statements.
+    8. While loop.
+    
     
 # If statements
 
