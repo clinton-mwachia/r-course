@@ -11,7 +11,7 @@
 
 <meta name="author" content="Prepared By Clinton Moshe Mwachia" />
 
-<meta name="date" content="2022-12-23" />
+<meta name="date" content="2022-12-24" />
 
 <title>Fundermentals of R</title>
 
@@ -353,7 +353,7 @@ display: none;
 <h1 class="title toc-ignore">Fundermentals of R</h1>
 <h3 class="subtitle">3.0 Conditional Statements</h3>
 <h4 class="author">Prepared By Clinton Moshe Mwachia</h4>
-<h4 class="date">2022-12-23</h4>
+<h4 class="date">2022-12-24</h4>
 
 </div>
 
@@ -369,6 +369,15 @@ display: none;
 <li><a href="#less-than-or-equal-to" id="toc-less-than-or-equal-to">Less
 than or Equal to</a></li>
 </ul></li>
+<li><a href="#if-else-statements" id="toc-if-else-statements">If Else
+Statements</a></li>
+<li><a href="#else-if-statements" id="toc-else-if-statements">Else If
+Statements</a></li>
+<li><a href="#and-and-or-statements." id="toc-and-and-or-statements.">AND and OR statements.</a>
+<ul>
+<li><a href="#and-operator" id="toc-and-operator">AND operator</a></li>
+<li><a href="#or-operator" id="toc-or-operator">OR operator</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -380,10 +389,11 @@ session, we will cover the following :-</p>
 <pre><code>1. If statements.
 2. If else statements.
 3. Else if statements.
-4. Next statements.
-5. Break Statements.
-6. While loop.
-7. For loop.</code></pre>
+4. AND and OR.
+5. Next statements.
+6. Break Statements.
+7. While loop.
+8. For loop.</code></pre>
 </div>
 <div id="if-statements" class="section level1">
 <h1>If statements</h1>
@@ -399,7 +409,7 @@ num = 10
 
 # the if statement
 if(num &gt; 10){
-  num
+  cat(num)
 }
 
 # since the num is not greater than 10 (evaluates to FALSE), the code is not 
@@ -409,32 +419,139 @@ if(num &gt; 10){
 <h2>Equal to</h2>
 <pre class="r"><code># check if num is equal to
 if(num == 10){
-  num
+  cat(num)
 }</code></pre>
-<pre><code>## [1] 10</code></pre>
+<pre><code>## 10</code></pre>
 </div>
 <div id="not-equal-to" class="section level2">
 <h2>Not Equal to</h2>
 <pre class="r"><code># check if num is not equal to
 if(num != 10){
-  num
+  cat(num)
 }</code></pre>
 </div>
 <div id="greater-than-or-equal-to" class="section level2">
 <h2>Greater than or Equal to</h2>
 <pre class="r"><code># check if num is greater than or equal to
 if(num &gt;= 10){
-  num
+  cat(num)
 }</code></pre>
-<pre><code>## [1] 10</code></pre>
+<pre><code>## 10</code></pre>
 </div>
 <div id="less-than-or-equal-to" class="section level2">
 <h2>Less than or Equal to</h2>
 <pre class="r"><code># check if num is greater than or equal to
 if(num &lt;= 10){
-  num
+  cat(num)
 }</code></pre>
-<pre><code>## [1] 10</code></pre>
+<pre><code>## 10</code></pre>
+</div>
+</div>
+<div id="if-else-statements" class="section level1">
+<h1>If Else Statements</h1>
+<p>An if else statements is used to handle situations that are not
+handled by the if statement. For instance, in the if statement, if the
+num is not equal to 10, the code will not be executed, to solve this we
+will use the else statement to give the user feedback.</p>
+<p>Let use create a new variable, name, and use it to illustrate if else
+statements.</p>
+<pre class="r"><code># defining name
+name = &quot;james bond&quot;
+
+# let check if the name jane doe is equal to name
+if(name == &quot;jane doe&quot;){
+  cat(name)
+} else {
+  cat(&quot;name is not jane doe&quot;)
+}</code></pre>
+<pre><code>## name is not jane doe</code></pre>
+<p>Lets change the name from <em>jane doe</em> to <em>james
+bond</em>.</p>
+<pre class="r"><code>if(name == &quot;james bond&quot;){
+  cat(name)
+} else {
+  cat(&quot;name is not jane doe&quot;)
+}</code></pre>
+<pre><code>## james bond</code></pre>
+<p>As seen above, if the if statement does not catch the condition, it
+is forwarded to the else condition. Lets try the same but with
+numbers.</p>
+<pre class="r"><code># declare num2
+num2 = 2
+
+# test if the number is greater than 2
+if(num2 &gt; 2){
+  cat(&quot;number is greater than 2&quot;)
+} else {
+  cat(&quot;number is less than 2&quot;)
+}</code></pre>
+<pre><code>## number is less than 2</code></pre>
+</div>
+<div id="else-if-statements" class="section level1">
+<h1>Else If Statements</h1>
+<p>Else if statements helps one to handle multiple conditions before
+executing the else condition.</p>
+<p>The code chunk below illustrates how to make use of the else if
+statements, we will use the name variable.</p>
+<pre class="r"><code># check if the name is available and give access
+name = &quot;james bond&quot;
+
+if(name == &quot;james bond&quot;){
+  cat(&quot;name exists in the data base&quot;)
+} else if(name == &quot;Clinton Bond&quot;){
+  cat(&quot;name clinton exists&quot;)
+} else {
+  cat(&quot;name does not exists&quot;)
+}</code></pre>
+<pre><code>## name exists in the data base</code></pre>
+<p>In the code chunk above, condition 1 is met because the name is james
+bond.</p>
+<p>In the code chunk below, we change the name to clinton Bond, observe
+the results.</p>
+<pre class="r"><code># check if the name is available and give access
+name = &quot;Clinton Bond&quot;
+
+if(name == &quot;james bond&quot;){
+  cat(&quot;name exists in the data base&quot;)
+} else if(name == &quot;Clinton Bond&quot;){
+  cat(&quot;name clinton exists&quot;)
+} else {
+  cat(&quot;name does not exists&quot;)
+}</code></pre>
+<pre><code>## name clinton exists</code></pre>
+</div>
+<div id="and-and-or-statements." class="section level1">
+<h1>AND and OR statements.</h1>
+<p>The AND and OR statements are logical operators that are used to
+combine multiple conditional statements. They help one to check for
+multiple criteria before executing a give code.</p>
+<p>When using AND, the code only executes if both conditions are true
+and when using OR, the code executes even when at-least one of the
+conditions in true.</p>
+<p>The code chunks below demonstrate some of the use cases.</p>
+<div id="and-operator" class="section level2">
+<h2>AND operator</h2>
+<pre class="r"><code># define the variables
+a = 5
+b = 7
+
+# check if both are greater than
+if(a &gt; 4 &amp; b &gt; 5){
+  cat(&quot;both a and b are greater than&quot;)
+} else {
+  cat(&quot;both a and b are less than&quot;)
+}</code></pre>
+<pre><code>## both a and b are greater than</code></pre>
+</div>
+<div id="or-operator" class="section level2">
+<h2>OR operator</h2>
+<pre class="r"><code># check if any is greater than
+if(a &gt; 5 | b &gt; 5){
+  cat(&quot;atleast one greater than&quot;)
+} else {
+  cat(&quot;atleast one is less than&quot;)
+}</code></pre>
+<pre><code>## atleast one greater than</code></pre>
 </div>
 </div>
 

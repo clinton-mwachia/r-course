@@ -19,10 +19,11 @@ Conditional statements are used to  handle decisions in R. They are used to perf
     1. If statements.
     2. If else statements.
     3. Else if statements.
-    4. Next statements.
-    5. Break Statements.
-    6. While loop.
-    7. For loop.
+    4. AND and OR.
+    5. Next statements.
+    6. Break Statements.
+    7. While loop.
+    8. For loop.
     
 # If statements
 
@@ -159,3 +160,38 @@ if(name == "james bond"){
 }
 ```
 
+# AND and OR statements.
+
+The AND and OR statements are logical operators that are used to combine multiple conditional statements. They help one to check for multiple criteria before executing a give code.
+
+When using AND, the code only executes if both conditions are true and when using OR, the code executes even when at-least one of the conditions in true.
+
+The code chunks below demonstrate some of the use cases.
+
+## AND operator
+
+```{r}
+# define the variables
+a = 5
+b = 7
+
+# check if both are greater than
+if(a > 4 & b > 5){
+  cat("both a and b are greater than")
+} else {
+  cat("both a and b are less than")
+}
+
+```
+
+## OR operator
+
+```{r}
+# check if any is greater than
+if(a > 5 | b > 5){
+  cat("atleast one greater than")
+} else {
+  cat("atleast one is less than")
+}
+
+```
