@@ -23,7 +23,6 @@ Conditional statements are used to  handle decisions in R. They are used to perf
     5. For loop.
     6. Break Statements.
     7. Next statements.
-    8. While loop.
     
     
 # If statements
@@ -286,3 +285,5 @@ for (i in x) {
   cat(paste0(i, " ")) # to add spaces between the items
 }
 ```
+
+
