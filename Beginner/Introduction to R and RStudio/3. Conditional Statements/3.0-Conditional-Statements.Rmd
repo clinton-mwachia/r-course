@@ -42,7 +42,7 @@ if(num > 10){
   cat(num)
 }
 
-# since the num is not greater than 10 (evaluates to FALSE), the code is not 
+# since the num is not greater than 10 (evaluates to FALSE), the code is not
 # executed
 ```
 
