@@ -1,0 +1,93 @@
+---
+title: "Fundermentals of R"
+subtitle: '3.0 Conditional Statements Assignements'
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Set Up Q1
+
+Create two variables,`x = 10 and y = 20`, and tackle the following question.
+
+## Question 1
+
+Create a new variable, z, and assign it to the result of y > x. Print the value of z using the  `cat()` function
+
+```{r}
+# your code goes here
+```
+
+Change the value of z to your full name and print the new value of z.
+
+## Question 2
+
+```{r}
+# your code goes here
+```
+
+# Set Up Q2
+
+Create a data frame, **Perf**, containing the performance of your class. The data frame is already created for you in the code chunk below, print it.
+
+```{r}
+# creating the perf data frame
+perf = data.frame(
+  Student = c("James", "Peter", "Andrew", "Mercy",  "Magdalene"),
+  Math = c(89,79,50,40,98)
+)
+```
+
+## Question 1
+
+Create a new column, **Grade**, containing the grades of each student based on the following grading system.
+
+    0 - 30 - D
+    31 - 50 - C
+    51 - 70 - B
+    71 - 80 - B+
+    81 - 100 - A
+    
+```{r}
+# your code goes here
+```
+
+## Question 2
+
+Create a new column, **Pass**, containing a Boolean value on whether a student has passed or not. *The pass mark is 50*.
+
+```{r}
+# your code goes here
+```
+
+# Set Up Q3
+
+Create an empty vector, **vec**, of length 10. 
+
+## Question 1
+
+Print the contents of *vec*.
+
+```{r}
+# your code goes here
+```
+
+Create another vector, **vec2**, containing the data `1,2,3,4,5,6,7,8,9,10`. Using the appropriate conditional statements, fill up **vec** with twice the value of **vec2**.
+
+## Question 2
+
+Print the values of **vec**.
+
+*Hint: Use the functions length and for loop*
+
+```{r}
+# your code goes here
+```
+
+
+
