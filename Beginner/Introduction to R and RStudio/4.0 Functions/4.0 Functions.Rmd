@@ -12,22 +12,50 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+A function in R is a block of code that performs certain tasks and can only run when it is called. Functions are normally created and stored into libraries. In this session, we will learn about the following: -
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+      1. Built on functions.
+      2. User defined functions.
+      
+# Built in functions
 
-```{r cars}
-summary(cars)
+These are functions that can be found in the default R work-space. They come with the R and RStudio ecosystem and can be accessed without installing any libraries. Some of the built functions in R are `mean`, `mode`,`median`, `sum` and many more, The code chunks below will show some of the built in functions.
+
+## Absolute value of a number
+
+```{r}
+# get the absolute value of a number
+abs(-10)
 ```
 
-## Including Plots
+## sum of 10 numbers
 
-You can also embed plots, for example:
+```{r}
+# initialize the sum
+total = 0 
+# loop through 10 numbers and sum them
+for (i in 1:10) {
+  total = total + i
+}
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+# print the total
+cat(total)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Logarithm of a number
+
+```{r}
+log(2)
+```
+
+## Split a string by space
+
+```{r}
+# define the string
+name = "James clinton"
+
+# split the string by space
+strsplit(name, " ")
+```
