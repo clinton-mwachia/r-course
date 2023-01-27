@@ -12,8 +12,100 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Set Up Question 1
 
-```{r cars}
-summary(cars)
+Create a function that will accept the first and last name with the age of a person.
+
+```{r}
+# your function goes here
 ```
+
+
+## Question 1
+
+Print out the first name, last name and age of the person.
+
+```{r}
+# your code
+```
+
+## Question 2
+
+Recreate the function and supply default values for the first name, last name and the age. Print the default values to the console.
+
+```{r}
+# your code
+```
+
+# Set Up Question 2
+
+Create a function, *sample_num*, that will sample 20 numbers from 100 numbers. The function will first generate the 20 numbers and later on we will later on create a function to calculate the mean of the numbers. *(DO NOT USE THE BUILD IN MEAN FUNCTION)*
+
+```{r}
+# your code
+```
+
+
+## Question 1
+
+Print out the numbers you generated in the set up above.
+
+```{r}
+# your code
+```
+
+## Question 2
+
+Create a function, *sample_mean*, that accepts a list of numbers and calculates the mean of those numbers. The function should return the mean of the numbers.
+
+*HINT:TEST THE FUNCTION ON SMALL NUMBERS FIRST*
+
+```{r}
+# your function goes here
+```
+
+## Question 3
+
+Calculate the mean of the numbers you generated earlier using the function above.
+
+```{r}
+# your code
+```
+
+# Set Up Question 3
+
+Write a function, *sum_n*, that will accept the number, n, which is the maximum number you will want to sum up-to. The function should return the sum of those numbers.
+
+```{r}
+# your code
+```
+
+## Question 1
+
+What is the sum of the first 20 numbers?
+
+```{r}
+# your code
+```
+
+## Question 2
+
+What is the sum of the first 100 numbers?
+
+```{r}
+# your code
+```
+
+## Question 3
+
+What is the sum of the first 1050 numbers?
+
+```{r}
+# your code
+```
+
+# Conclusion
+
+This is the end of the assignment, Proceed to the next lesson.
+
+GOOD LUCK!!
