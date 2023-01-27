@@ -10,14 +10,13 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 # Set Up Q1
 
 Create two variables,`x = 10 and y = 20`, and tackle the following question.
 
 ## Question 1
 
-Create a new variable, z, and assign it to the result of y > x. Print the value of z using the  `cat()` function
+Create a new variable, z, and assign it to the result of y \> x. Print the value of z using the `cat()` function
 
 ```{r}
 # your code goes here
@@ -52,7 +51,7 @@ Create a new column, **Grade**, containing the grades of each student based on t
     51 - 70 - B
     71 - 80 - B+
     81 - 100 - A
-    
+
 ```{r}
 # your code goes here
 ```
@@ -67,7 +66,7 @@ Create a new column, **Pass**, containing a Boolean value on whether a student h
 
 # Set Up Q3
 
-Create an empty vector, **vec**, of length 10. 
+Create an empty vector, **vec**, of length 10.
 
 ## Question 1
 
@@ -83,11 +82,35 @@ Create another vector, **vec2**, containing the data `1,2,3,4,5,6,7,8,9,10`. Usi
 
 Print the values of **vec**.
 
-*Hint: Use the functions length and for loop*
+*Hint: Use the functions `length` and for loop*
 
 ```{r}
 # your code goes here
 ```
 
 
+# Set Up Q4
+
+Create a data frame, **df**, containing the column, *Num*, filled with the first 20 positive number.
+
+```{r}
+# your code goes here
+```
+
+
+## Question 1
+
+Print out the last four parts of the data frame.
+
+```{r}
+# your code goes here
+```
+
+## Question 2
+
+Extract out **ONLY** the even numbers of the data frame, *df* and assign the result to a vector called *Even*. Print the values of Even on the console.
+
+```{r}
+# your code goes here
+```
 
