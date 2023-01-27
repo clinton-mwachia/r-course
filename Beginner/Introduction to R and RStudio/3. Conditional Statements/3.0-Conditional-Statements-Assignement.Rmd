@@ -16,7 +16,7 @@ Create two variables,`x = 10 and y = 20`, and tackle the following question.
 
 ## Question 1
 
-Create a new variable, z, and assign it to the result of y \> x. Print the value of z using the `cat()` function
+Create a new variable, z, and assign it to the result of y > x. Print the value of z using the `cat()` function
 
 ```{r}
 # your code goes here
