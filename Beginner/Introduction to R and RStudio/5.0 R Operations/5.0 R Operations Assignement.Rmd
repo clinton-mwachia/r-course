@@ -5,11 +5,129 @@ author: "Prepared By Clinton Moshe Mwachia"
 date: "`r Sys.Date()`"
 output: 
   html_document:
-    toc:true
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#
+# SetUp
+
+Define the following variables: -
+
+- a with the value of 10
+- b with the value of 5
+- c with the value of TRUE
+- d with the value of "hello"
+
+# Question 1
+
+Using Arithmetic Operators,calculate the following:-
+
+    1. a + b
+    2. a - b
+    3. a * b
+    4. a / b
+    5. a ^ 2
+    
+```{r}
+# your code
+```
+
+
+# Question 2
+
+Using comparison operators, evaluate the following expressions and store the result in a variable
+
+    1. `a` is equal to `b`
+    2. `a` is not equal to `b`
+    3. `a` is greater than `b`
+    4. `a` is less than `b`
+    5. `a` is greater than or equal to `b`
+    6. `a` is less than or equal to `b`
+    
+```{r}
+# your code
+```    
+    
+# Question 3
+
+Using logical operators, evaluate the following expressions and store the result in a variable:
+
+    1. `c` AND `c`
+    2. `c` OR `c`
+    3.  NOT `c`
+    4. `a` is greater than `b` AND `c` is TRUE
+    5. `d` is equal to "hello" OR `c` is FALSE
+    
+```{r}
+# your code
+```
+
+# Question 4
+
+Using concatenation operator, combine the following vectors
+
+    x <- c("apple", "banana", "orange")
+    y <- c("grape", "pineapple", "watermelon")
+    
+```{r}
+# your code
+```
+
+# Question 5
+
+Write a program that prompts the user to enter two numbers and performs the following operations:-
+
+    1. Adds the two numbers
+    2. Subtracts the second number from the first number
+    3. Multiplies the two numbers
+    4. Divides the first number by the second number
+    
+```{r}
+# your code
+```
+
+# Question 6
+
+Using the seq() function, create a vector of integers from 1 to 10. Using arithmetic operators, calculate the sum of the vector.
+
+```{r}
+# your code
+```
+
+# Question 7
+
+Create a variable age with a value of 30. Using comparison operators, write an if-else statement that prints "You are an adult" if age is greater than or equal to 18, and "You are not yet an adult" if age is less than 18.
+
+```{r}
+# your code
+```
+
+# Question 8
+
+Using logical operators, write a program that prompts the user to enter a number and checks if it is a multiple of both 3 and 5. Print "The number is a multiple of both 3 and 5" if it is, and "The number is not a multiple of both 3 and 5" if it is not
+
+```{r}
+# your code
+```
+
+# Question 9
+
+Using the concatenation operator, create a vector fruits with the values "apple", "banana", and "orange". Create another vector prices with the values 0.50, 0.30, and 0.75. Using the paste() function, combine the two vectors into a new vector fruit_prices, where each element is a combination of the fruit name and its corresponding price (e.g. "apple - 0.50"). Print the resulting vector.
+
+```{r}
+# your code
+```
+
+# Question 10
+
+Using the rep() function, create a vector with 10 repetitions of the string "hello". Using the `toUpper()` function, convert the vector to all uppercase letters. Using the concatenation operator, add an exclamation mark to the end of each element in the vector. Print the resulting vector.
+
+```{r}
+# your code
+```
+
+# NOTE
+Your submission should include a well-documented R code explaining each step of your code.
