@@ -133,3 +133,47 @@ These operators are used to compare values. They will always return a Boolean va
 ```{r}
 100 > 1020
 ```
+
+## Logical operators
+
+Logical operators are used to perform logical operations.
+
+### Logical AND Operator
+
+```{r}
+TRUE & TRUE
+
+TRUE & FALSE
+```
+
+### Logical OR Operator
+
+```{r}
+TRUE | TRUE
+
+TRUE | FALSE
+```
+
+### Logical NOT Operator
+
+```{r}
+!TRUE
+
+!(2==5)
+```
+
+## concatenation operators
+
+This operator is used to combine variables into a vector.
+
+```{r}
+y = c(1,2,3)
+
+y
+```
+
+# Assignement
+
+This is the end of the lesson, Proceed to the assignment.
+
+GOOD LUCK!!
