@@ -377,6 +377,16 @@ Data</a>
 <li><a href="#lists" id="toc-lists">Lists</a></li>
 <li><a href="#factors" id="toc-factors">Factors</a></li>
 </ul></li>
+<li><a href="#working-directory" id="toc-working-directory">Working
+Directory</a>
+<ul>
+<li><a href="#get-working-directory" id="toc-get-working-directory">Get
+Working Directory</a></li>
+<li><a href="#setting-the-working-directory" id="toc-setting-the-working-directory">Setting the working
+Directory</a></li>
+<li><a href="#list-files-in-working-directory" id="toc-list-files-in-working-directory">List Files in working
+directory</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -497,6 +507,41 @@ factor_gender &lt;- factor(gender)
 factor_gender</code></pre>
 <pre><code>## [1] Male   Female Male   Male  
 ## Levels: Female Male</code></pre>
+</div>
+</div>
+<div id="working-directory" class="section level2">
+<h2>Working Directory</h2>
+<p>The working directory in R refers to the folder or directory where R
+will look for files and where it will save files by default.
+Understanding and managing the working directory is important for
+efficient file handling and data analysis. In this lesson, we will cover
+the concept of the working directory in R and explore various functions
+to set, check, and change the working directory.</p>
+<div id="get-working-directory" class="section level3">
+<h3>Get Working Directory</h3>
+<p>To check the current working directory in R, you can use the
+<code>getwd()</code> function. This function returns the path to the
+current working directory as a character string. Run the code chunk to
+get the current working directory.</p>
+<pre class="r"><code># get current working directory
+getwd()</code></pre>
+<pre><code>## [1] &quot;F:/R/r-course/Intermediate/1.0 Data&quot;</code></pre>
+</div>
+<div id="setting-the-working-directory" class="section level3">
+<h3>Setting the working Directory</h3>
+<p>To set a specific directory as the working directory in R, you can
+use the <code>setwd()</code> function or use the IDE setting. This
+function takes a path to the desired directory as an argument and sets
+it as the working directory.</p>
+<pre class="r"><code># set a working directory
+setwd(&quot;F:/R/r-course/Intermediate&quot;)
+getwd()</code></pre>
+<pre><code>## [1] &quot;F:/R/r-course/Intermediate&quot;</code></pre>
+</div>
+<div id="list-files-in-working-directory" class="section level3">
+<h3>List Files in working directory</h3>
+<pre class="r"><code>list.files()</code></pre>
+<pre><code>## [1] &quot;1.0-Data-Part-1.html&quot; &quot;1.0-Data-Part-1.Rmd&quot;  &quot;1.0 Data Part 1.Rmd&quot;</code></pre>
 </div>
 </div>
 </div>

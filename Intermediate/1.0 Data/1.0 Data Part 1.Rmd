@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
 ```
 
 # Introduction
@@ -98,5 +98,34 @@ gender <- c("Male", "Female", "Male", "Male")
 factor_gender <- factor(gender)
 
 factor_gender
+```
+
+## Working Directory
+
+The working directory in R refers to the folder or directory where R will look for files and where it will save files by default. Understanding and managing the working directory is important for efficient file handling and data analysis. In this lesson, we will cover the concept of the working directory in R and explore various functions to set, check, and change the working directory.
+
+### Get Working Directory
+
+To check the current working directory in R, you can use the `getwd()` function. This function returns the path to the current working directory as a character string. Run the code chunk to get the current working directory.
+
+```{r}
+# get current working directory
+getwd()
+```
+
+### Setting the working Directory
+
+To set a specific directory as the working directory in R, you can use the `setwd()` function or use the IDE setting. This function takes a path to the desired directory as an argument and sets it as the working directory.
+
+```{r}
+# set a working directory
+setwd("F:/R/r-course/Intermediate")
+getwd()
+```
+
+### List Files in working directory
+
+```{r}
+list.files()
 ```
 
