@@ -153,9 +153,6 @@ write.csv(data, file = "./data/data.csv")
 # write txt file
 write.table(data, file = "./data/data.txt")
 
-# write txt file
-write.table(data, file = "./data/data.txt")
-
 # write json file
 jsonlite::write_json(data, path = "./data/data.json")
 
