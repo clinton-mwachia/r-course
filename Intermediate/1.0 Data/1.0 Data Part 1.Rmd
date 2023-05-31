@@ -23,12 +23,12 @@ R comes with a package called "datasets" that contains numerous built-in dataset
 NOTE: This lesson is only limited to showing how to loading data, manipulation will come later on.
 
 ```{r method1}
-library(help = "datasets")
+#library(help = "datasets")
 ```
 
 
 ```{r method2}
-data()
+#data()
 ```
 
 ### Sample npk Data
@@ -44,3 +44,59 @@ head(npk, 4)
 # view the first 4 rows
 head(cars, 4)
 ```
+
+## User Created Data
+
+In R, users have the flexibility to create and manipulate their own data sets. This capability allows for the exploration, analysis, and modeling of custom data, tailored to specific needs. In this lesson, we will cover various techniques and code examples for creating user-created data in R.
+
+### Vectors
+
+```{r vec}
+# Creating a numeric vector
+num_vec <- c(1, 2, 3, 4, 5)
+num_vec
+# Creating a character vector
+char_vec <- c("one", "two", "three")
+char_vec
+# Creating a logical vector
+logic_vec <- c(TRUE, FALSE, TRUE)
+logic_vec
+```
+
+### Data Frame
+
+```{r}
+# Creating a data frame
+fname <- c("James", "Emily", "David")
+age <- c(25, 30, 35)
+
+df <- data.frame(fname, age)
+df
+```
+
+### Matrix
+
+```{r}
+# Creating a matrix
+mat <- matrix(1:9, nrow = 3, ncol = 3)
+mat
+```
+
+### Lists
+
+```{r}
+# Creating a list
+lis <- list(num_vec, char_vec, df, mat)
+lis
+```
+
+### Factors
+
+```{r}
+# Creating a factor
+gender <- c("Male", "Female", "Male", "Male")
+factor_gender <- factor(gender)
+
+factor_gender
+```
+

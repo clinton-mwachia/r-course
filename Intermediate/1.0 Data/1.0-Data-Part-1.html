@@ -368,6 +368,15 @@ Data</a></li>
 <li><a href="#sample-cars-data" id="toc-sample-cars-data">Sample Cars
 Data</a></li>
 </ul></li>
+<li><a href="#user-created-data" id="toc-user-created-data">User Created
+Data</a>
+<ul>
+<li><a href="#vectors" id="toc-vectors">Vectors</a></li>
+<li><a href="#data-frame" id="toc-data-frame">Data Frame</a></li>
+<li><a href="#matrix" id="toc-matrix">Matrix</a></li>
+<li><a href="#lists" id="toc-lists">Lists</a></li>
+<li><a href="#factors" id="toc-factors">Factors</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -388,8 +397,8 @@ either <code>data()</code> or <code>library(help = &quot;datasets&quot;)</code>,
 run the code chunks below to see them in action.</p>
 <p>NOTE: This lesson is only limited to showing how to loading data,
 manipulation will come later on.</p>
-<pre class="r"><code>library(help = &quot;datasets&quot;)</code></pre>
-<pre class="r"><code>data()</code></pre>
+<pre class="r"><code>#library(help = &quot;datasets&quot;)</code></pre>
+<pre class="r"><code>#data()</code></pre>
 <div id="sample-npk-data" class="section level3">
 <h3>Sample npk Data</h3>
 <pre class="r"><code># view the first 4 rows
@@ -409,6 +418,85 @@ head(cars, 4)</code></pre>
 ## 2     4   10
 ## 3     7    4
 ## 4     7   22</code></pre>
+</div>
+</div>
+<div id="user-created-data" class="section level2">
+<h2>User Created Data</h2>
+<p>In R, users have the flexibility to create and manipulate their own
+data sets. This capability allows for the exploration, analysis, and
+modeling of custom data, tailored to specific needs. In this lesson, we
+will cover various techniques and code examples for creating
+user-created data in R.</p>
+<div id="vectors" class="section level3">
+<h3>Vectors</h3>
+<pre class="r"><code># Creating a numeric vector
+num_vec &lt;- c(1, 2, 3, 4, 5)
+num_vec</code></pre>
+<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre class="r"><code># Creating a character vector
+char_vec &lt;- c(&quot;one&quot;, &quot;two&quot;, &quot;three&quot;)
+char_vec</code></pre>
+<pre><code>## [1] &quot;one&quot;   &quot;two&quot;   &quot;three&quot;</code></pre>
+<pre class="r"><code># Creating a logical vector
+logic_vec &lt;- c(TRUE, FALSE, TRUE)
+logic_vec</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
+</div>
+<div id="data-frame" class="section level3">
+<h3>Data Frame</h3>
+<pre class="r"><code># Creating a data frame
+fname &lt;- c(&quot;James&quot;, &quot;Emily&quot;, &quot;David&quot;)
+age &lt;- c(25, 30, 35)
+
+df &lt;- data.frame(fname, age)
+df</code></pre>
+<pre><code>##   fname age
+## 1 James  25
+## 2 Emily  30
+## 3 David  35</code></pre>
+</div>
+<div id="matrix" class="section level3">
+<h3>Matrix</h3>
+<pre class="r"><code># Creating a matrix
+mat &lt;- matrix(1:9, nrow = 3, ncol = 3)
+mat</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9</code></pre>
+</div>
+<div id="lists" class="section level3">
+<h3>Lists</h3>
+<pre class="r"><code># Creating a list
+lis &lt;- list(num_vec, char_vec, df, mat)
+lis</code></pre>
+<pre><code>## [[1]]
+## [1] 1 2 3 4 5
+## 
+## [[2]]
+## [1] &quot;one&quot;   &quot;two&quot;   &quot;three&quot;
+## 
+## [[3]]
+##   fname age
+## 1 James  25
+## 2 Emily  30
+## 3 David  35
+## 
+## [[4]]
+##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9</code></pre>
+</div>
+<div id="factors" class="section level3">
+<h3>Factors</h3>
+<pre class="r"><code># Creating a factor
+gender &lt;- c(&quot;Male&quot;, &quot;Female&quot;, &quot;Male&quot;, &quot;Male&quot;)
+factor_gender &lt;- factor(gender)
+
+factor_gender</code></pre>
+<pre><code>## [1] Male   Female Male   Male  
+## Levels: Female Male</code></pre>
 </div>
 </div>
 </div>
