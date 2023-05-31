@@ -1,0 +1,4 @@
+"name" "age" "gender"
+"1" "James John" 23 "M"
+"2" "Sydney Aundrew" 34 "M"
+"3" "Esther Kubuni" 67 "F"

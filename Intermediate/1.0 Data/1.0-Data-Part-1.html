@@ -387,6 +387,11 @@ Directory</a></li>
 <li><a href="#list-files-in-working-directory" id="toc-list-files-in-working-directory">List Files in working
 directory</a></li>
 </ul></li>
+<li><a href="#load-external-data" id="toc-load-external-data">Load
+External Data</a>
+<ul>
+<li><a href="#create-data" id="toc-create-data">Create Data</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -541,7 +546,40 @@ getwd()</code></pre>
 <div id="list-files-in-working-directory" class="section level3">
 <h3>List Files in working directory</h3>
 <pre class="r"><code>list.files()</code></pre>
-<pre><code>## [1] &quot;1.0-Data-Part-1.html&quot; &quot;1.0-Data-Part-1.Rmd&quot;  &quot;1.0 Data Part 1.Rmd&quot;</code></pre>
+<pre><code>## [1] &quot;1.0-Data-Part-1.html&quot; &quot;1.0-Data-Part-1.Rmd&quot;  &quot;1.0 Data Part 1.Rmd&quot; 
+## [4] &quot;data&quot;</code></pre>
+</div>
+</div>
+<div id="load-external-data" class="section level2">
+<h2>Load External Data</h2>
+<p>Lets first create own files to use for this section of the lesson. We
+will create a data folder, and the write our various data into the
+folder.</p>
+<div id="create-data" class="section level3">
+<h3>Create Data</h3>
+<p>Run the code chunk below to create various data files</p>
+<pre class="r"><code># create the data to be written
+data = data.frame(name=c(&quot;James John&quot;, &quot;Sydney Aundrew&quot;, &quot;Esther Kubuni&quot;),
+                  age = c(23, 34, 67),
+                  gender = c(&quot;M&quot;,&quot;M&quot;,&quot;F&quot;))
+# create csv data types
+# two write the data in the current folder, we have to change the working directory
+setwd(&quot;F:/R/r-course/Intermediate/1.0 Data&quot;)
+
+# write csv file
+# create the data folder
+write.csv(data, file = &quot;./data/data.csv&quot;)
+
+# write txt file
+write.table(data, file = &quot;./data/data.txt&quot;)
+
+# write txt file
+write.table(data, file = &quot;./data/data.txt&quot;)
+
+# write json file
+jsonlite::write_json(data, path = &quot;./data/data.json&quot;)
+
+# for now we will work with these, the rest you&#39;ll work with during the assignement</code></pre>
 </div>
 </div>
 </div>

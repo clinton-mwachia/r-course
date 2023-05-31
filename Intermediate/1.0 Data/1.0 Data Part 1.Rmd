@@ -129,3 +129,36 @@ getwd()
 list.files()
 ```
 
+## Load External Data
+
+Lets first create own files to use for this section of the lesson. We will create a data folder, and the write our various data into the folder.
+
+### Create Data
+
+Run the code chunk below to create various data files
+
+```{r create-data}
+# create the data to be written
+data = data.frame(name=c("James John", "Sydney Aundrew", "Esther Kubuni"),
+                  age = c(23, 34, 67),
+                  gender = c("M","M","F"))
+# create csv data types
+# two write the data in the current folder, we have to change the working directory
+setwd("F:/R/r-course/Intermediate/1.0 Data")
+
+# write csv file
+# create the data folder
+write.csv(data, file = "./data/data.csv")
+
+# write txt file
+write.table(data, file = "./data/data.txt")
+
+# write txt file
+write.table(data, file = "./data/data.txt")
+
+# write json file
+jsonlite::write_json(data, path = "./data/data.json")
+
+# for now we will work with these, the rest you'll work with during the assignement
+```
+
