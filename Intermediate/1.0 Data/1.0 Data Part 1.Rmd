@@ -3,29 +3,44 @@ title: "Fundermentals of R"
 subtitle: 'Intermediate R - 1.0 Data'
 author: "Prepared By Clinton Moshe Mwachia"
 date: "`r Sys.Date()`"
-output: html_document
+output: 
+  html_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+# Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+R provides a wide range of built-in datasets that are readily available for analysis and exploration. These datasets cover various domains, including statistics, economics, biology, and social sciences. In this lesson, we will explore some commonly used built-in datasets in R along with code examples to access and manipulate them
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## In Built Data
 
-```{r cars}
-summary(cars)
+R comes with a package called "datasets" that contains numerous built-in datasets. To access these datasets, we have to load the "datasets" package. To view a list of all the datasets, you can use either `data()` or `library(help = "datasets")`, run the code chunks below to see them in action.
+
+NOTE: This lesson is only limited to showing how to loading data, manipulation will come later on.
+
+```{r method1}
+library(help = "datasets")
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r method2}
+data()
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Sample npk Data
+
+```{r npk-data}
+# view the first 4 rows
+head(npk, 4)
+```
+
+### Sample Cars Data
+
+```{r cars-data}
+# view the first 4 rows
+head(cars, 4)
+```
