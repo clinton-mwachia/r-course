@@ -86,4 +86,14 @@ A frequency distribution displays the frequency (count) of each unique value in 
 table(vec)
 ```
 
+## Summary Statistics
 
+Summary statistics provide a comprehensive summary of the central tendency, dispersion, and shape of a data set.
+
+```{r summary}
+# summary of vec
+summary(vec)
+```
+
+
+YAY! CONGRATULATIONS ON FINISHING YOUR LESSON ON STATISTICAL ANALYSIS IN R. PROCEED TO THE ASSIGNMENT.
