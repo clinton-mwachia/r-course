@@ -29,7 +29,6 @@ NOTE: This lesson is only limited to showing how to loading data, manipulation w
 #library(help = "datasets")
 ```
 
-
 ```{r method2}
 #data()
 ```
@@ -68,7 +67,7 @@ logic_vec
 
 ### Data Frame
 
-```{r}
+```{r DF}
 # Creating a data frame
 fname <- c("James", "Emily", "David")
 age <- c(25, 30, 35)
@@ -79,7 +78,7 @@ df
 
 ### Matrix
 
-```{r}
+```{r MATRIX}
 # Creating a matrix
 mat <- matrix(1:9, nrow = 3, ncol = 3)
 mat
@@ -87,7 +86,7 @@ mat
 
 ### Lists
 
-```{r}
+```{r list}
 # Creating a list
 lis <- list(num_vec, char_vec, df, mat)
 lis
@@ -95,7 +94,7 @@ lis
 
 ### Factors
 
-```{r}
+```{r fc}
 # Creating a factor
 gender <- c("Male", "Female", "Male", "Male")
 factor_gender <- factor(gender)
@@ -111,7 +110,7 @@ The working directory in R refers to the folder or directory where R will look f
 
 To check the current working directory in R, you can use the `getwd()` function. This function returns the path to the current working directory as a character string. Run the code chunk to get the current working directory.
 
-```{r}
+```{r dir}
 # get current working directory
 getwd()
 ```
@@ -120,7 +119,7 @@ getwd()
 
 To set a specific directory as the working directory in R, you can use the `setwd()` function or use the IDE setting. This function takes a path to the desired directory as an argument and sets it as the working directory.
 
-```{r}
+```{r dir2}
 # set a working directory
 #setwd("F:/R/r-course/Intermediate")
 #getwd()
@@ -128,7 +127,7 @@ To set a specific directory as the working directory in R, you can use the `setw
 
 ### List Files in working directory
 
-```{r}
+```{r list_files}
 list.files()
 ```
 
@@ -147,7 +146,7 @@ data = data.frame(name=c("James John", "Sydney Aundrew", "Esther Kubuni"),
                   gender = c("M","M","F"))
 # create csv data types
 # two write the data in the current folder, we have to change the working directory
-#setwd("F:/R/r-course/Intermediate/1.0 Data")
+# setwd("F:/R/r-course/Intermediate/1.0 Data")
 
 # write csv file
 # create the data folder
@@ -163,12 +162,71 @@ write.xlsx(data, file = "./data/data.xlsx")
 jsonlite::write_json(data, path = "./data/data.json")
 
 # sqlite
-RSQLite::dbConnect(drv = RSQLite::SQLite(), dbname = "./data/database.db")
+con = RSQLite::dbConnect(drv = RSQLite::SQLite(), dbname = "./data/database.db")
+
+# write data into the db
+RSQLite::dbWriteTable(con, "mtcars", mtcars)
 
 # for now we will work with these, the rest you'll work with during the assignement
 ```
 
-### Loading the Data
+### CSV DATA
 
-```{r loading-data}
-#
+```{r loading-data-csv}
+# change working directory
+setwd("F:/Software Data Solutions/Courses/r-course/Intermediate/1.0 Data")
+# loading csv data
+data = read.csv("data/data.csv")
+
+# head of the data
+head(data)
+```
+
+### EXCEL DATA
+
+```{r loading-data-excel}
+# loading csv data
+data2 = readxl::read_excel("data/data.xlsx")
+
+# head of the data
+head(data2)
+```
+
+### TEXT FILE DATA
+
+```{r loading-data-txt}
+# loading txt file data
+data3 = read.table("data/data.txt", header = TRUE)
+
+# head of the data
+head(data3)
+```
+
+### JSON DATA
+
+```{r loading-data-json}
+# loading json data
+data4 = jsonlite::fromJSON("data/data.json")
+
+# head of the data
+head(data4)
+```
+
+### SQLITE DATA
+
+```{r loading-data-sqlite}
+# query to read data from the sqlite database
+query <- "SELECT * FROM mtcars"
+
+# execute the query
+data <- RSQLite::dbGetQuery(con, query)
+
+# head of the data
+head(data)
+
+# disconnect the connection
+RSQLite::dbDisconnect(con)
+```
+
+
+HURRAY! YOU HAVE FINISHED THE LESSON, PROCEED TO THE ASSIGNEMENT.

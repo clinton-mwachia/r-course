@@ -391,6 +391,12 @@ directory</a></li>
 External Data</a>
 <ul>
 <li><a href="#create-data" id="toc-create-data">Create Data</a></li>
+<li><a href="#csv-data" id="toc-csv-data">CSV DATA</a></li>
+<li><a href="#excel-data" id="toc-excel-data">EXCEL DATA</a></li>
+<li><a href="#text-file-data" id="toc-text-file-data">TEXT FILE
+DATA</a></li>
+<li><a href="#json-data" id="toc-json-data">JSON DATA</a></li>
+<li><a href="#sqlite-data" id="toc-sqlite-data">SQLITE DATA</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -545,8 +551,7 @@ it as the working directory.</p>
 <div id="list-files-in-working-directory" class="section level3">
 <h3>List Files in working directory</h3>
 <pre class="r"><code>list.files()</code></pre>
-<pre><code>## [1] &quot;1.0-Data-Part-1.html&quot; &quot;1.0-Data-Part-1.pdf&quot;  &quot;1.0-Data-Part-1.Rmd&quot; 
-## [4] &quot;1.0 Data Part 1.Rmd&quot;  &quot;data&quot;</code></pre>
+<pre><code>## [1] &quot;1.0-Data.Rmd&quot; &quot;1.0 Data.Rmd&quot; &quot;data&quot;</code></pre>
 </div>
 </div>
 <div id="load-external-data" class="section level2">
@@ -563,7 +568,7 @@ data = data.frame(name=c(&quot;James John&quot;, &quot;Sydney Aundrew&quot;, &qu
                   gender = c(&quot;M&quot;,&quot;M&quot;,&quot;F&quot;))
 # create csv data types
 # two write the data in the current folder, we have to change the working directory
-#setwd(&quot;F:/R/r-course/Intermediate/1.0 Data&quot;)
+# setwd(&quot;F:/R/r-course/Intermediate/1.0 Data&quot;)
 
 # write csv file
 # create the data folder
@@ -579,11 +584,86 @@ write.xlsx(data, file = &quot;./data/data.xlsx&quot;)
 jsonlite::write_json(data, path = &quot;./data/data.json&quot;)
 
 # sqlite
-RSQLite::dbConnect(drv = RSQLite::SQLite(), dbname = &quot;./data/database.db&quot;)</code></pre>
-<pre><code>## &lt;SQLiteConnection&gt;
-##   Path: F:\Software Data Solutions\Courses\r-course\Intermediate\1.0 Data\data\database.db
-##   Extensions: TRUE</code></pre>
-<pre class="r"><code># for now we will work with these, the rest you&#39;ll work with during the assignement</code></pre>
+con = RSQLite::dbConnect(drv = RSQLite::SQLite(), dbname = &quot;./data/database.db&quot;)
+
+# write data into the db
+RSQLite::dbWriteTable(con, &quot;mtcars&quot;, mtcars)
+
+# for now we will work with these, the rest you&#39;ll work with during the assignement</code></pre>
+</div>
+<div id="csv-data" class="section level3">
+<h3>CSV DATA</h3>
+<pre class="r"><code># change working directory
+setwd(&quot;F:/Software Data Solutions/Courses/r-course/Intermediate/1.0 Data&quot;)
+# loading csv data
+data = read.csv(&quot;data/data.csv&quot;)
+
+# head of the data
+head(data)</code></pre>
+<pre><code>##   X           name age gender
+## 1 1     James John  23      M
+## 2 2 Sydney Aundrew  34      M
+## 3 3  Esther Kubuni  67      F</code></pre>
+</div>
+<div id="excel-data" class="section level3">
+<h3>EXCEL DATA</h3>
+<pre class="r"><code># loading csv data
+data2 = readxl::read_excel(&quot;data/data.xlsx&quot;)</code></pre>
+<pre><code>## New names:
+## • `` -&gt; `...1`</code></pre>
+<pre class="r"><code># head of the data
+head(data2)</code></pre>
+<pre><code>## # A tibble: 3 × 4
+##   ...1  name             age gender
+##   &lt;chr&gt; &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; 
+## 1 1     James John        23 M     
+## 2 2     Sydney Aundrew    34 M     
+## 3 3     Esther Kubuni     67 F</code></pre>
+</div>
+<div id="text-file-data" class="section level3">
+<h3>TEXT FILE DATA</h3>
+<pre class="r"><code># loading txt file data
+data3 = read.table(&quot;data/data.txt&quot;, header = TRUE)
+
+# head of the data
+head(data3)</code></pre>
+<pre><code>##             name age gender
+## 1     James John  23      M
+## 2 Sydney Aundrew  34      M
+## 3  Esther Kubuni  67      F</code></pre>
+</div>
+<div id="json-data" class="section level3">
+<h3>JSON DATA</h3>
+<pre class="r"><code># loading json data
+data4 = jsonlite::fromJSON(&quot;data/data.json&quot;)
+
+# head of the data
+head(data4)</code></pre>
+<pre><code>##             name age gender
+## 1     James John  23      M
+## 2 Sydney Aundrew  34      M
+## 3  Esther Kubuni  67      F</code></pre>
+</div>
+<div id="sqlite-data" class="section level3">
+<h3>SQLITE DATA</h3>
+<pre class="r"><code># query to read data from the sqlite database
+query &lt;- &quot;SELECT * FROM mtcars&quot;
+
+# execute the query
+data &lt;- RSQLite::dbGetQuery(con, query)
+
+# head of the data
+head(data)</code></pre>
+<pre><code>##    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## 1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## 2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## 3 22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## 4 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## 5 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## 6 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<pre class="r"><code># disconnect the connection
+RSQLite::dbDisconnect(con)</code></pre>
+<p>HURRAY! YOU HAVE FINISHED THE LESSON, PROCEED TO THE ASSIGNEMENT.</p>
 </div>
 </div>
 </div>
