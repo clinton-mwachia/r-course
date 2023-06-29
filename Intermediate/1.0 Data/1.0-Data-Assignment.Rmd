@@ -1,0 +1,127 @@
+---
+title: "Fundermentals of R"
+subtitle: "Intermediate R - 1.0 Data Assignment"
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+In this assignment, you will create all the datasets and then perform the required task.
+
+## Question 1
+
+Load the "iris" dataset from the built-in datasets in R and assign it to a variable called "iris_data". Display the first 5 rows of the dataset.
+
+```{r q1}
+# your code
+```
+
+## Question 2
+
+You have an Excel file named `sales.xlsx` with multiple sheets. Load the sheet named `SalesData` into R and assign it to a variable called `sales_data`.
+
+```{r q2}
+# your code
+```
+
+## Question 3
+
+Connect to a SQLite database named `mydatabase.db` and execute a query to retrieve all records from the `customers` table. Assign the result to a variable called `customer_data`.
+
+```{r}
+# your code
+```
+
+## Question 4
+
+Load a text file named `notes.txt` and count the total number of lines in the file.
+
+```{r q4}
+# your code
+```
+
+## Question 5
+
+Create a 3x3 matrix named `mat1` with the following values:
+
+      1 2 3
+      4 5 6
+      7 8 9
+      
+Perform matrix multiplication of `mat1` with its transpose and assign the result to a new matrix called `mat2`. Display the contents of `mat2`.
+
+```{r q5}
+# your code
+```
+
+## Question 6
+
+Create a matrix named `mat2` with the following values:
+
+      2  4  6
+      8  10 12
+      14 16 18
+      
+Calculate the sum of the elements in each column of `mat2` and store the result in a vector called `column_sums`. Display the contents of `column_sums`.
+
+```{r q6}
+# your code
+```
+
+## Question 7
+
+Create a 10*10 multiplication table named `Mult` using matrix and a for loop. Display the contents of `Mult`.  
+
+```{r q7}
+# your code
+```
+
+## Question 8
+
+Create a data frame named `students` with the following columns: `Name`, `Age`, `Gender`, and `Grade`, Add at least five rows of data to the data frame.
+
+```{r q8}
+# your code
+```
+
+### Question 9
+
+Extract the `Age` column from the `students` data frame and assign it to a variable called `ages`. Calculate the average age of the students.
+
+```{r q9}
+# your code
+```
+
+### Question 10
+
+Filter the `students` data frame to include only female students. Assign the filtered data frame to a variable called `female_students`.
+
+```{r q10}
+# your code
+```
+
+### Question 11
+
+Add a new column named `Pass` to the `students` data frame. The `Pass` column should indicate whether the student passed or failed based on a minimum passing grade. Display the updated data frame.
+
+```{r q11}
+# your code
+```
+
+### Question 12
+
+Rename the `Grade` column in the `students` data frame to `FinalGrade`. Display the updated data frame structure.
+
+```{r q12}
+# your code
+```
+
+
