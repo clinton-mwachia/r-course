@@ -12,22 +12,78 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+R provides a powerful set of functions and packages for statistical analysis. In this lesson, we will cover various statistical measures and analysis techniques in R, including calculating minimum, maximum, standard deviation, quartiles, mean, mode, median, summary statistics, range, frequency distribution, and interquartile range.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Descriptive Statistics
 
-```{r cars}
-summary(cars)
+### Minimun Value
+
+```{r min}
+# create the vector we will work with
+vec = c(1,2,3,4,-20,100,230)
+
+# lowest value
+min(vec)
 ```
 
-## Including Plots
+### Maximum Value
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r max}
+# highest value
+max(vec)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Standard Deviation
+
+```{r sd}
+# Standard Deviation
+sd(vec)
+```
+
+### Quartiles
+
+```{r qt}
+# quatiles
+quantile(vec)
+```
+
+### Average
+
+```{r average}
+# average
+mean(vec, na.rm = TRUE)
+```
+
+### Median
+
+```{r median}
+# median
+median(vec, na.rm = TRUE)
+```
+
+### Range
+
+```{r range}
+# range
+range(vec, na.rm = TRUE)
+```
+
+### Interquartile Range
+
+```{r iqr}
+# Interquartile range
+IQR(vec, na.rm = TRUE)
+```
+
+## Frequency Distribution
+
+A frequency distribution displays the frequency (count) of each unique value in a data set.
+
+```{r fq}
+# freaquency
+table(vec)
+```
+
+
