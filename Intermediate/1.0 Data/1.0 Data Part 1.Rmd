@@ -1,13 +1,13 @@
 ---
 title: "Fundermentals of R"
+subtitle: "Intermediate R - 1.0 Data"
 author: "Prepared By Clinton Moshe Mwachia"
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
-subtitle: "Intermediate R - 1.0 Data"
+  pdf_document:
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -162,8 +162,13 @@ write.xlsx(data, file = "./data/data.xlsx")
 # write json file
 jsonlite::write_json(data, path = "./data/data.json")
 
-# test
+# sqlite
+RSQLite::dbConnect(drv = RSQLite::SQLite(), dbname = "./data/database.db")
 
 # for now we will work with these, the rest you'll work with during the assignement
 ```
 
+### Loading the Data
+
+```{r loading-data}
+#

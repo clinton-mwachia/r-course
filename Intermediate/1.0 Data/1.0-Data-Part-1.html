@@ -11,7 +11,7 @@
 
 <meta name="author" content="Prepared By Clinton Moshe Mwachia" />
 
-<meta name="date" content="2023-06-26" />
+<meta name="date" content="2023-06-29" />
 
 <title>Fundermentals of R</title>
 
@@ -353,7 +353,7 @@ display: none;
 <h1 class="title toc-ignore">Fundermentals of R</h1>
 <h3 class="subtitle">Intermediate R - 1.0 Data</h3>
 <h4 class="author">Prepared By Clinton Moshe Mwachia</h4>
-<h4 class="date">2023-06-26</h4>
+<h4 class="date">2023-06-29</h4>
 
 </div>
 
@@ -545,8 +545,8 @@ it as the working directory.</p>
 <div id="list-files-in-working-directory" class="section level3">
 <h3>List Files in working directory</h3>
 <pre class="r"><code>list.files()</code></pre>
-<pre><code>## [1] &quot;1.0-Data-Part-1.html&quot; &quot;1.0-Data-Part-1.Rmd&quot;  &quot;1.0 Data Part 1.Rmd&quot; 
-## [4] &quot;data&quot;</code></pre>
+<pre><code>## [1] &quot;1.0-Data-Part-1.html&quot; &quot;1.0-Data-Part-1.pdf&quot;  &quot;1.0-Data-Part-1.Rmd&quot; 
+## [4] &quot;1.0 Data Part 1.Rmd&quot;  &quot;data&quot;</code></pre>
 </div>
 </div>
 <div id="load-external-data" class="section level2">
@@ -578,7 +578,12 @@ write.xlsx(data, file = &quot;./data/data.xlsx&quot;)
 # write json file
 jsonlite::write_json(data, path = &quot;./data/data.json&quot;)
 
-# for now we will work with these, the rest you&#39;ll work with during the assignement</code></pre>
+# sqlite
+RSQLite::dbConnect(drv = RSQLite::SQLite(), dbname = &quot;./data/database.db&quot;)</code></pre>
+<pre><code>## &lt;SQLiteConnection&gt;
+##   Path: F:\Software Data Solutions\Courses\r-course\Intermediate\1.0 Data\data\database.db
+##   Extensions: TRUE</code></pre>
+<pre class="r"><code># for now we will work with these, the rest you&#39;ll work with during the assignement</code></pre>
 </div>
 </div>
 </div>
