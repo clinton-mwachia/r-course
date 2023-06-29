@@ -1,0 +1,111 @@
+---
+title: "Fundermentals of R"
+subtitle: "Intermediate R - 2.0 Statistical Analysis Assignment"
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Set-Up
+
+Create a data frame named `df` with the variables `Student`, `Age`, `gender`, `maths`, `pass` and fill it with 20 records.
+
+The variables contain the following data types:
+
+      Student => string
+      Age => number
+      gender => factor
+      maths => number
+      pass => boolean
+      
+```{r set-up}
+# your code
+```
+
+## Question 1
+
+Print-out the summary of `df.`
+
+```{r q1}
+# your code
+```
+
+## Question 2
+
+Who is the youngest and oldest student?
+
+```{r q2}
+# your code
+```
+
+## Question 3
+
+What percentage of the students are male and female?
+
+```{r q3}
+# your code
+```
+
+## Question 4
+
+What percentage of students passed the exams?
+
+```{r q4}
+# your code
+```
+
+## Question 5
+
+Write a function without using the built function and use it to calculate the mean maths performance?
+
+```{r q5}
+# your code
+```
+
+## Question 6
+
+Plot the distribution of the students performance for maths.
+
+```{r q6}
+# your code
+```
+
+## Question 7
+
+generate the frequency distribution table for both `gender` and `pass`.
+
+```{r q7}
+# your code
+```
+
+## Question 8
+
+What is the performance range for maths?
+
+```{r q8}
+# your code
+```
+
+## Question 9
+
+Add a new column, `Young`, which contains a Boolean. The Boolean should be `TRUE` if the student is younger than 20 years.
+
+```{r q9}
+# your code
+```
+
+## Question 10
+
+Write a brief overview of the data summary.
+
+```{r q10}
+# your code
+```
+
+NICE ONE! PLEASE PROCEED TO THE NEXT LESSON.
