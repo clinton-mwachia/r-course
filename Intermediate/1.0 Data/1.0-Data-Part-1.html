@@ -11,7 +11,7 @@
 
 <meta name="author" content="Prepared By Clinton Moshe Mwachia" />
 
-<meta name="date" content="2023-05-31" />
+<meta name="date" content="2023-06-26" />
 
 <title>Fundermentals of R</title>
 
@@ -353,7 +353,7 @@ display: none;
 <h1 class="title toc-ignore">Fundermentals of R</h1>
 <h3 class="subtitle">Intermediate R - 1.0 Data</h3>
 <h4 class="author">Prepared By Clinton Moshe Mwachia</h4>
-<h4 class="date">2023-05-31</h4>
+<h4 class="date">2023-06-26</h4>
 
 </div>
 
@@ -530,7 +530,7 @@ current working directory as a character string. Run the code chunk to
 get the current working directory.</p>
 <pre class="r"><code># get current working directory
 getwd()</code></pre>
-<pre><code>## [1] &quot;F:/R/r-course/Intermediate/1.0 Data&quot;</code></pre>
+<pre><code>## [1] &quot;F:/Software Data Solutions/Courses/r-course/Intermediate/1.0 Data&quot;</code></pre>
 </div>
 <div id="setting-the-working-directory" class="section level3">
 <h3>Setting the working Directory</h3>
@@ -539,9 +539,8 @@ use the <code>setwd()</code> function or use the IDE setting. This
 function takes a path to the desired directory as an argument and sets
 it as the working directory.</p>
 <pre class="r"><code># set a working directory
-setwd(&quot;F:/R/r-course/Intermediate&quot;)
-getwd()</code></pre>
-<pre><code>## [1] &quot;F:/R/r-course/Intermediate&quot;</code></pre>
+#setwd(&quot;F:/R/r-course/Intermediate&quot;)
+#getwd()</code></pre>
 </div>
 <div id="list-files-in-working-directory" class="section level3">
 <h3>List Files in working directory</h3>
@@ -564,7 +563,7 @@ data = data.frame(name=c(&quot;James John&quot;, &quot;Sydney Aundrew&quot;, &qu
                   gender = c(&quot;M&quot;,&quot;M&quot;,&quot;F&quot;))
 # create csv data types
 # two write the data in the current folder, we have to change the working directory
-setwd(&quot;F:/R/r-course/Intermediate/1.0 Data&quot;)
+#setwd(&quot;F:/R/r-course/Intermediate/1.0 Data&quot;)
 
 # write csv file
 # create the data folder
@@ -573,8 +572,8 @@ write.csv(data, file = &quot;./data/data.csv&quot;)
 # write txt file
 write.table(data, file = &quot;./data/data.txt&quot;)
 
-# write txt file
-write.table(data, file = &quot;./data/data.txt&quot;)
+# write xlsx file
+write.xlsx(data, file = &quot;./data/data.xlsx&quot;)
 
 # write json file
 jsonlite::write_json(data, path = &quot;./data/data.json&quot;)

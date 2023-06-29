@@ -1,15 +1,18 @@
 ---
 title: "Fundermentals of R"
-subtitle: 'Intermediate R - 1.0 Data'
 author: "Prepared By Clinton Moshe Mwachia"
 date: "`r Sys.Date()`"
-output: 
+output:
+  pdf_document:
+    toc: yes
   html_document:
-    toc: true
+    toc: yes
+subtitle: "Intermediate R - 1.0 Data"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+library(xlsx)
 ```
 
 # Introduction
@@ -119,8 +122,8 @@ To set a specific directory as the working directory in R, you can use the `setw
 
 ```{r}
 # set a working directory
-setwd("F:/R/r-course/Intermediate")
-getwd()
+#setwd("F:/R/r-course/Intermediate")
+#getwd()
 ```
 
 ### List Files in working directory
@@ -144,7 +147,7 @@ data = data.frame(name=c("James John", "Sydney Aundrew", "Esther Kubuni"),
                   gender = c("M","M","F"))
 # create csv data types
 # two write the data in the current folder, we have to change the working directory
-setwd("F:/R/r-course/Intermediate/1.0 Data")
+#setwd("F:/R/r-course/Intermediate/1.0 Data")
 
 # write csv file
 # create the data folder
@@ -153,8 +156,13 @@ write.csv(data, file = "./data/data.csv")
 # write txt file
 write.table(data, file = "./data/data.txt")
 
+# write xlsx file
+write.xlsx(data, file = "./data/data.xlsx")
+
 # write json file
 jsonlite::write_json(data, path = "./data/data.json")
+
+# test
 
 # for now we will work with these, the rest you'll work with during the assignement
 ```
