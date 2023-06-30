@@ -1,0 +1,98 @@
+---
+title: "Fundermentals of R"
+subtitle: "Intermediate R - 3.0 Probability Distributions Assignment"
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 1
+
+Generate random numbers from a uniform distribution between -1 and 1 in R, and calculate the mean and standard deviation of the generated values.
+
+```{r q1}
+# your code
+```
+
+## Question 2
+
+Plot the probability mass function (PMF) of a binomial distribution with n = 50 and p = 0.4 using R's base graphics system.
+
+```{r q2}
+# your code
+```
+
+## Question 3
+
+Calculate the quatiles of a Poisson distribution with λ = 2.5 in R.
+
+```{r q2}
+# your code
+```
+
+## Question 4
+
+Generate random numbers from a binomial distribution with parameters n = 50 and p = 0.3 in R and print the numbers.
+
+```{r q4}
+# your code
+```
+
+Use the vector you created in question 4 above, answer the questions below:
+
+### Question 5
+
+Generate the summary and write a brief history.
+
+```{r q5}
+# your code
+```
+
+### Question 6
+
+Calculate the average and median of the vector. 
+
+```{r q6}
+# your code
+```
+
+
+### Question 7
+
+Plot the density plot of the vector using the base functions.
+
+```{r q7}
+# your code
+```
+
+### Question 8
+
+Calculate the minimum and maximum values of the vector.
+
+```{r q8}
+# your code
+```
+
+### Question 9
+
+print out the 10th, 20th, 60th and 90th quantiles of the vector.
+
+```{r q9}
+# your code
+```
+
+## Question 10
+
+Calculate the value of the CDF at x = 3.
+
+```{r}
+# your code
+```
+
+HURRAY! YOU HAVE FINISHED THE ASSIGNMENT, PROCEED TO THE NEXT LESSON.
