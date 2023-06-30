@@ -1,0 +1,120 @@
+---
+title: "Fundermentals of R"
+subtitle: "Intermediate R - 3.0 Probability Distributions"
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Probability distributions are a fundamental concept in statistics and data analysis. In R, there are various built-in functions and packages that allow for the generation and manipulation of probability distributions. In this lesson, we will explore some commonly used probability distributions in R and demonstrate how to work with them in R.
+
+# Probability Distributions
+
+## Discrete Probability Distributions
+
+### Binomial Distribution
+
+The binomial distribution models the number of successes in a fixed number of independent Bernoulli trials. In R, the `rbinom()` function generates random numbers from a binomial distribution.
+
+```{r r-binom}
+# Generating random numbers from a binomial distribution
+n <- 10  # number of trials
+
+p <- 0.5  # probability of success on each trial
+
+binom <- rbinom(n, size = n, prob = p)
+
+binom
+```
+
+###  Poisson Distribution
+
+The Poisson distribution models the number of events occurring in a fixed interval of time or space. In R, the `rpois()` function generates random numbers from a Poisson distribution.
+
+```{r r-pois}
+# Generating random numbers from a Poisson distribution
+lambda <- 2  # average rate of events
+
+poisson <- rpois(n, lambda = lambda)
+
+poisson
+```
+
+## Continuous Probability Distributions
+
+### Normal Distribution
+
+The normal distribution, also known as the Gaussian distribution, is widely used in statistics and data analysis. In R, the `rnorm()` function generates random numbers from a normal distribution.
+
+```{r r-norm}
+# Generating random numbers from a normal distribution
+mean <- 0  # mean of the distribution
+
+sd <- 1  # standard deviation of the distribution
+
+normal <- rnorm(n, mean = mean, sd = sd)
+
+normal
+```
+
+### Uniform Distribution
+
+The uniform distribution represents a continuous probability distribution where all outcomes are equally likely. In R, the `runif()` function generates random numbers from a uniform distribution.
+
+```{r r-unif}
+# Generating random numbers from a uniform distribution
+min <- 0  # minimum value
+
+max <- 1  # maximum value
+
+uniform <- runif(n, min = min, max = max)
+
+uniform
+```
+
+## Additional Distributions
+
+### Exponential Distribution
+
+```{r r-exp}
+# Generating random numbers from an exponential distribution
+rate <- 0.5  # rate parameter
+
+exponential <- rexp(n, rate = rate)
+
+exponential
+```
+
+### Gamma Distribution
+
+```{r r-gamma}
+# Generating random numbers from a gamma distribution
+rate <- 0.5  # rate parameter
+
+shape <- 0.5  
+
+gamma <- rgamma(n, shape = shape,rate = rate)
+
+gamma
+```
+
+### Chi-Square Distribution
+
+```{r r-chisq}
+# Generating random numbers from a chi-square distribution
+df <- 5  # degrees of freedom
+
+chi_square <- rchisq(n, df = df)
+
+chi_square
+```
+
+HURRAY! YOU HAVE FINISHED THE LESSON, PROCEED TO THE ASSIGNMENT.
