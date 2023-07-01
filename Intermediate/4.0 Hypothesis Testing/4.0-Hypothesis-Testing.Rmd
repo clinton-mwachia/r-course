@@ -1,0 +1,132 @@
+---
+title: "Fundermentals of R"
+subtitle: "Intermediate R - 4.0 Hypothesis Testing"
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output:   
+  html_document: 
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Hypothesis testing is a statistical technique used to make inferences about a population based on sample data. In R, there are several functions and tests available for hypothesis testing. In this lesson, we will cover the following hypothesis tests: one-sample t-test, two-sample t-test, normality test, confidence interval, sign test, Wilcoxon signed-rank test, and Kruskal-Wallis rank sum test.
+
+## One-Sample t-test
+
+The one-sample t-test is used to determine if the mean of a sample significantly differs from a specified value.
+    
+The p-value obtained from the one-sample t-test determines whether the mean of the sample significantly differs from the specified value (mu = 27). If the p-value is less than the significance level (commonly 0.05), we reject the null hypothesis (H0) and conclude that the mean is significantly different.
+
+
+      H0: the mean of the data is 27
+      H1: the mean is not equal to 27
+
+```{r one-sample-ttest}
+# Sample Data
+data <- c(23, 25, 26, 24, 28, 27, 22, 26, 25, 24)
+
+# One-sample t-test
+t.test(data, mu = 27)
+```
+
+### Conclusion
+
+Since the p-value is less than 0.05, we reject the null hypothesis, Therefore, we can conclude that the mean of the data is not equal to 27.
+
+## Two-Sample t-test
+
+The two-sample t-test is used to compare the means of two independent samples.
+        
+The p-value obtained from the two-sample t-test determines whether the means of the two groups significantly differ. If the p-value is less than the significance level (0.05), we reject the null hypothesis and conclude that there is a significant difference between the means of the two groups.
+
+          H0: the mean difference is zero (mean1 = mean2)
+          H1: the mean difference is not zero (mean1 != mean2)
+
+```{r two-sample-ttest}
+# Sample Data
+data1 <- c(23, 25, 26, 24, 28)
+data2 <- c(27, 22, 26, 25, 24)
+
+# Two-sample t-test
+t.test(data1, data2)
+```
+
+
+### Conclusion
+
+Since the p-value is greater than 0.05, we fail to reject the null hypothesis since we do not have enough evidence.
+
+## Normality Test
+
+The normality test is used to assess whether a sample follows a normal distribution.
+
+The Shapiro-Wilk test is commonly used to check for normality. The p-value obtained from the test indicates whether the sample deviates significantly from a normal distribution. If the p-value is less than the significance level, we reject the null hypothesis and conclude that the data is not normally distributed.
+
+          H0: the data is normally distributed
+          H1: the data is not normally distributed
+          
+```{r shapiro-test}
+# Sample Data
+data <- rnorm(100)
+
+# Normality test
+shapiro.test(data)
+```
+
+### Conclusion
+
+Since the p-value is greater than 0.05, we fail to reject the null hypothesis since we do not have enough evidence.
+
+## Wilcoxon Signed-Rank Test
+
+The Wilcoxon signed-rank test is a non-parametric alternative to the paired t-test when the data is not normally distributed.
+
+The p-value obtained from the Wilcoxon signed-rank test determines whether there is a significant difference between the paired observations. If the p-value is less than the significance level, we reject the null hypothesis and conclude that there is a significant difference.
+
+      H0: The median of the data of differences between the paired data is zero.
+      H1: The median of the data of differences between the paired data is not zero
+      
+      
+```{r wilcox-test, warning=FALSE}
+# Sample Data
+x <- c(23, 25, 26, 24, 28)
+y <- c(27, 22, 26, 25, 24)
+
+# Wilcoxon signed-rank test
+wilcox.test(x, y, paired = TRUE)
+```
+
+### Conclusion
+
+Since the p-value is 1, we fail to reject the null hypothesis and conclude that there is no significant difference between the paired observations. The test did not find any evidence of a significant difference between the paired observations.
+
+## Kruskal-Wallis Rank Sum Test
+
+The Kruskal-Wallis rank sum test is a non-parametric test used to compare the distributions of two or more independent groups.
+
+The p-value obtained from the Kruskal-Wallis test determines whether there is a significant difference between the distributions of the groups. If the p-value is less than the significance level, we reject the null hypothesis and conclude that there is a significant difference.
+
+      H0: The mean ranks of the groups are the same
+      H1: The mean ranks of the groups are different
+      
+```{r kruskal-wallis}
+# Sample Data
+x <- c(23, 25, 26, 24, 28)
+y <- c(27, 22, 26, 25, 24)
+z <- c(29, 31, 30, 28, 27)
+
+# Kruskal-Wallis test
+kruskal.test(list(x, y, z))
+```
+
+### Conclusion
+
+Since the p-value is less than 0.05, we reject the null hypothesis and conclude that the mean ranks of the groups are different.
+
+HURRAY! YOU HAVE FINISHED THE LESSON, PROCEED TO THE ASSIGNMENT.
+
