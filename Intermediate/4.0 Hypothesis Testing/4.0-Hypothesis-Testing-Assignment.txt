@@ -1,0 +1,22 @@
+CREATE YOUR RMD FILE AND ANSWER THE FOLLOWING QUESTION.
+NAME THE MARKDOWN FILE `4.0-Hypothesis-Testing.Rmd`
+
+1. Is there a significant difference in the mean heights of male and female students in a university? (Hint:Two-sample t-test)
+
+2. Does a new drug lead to a significant improvement in patient recovery time compared to the standard treatment? (Hint:One-sample t-test)
+
+3. Is there a significant difference in the average scores of students who received tutoring and those who did not? (Two-sample t-test)
+
+4. Does a new marketing strategy result in a significant increase in sales compared to the old strategy? (Hint:One-sample t-test)
+
+5. Is there a significant difference in the satisfaction ratings between two different customer service approaches? (Hint:Two-sample t-test)
+
+6. Does a training program lead to a significant improvement in employee productivity? (Hint:One-sample t-test)
+
+7. Is there a significant difference in the mean response times of two different website designs? (Hint:Two-sample t-test)
+
+8. Does a new manufacturing process result in a significant reduction in product defects compared to the old process? (Hint:One-sample t-test)
+
+9. Is there a significant difference in the average incomes of individuals with different educational levels? (Hint:Two-sample t-test)
+
+10. Does a new teaching method result in a significant improvement in student test scores compared to the traditional method? (Hint:One-sample t-test)
