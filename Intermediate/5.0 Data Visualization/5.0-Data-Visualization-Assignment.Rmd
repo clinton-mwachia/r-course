@@ -1,0 +1,99 @@
+---
+title: "Fundermentals of R"
+subtitle: "Intermediate R - 5.0 Data Visualization Assignment"
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+You are provided with the data `DATA.xlsx` in the data folder. you will use the data to answer all the questions.
+
+## Question 1
+
+Create a scatter plot to visualize the relationship between two variables, "Age" and "Income," from the dataset provided above. Interpret the scatter plot and determine the correlation between the variables.
+
+```{r q1}
+# your code
+```
+
+## Question 2
+
+Create a line plot to show the monthly sales trend for the product. Identify any patterns or trends in the data.
+
+```{r q2}
+# your code
+```
+
+## Question 3
+
+Create a pie chart to display the distribution of car types. Calculate the percentage of each car type and display it in the pie chart.
+
+```{r q3}
+# your code
+```
+
+## Question 4
+
+Create a bar plot to compare the population sizes of different countries. Identify the country with the highest population and compare it with other countries.
+
+```{r q4}
+# your code
+```
+
+## Question 5
+
+Create a box-plot to compare the exam scores of students from three different schools (A, B, C). Analyze the variation in scores between the schools and comment.
+
+```{r q5}
+# your code
+```
+
+## Question 6
+
+Generate a histogram to visualize the distribution of heights (in inches). Determine the shape of the distribution and identify any outliers.
+
+```{r q6}
+# your code
+```
+
+## Question 7
+
+Create a scatter plot to examine the relationship between the number of hours studied and the corresponding test scores of students. Analyze the pattern between hours studied and test scores.
+
+```{r q7}
+# your code
+```
+
+## Queston 8
+
+Create a line plot to display the daily closing prices of a specific stock over a given time period. Identify any trends or patterns in the stock price.
+
+```{r q8}
+# your code
+```
+
+## Question 9
+
+Create a pie chart to represent the distribution of different fruits (apple, banana, orange, grape). Calculate the percentage of each fruit and display it in the pie chart.
+
+```{r q9}
+# your code
+```
+
+## Question 10
+
+Create a bar plot to compare the sales performance of different Counties (Nairobi, Kisumu, Nakuru, Naivasha, Mombasa, Kilifi, Malindi, Tana River, Taita Taveta, Kwale). Identify the county with the highest sales and analyze the differences among the regions.
+
+```{r q10}
+# your code
+```
+
+HURRAY! CONGRATULATIONS, YOU HAVE FINISHED THE INTERMEDIATE COURSE. PROCEED TO THE ADVANCED COURSE WHERE YOU WILL LEARN THE FANCY MACHINE LEARNING.
+
+
