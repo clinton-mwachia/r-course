@@ -45,7 +45,7 @@
 # Intermediate
 
 | 1   | Data                                                                                         |
-|-----|----------------------------------------------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 |     | In Build Data                                                                                |
 |     | User-created Data                                                                            |
 |     | working directory                                                                            |
@@ -93,8 +93,6 @@
 |-----|---------------------------------------|
 |     | Handling Missing data                 |
 |     | Handling duplicate Data               |
-|     | Handling data types                   |
-|     | Multi-collinearity                    |
 |     | Removing unnecessary columns/rows     |
 | 2   | **Data Transformation**               |
 |     | Normalization                         |
@@ -121,6 +119,7 @@
 |     | EDA                                   |
 |     | Data Preparation/Cleaning             |
 |     | Data Splitting                        |
+|     | Multi-Collinearity                    |
 |     | Model Training                        |
 |     | Predictions and Evaluation (roc, auc) |
 |     | Model Tuning                          |
