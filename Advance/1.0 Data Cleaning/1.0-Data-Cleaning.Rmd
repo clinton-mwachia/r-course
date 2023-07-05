@@ -12,15 +12,157 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Introduction
 
-```{r cars}
-summary(cars)
+Data cleaning is an essential step in the data analysis process. It involves identifying and handling various data issues, such as missing values, duplicates, incorrect data types, and multi-collinearity. In this lesson, we will cover techniques for cleaning and preparing your data in R.
+
+# Missing Data
+
+## Checking Missing Data
+
+Missing data can occur when certain observations or variables have incomplete or unknown values. It is crucial to identify and handle missing data appropriately to avoid biased analysis. R provides functions to detect and handle missing values, such as `is.na()` and `complete.cases()`.
+
+Code Example:
+
+```{r missing-data}
+# clean data
+data <- data.frame(
+  x = c(1, 2, 3, 4, 5),
+  y = c("a", "b", "c", "d", "e")
+)
+
+# Checking for missing values
+is.na(data)
 ```
 
-## Including Plots
 
-```{r}
-plot(pressure)
+```{r missing-data-2}
+# data with NA values
+data2 <- data.frame(
+  a = c(100, 203, 340, 450, 550),
+  x = c(1, 2, 3, 4, NA),
+  y = c(80, 83, NA, 90, 34),
+  z = c(10, 20, 30, 40, 50)
+)
+
+# Checking for missing values
+is.na(data2)
 ```
+
+## Handling Missing Data
+
+Handling missing data or NA values is crucial in data analysis to ensure accurate and reliable results. In R, there are several ways to handle missing data. Here are some common techniques
+
+### Removing Missing Data
+
+One approach is to remove the rows or columns with missing data from the dataset. This method is suitable when the missing data is random and does not significantly impact the overall analysis.
+
+```{r omit-na}
+# Removing rows with missing values
+clean_data = na.omit(data2) 
+
+# Removing columns with missing values
+clean_data2 <- data2[, -c(2,3)] 
+
+is.na(clean_data)
+is.na(clean_data2)
+```
+
+### Imputing Missing Data with mean/median
+
+Imputation involves replacing missing values with estimated or plausible values. This approach helps retain the complete dataset while minimizing the impact of missing data.
+
+```{r impute-na}
+data2_copy = data2
+# Imputing missing values with mean
+data2_copy$x <- ifelse(is.na(data2_copy$x), 
+                       mean(data2_copy$x, na.rm = TRUE), data2_copy$x)
+
+data2_copy$y <- ifelse(is.na(data2_copy$y), 
+                       mean(data2_copy$y, na.rm = TRUE), data2_copy$y)
+
+is.na(data2_copy)
+```
+
+# Duplicate Data
+
+Duplicate data refers to observations that have identical values across multiple variables. It is important to identify and remove duplicates to avoid skewed analysis results. R offers functions like `duplicated()` and `unique()` for checking and handling duplicate data.
+
+## Checking Duplicate Data
+
+```{r duplicate-data}
+# Creating a sample data frame with duplicate values
+data_dup <- data.frame(
+  x = c(1, 2, 3, 4, 2),
+  y = c("a", "b", "c", "d", "b"),
+  z = c(1, 2, 3, 4, 2)
+)
+
+# Checking for duplicate rows
+any_dup <- any(duplicated(data_dup))
+any_dup
+```
+
+## Count Duplicate rows
+
+Sometimes, it may be useful to identify and count the number of duplicate rows in a dataset without removing them. This can help gain insights into the frequency of duplicate observations.
+
+```{r dup-count}
+# Counting duplicate rows
+dup_count <- table(duplicated(data_dup))
+dup_count
+```
+
+## Remove Duplicate Data
+
+```{r remove-dup}
+# get unique data
+unique_data <- unique(data_dup)
+
+any(duplicated(unique_data))
+```
+
+These techniques help in handling duplicate data in R. It is important to carefully consider the nature of the data and the specific analysis requirements when deciding on the appropriate method for handling duplicates.
+
+# Dropping Columns/Rows
+
+Removing unnecessary columns or rows in R involves excluding specific variables or observations from a dataset. Some common techniques for removing unnecessary columns or rows include: -
+
+## Removing Columns by Index
+
+```{r rem-col-by-index}
+# make a copy of duplicated data frame
+data_dup_copy = data_dup
+
+# Removing columns 1
+new_data_dup_copy <- data_dup_copy[, -1]
+
+new_data_dup_copy
+```
+
+## Removing Columns by Name
+
+```{r rem-col-by-name}
+# make a copy of duplicated data frame
+data_dup_copy = data_dup
+
+# Removing columns 1
+new_data_dup_copy <- data_dup_copy[, c("y","z")]
+
+new_data_dup_copy
+```
+
+We can simplify the above process by using a package called `dplyr` as shown below
+
+```{r rem-col-dplyr, warning=FALSE}
+library(dplyr) # provides the select function
+library(magrittr) # for piping operator
+
+# remove column x
+new_data_dup_copy =  data_dup %>%
+  select(-x)
+
+new_data_dup_copy
+```
+
 
