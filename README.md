@@ -45,7 +45,7 @@
 # Intermediate
 
 | 1   | Data                                                                                         |
-|--------------------|------------------------------------------------------------|
+|-----|----------------------------------------------------------------------------------------------|
 |     | In Build Data                                                                                |
 |     | User-created Data                                                                            |
 |     | working directory                                                                            |
@@ -152,9 +152,6 @@
 |     | Compute the Principal Components      |
 |     | Plotting PCA                          |
 |     | Interpretation of results             |
-|     |                                       |
-|     |                                       |
-|     |                                       |
 
 **Later On:**
 
