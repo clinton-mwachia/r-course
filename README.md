@@ -93,6 +93,7 @@
 |-----|---------------------------------------|
 |     | Handling Missing data                 |
 |     | Handling duplicate Data               |
+|     | Outliers                              |
 |     | Removing unnecessary columns/rows     |
 | 2   | **Data Transformation**               |
 |     | Normalization                         |
