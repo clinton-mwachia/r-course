@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-Data cleaning is an essential step in the data analysis process. It involves identifying and handling various data issues, such as missing values, duplicates, incorrect data types, and multi-collinearity. In this lesson, we will cover techniques for cleaning and preparing your data in R.
+Data cleaning is an essential step in the data analysis process. It involves identifying and handling various data issues, such as missing values, duplicates, incorrect data types. In this lesson, we will cover techniques for cleaning and preparing your data in R.
 
 # Missing Data
 
@@ -165,4 +165,89 @@ new_data_dup_copy =  data_dup %>%
 new_data_dup_copy
 ```
 
+## Removing Rows with NA Values
 
+```{r rem-rown-na}
+# Removing rows with NA values
+data2[complete.cases(data2), ]
+```
+
+## Removing Rows by Index
+
+```{r rem-row-index}
+# Removing row 1
+data2[-1,]
+
+# Removing row 1, and 3
+data2[-c(1,3),]
+
+# Removing row 1 through 3
+data2[-c(1:3),]
+```
+
+## Removing Duplicate Rows
+
+```{r rem-dup-row}
+unique(data2)
+```
+
+## Filter Rows by condition
+
+```{r rem-row-cond}
+# filter data with x = 1
+data2[data2$x == 1,]
+
+# filter data with x > 1
+data2[data2$x > 1,]
+```
+
+# outliers
+
+Outlier is an observation or data point that significantly deviates from the overall pattern or distribution of the dataset. Outliers are extreme values that lie far away from the majority of the data points and may have a disproportionate influence on statistical measures and analyses.
+
+Outliers can arise due to various reasons, such as data entry errors, measurement errors, natural variations, or rare events. They can distort statistical measures, impact the assumptions of certain analysis techniques, and affect the accuracy and reliability of data analysis results.
+
+Identifying and understanding outliers is important because they can provide valuable insights into the data, highlight anomalies, or indicate potential data quality issues. Outliers can either be univariate (deviation in a single variable) or multivariate (deviation in multiple variables simultaneously).
+
+It is essential to consider the context and domain knowledge when determining whether an observation is an outlier. Outliers may be legitimate data points that represent unusual or significant phenomena, or they may be data errors that need to be addressed during data cleaning and analysis.
+
+Various statistical techniques and visual tools, such as boxplots, z-scores, scatter plots, and data visualization methods, are used to detect and analyze outliers in a dataset. The decision to handle or exclude outliers depends on the specific goals of the analysis, the nature of the data, and the impact of the outliers on the overall analysis results.
+
+## Outlier Detection
+
+### Using Box-Plots
+
+```{r outlier-det-boxplot}
+# loading required library
+library(ggplot2) # for plots
+# sample data
+df = data.frame(
+  heights = c(165, 170, 175, 180, 185, 190, 195, 200, 205,300)
+)
+
+# box-plot
+df %>%
+  ggplot(aes(y=heights)) +
+  geom_boxplot() +
+  theme_bw() +
+  ggtitle("Outliers")
+```
+
+By examining the boxplot, outliers can be identified as points that are significantly outside the whiskers of the boxplot. In this case, the height value of 300 appears to be an outlier.
+
+### Using Z-Scores
+
+Z-scores measure how many standard deviations an observation is from the mean. Observations with a z-score greater than a certain threshold (e.g., 2 or 3) can be considered outliers. R provides the scale() function to calculate z-scores.
+
+```{r outlier-det-zscore}
+# Calculating z-scores
+z_scores <- scale(df$heights)
+z_scores
+# Identifying outliers
+outliers <- which(abs(z_scores) > 2)
+outliers
+```
+
+We have looked at ways of identifying outlier, on your own time, find all the ways you can use to handle them and give its pros and cons.
+
+HURRAY! THE END OF THE LESSON, PROCEED TO THE ASSIGNEMENT.
