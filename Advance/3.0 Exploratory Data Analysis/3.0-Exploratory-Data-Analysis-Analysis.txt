@@ -1,0 +1,49 @@
+FOLLOW THE INTRUCTIONS TO COMPLETE THE TASK
+
+1. CREATE AN R MARKDOWN FILE AND GIVE IT A TITLE AND A SUBTITLE.
+2. ANSWER THE QUESTIONS BELOW.
+3. KNIT THE FILE TO HTML FILE
+
+QUESTIONS:
+
+1. Time Series Analysis:
+   - Data: "AirPassengers" dataset
+   - Question: Is there a noticeable trend in the monthly passenger numbers over time? How does it change?
+
+2. Maps:
+   - Data: World map
+   - Question: Can you identify any patterns or regional variations in the dataset when overlaid on the world map?
+
+3. Visualizing Missing Data:
+   - Data: Any dataset with missing values
+   - Question: What is the extent and pattern of missingness in the dataset? Are there any variables with particularly high rates of missing values?
+
+4. Animations:
+   - Data: "AirPassengers" dataset
+   - Question: Can you observe any seasonal or periodic patterns in the changing monthly passenger numbers as the animation progresses?
+
+5. Interactive Plots:
+   - Data: "mtcars" dataset
+   - Question: Can you identify any relationships or patterns between car weight, miles per gallon, number of cylinders, and horsepower using the interactive scatter plot?
+
+6. Scatter Plot:
+   - Data: "mtcars" dataset
+   - Question: Is there a correlation between car weight and horsepower? How does it vary across different car models?
+
+7. Bar Plot:
+   - Data: "mtcars" dataset
+   - Question: What is the distribution of the number of cars based on the number of cylinders? Are certain cylinder counts more common?
+
+8. Histogram:
+   - Data: "mtcars" dataset
+   - Question: What is the distribution of car weights in the dataset? Are there any significant peaks or gaps?
+
+9. Box Plot:
+   - Data: "mtcars" dataset
+   - Question: How does the distribution of miles per gallon vary across different numbers of gears in cars? Are there any outliers?
+
+10. Line Plot:
+   - Data: "AirPassengers" dataset
+   - Question: Can you observe any seasonal patterns or trends in the monthly passenger numbers over the years?
+
+congratulations, proceed to the next lesson.
