@@ -1,0 +1,34 @@
+FOLLOW THE INTRUCTIONS TO COMPLETE THE TASK
+
+1. CREATE AN R MARKDOWN FILE AND GIVE IT A TITLE AND A SUBTITLE.
+2. ANSWER THE QUESTIONS BELOW.
+3. KNIT THE FILE TO HTML FILE
+
+1. Question: Suppose you have a numeric vector `data <- c(2, 4, 6, 8, 10)`. Apply Min-Max normalization to this vector and provide the normalized values.
+
+2. Question: Consider a data frame `df` with two columns: "Height" and "Weight". Perform Z-Score standardization on the "Weight" column and display the standardized values.
+
+3. Question: Given a data frame `df` with columns "Category" and "Sales", how would you aggregate the data by the "Category" variable to calculate the sum of sales for each category?
+
+4. Question: You have a character vector `labels <- c("1", "2", "3", "4")`. Convert this vector to numeric data type and store the result in a new variable.
+
+5. Question: In a data frame `df`, add a new column named "Discounted_Price" by applying a 10% discount to the existing "Price" column.
+
+6. Question: Merge two data frames `df1` and `df2` based on the common variable "ID" and store the result in a new data frame.
+
+7. Question: Consider a data frame `df` with columns "Year", "Quarter", and "Revenue". Reshape this data frame from a long format to a wide format, where each unique year is a row and each quarter is a separate column.
+
+8. Question: Given a data frame `df` with columns "Country", "Year", and "Population", melt the data frame to convert it from a wide format to a long format, where each row represents a unique observation.
+
+9. Question: Suppose you have a data frame `df` with columns "ID", "Variable1", and "Variable2". Cast this data frame to reshape it from a long format to a wide format, where each unique ID is a row, and "Variable1" and "Variable2" are separate columns.
+
+10. Question: Transform the following matrix into a data frame with three columns: "Row", "Column", and "Value", where each row represents an element from the matrix.
+
+Matrix:
+```
+1 2 3
+4 5 6
+7 8 9
+```
+
+CONGRATULATIONS, PROCEDD TO THE NEXT LESSON.
