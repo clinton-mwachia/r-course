@@ -45,7 +45,7 @@
 # Intermediate
 
 | 1   | Data                                                                                         |
-|-----|----------------------------------------------------------------------------------------------|
+|------------|------------------------------------------------------------|
 |     | In Build Data                                                                                |
 |     | User-created Data                                                                            |
 |     | working directory                                                                            |
@@ -108,13 +108,13 @@
 |     | Casting Data Frames                   |
 | 3   | **Exploratory Data Analysis**         |
 |     | Correlation (Scatter plot etc)        |
-|     | Distribution                          |
-|     | Ranking (Bar Plot)                    |
+|     | Bar Plot                              |
+|     | Histogram                             |
 |     | Grouped                               |
-|     | Time Series                           |
-|     | Map                                   |
-|     | Network                               |
-|     | Missing Data                          |
+|     | Box Plot                              |
+|     | Line Plot                             |
+|     | Violin Plot                           |
+|     | Many More                             |
 | 4   | **Machine Learning**                  |
 |     | Loading the Data                      |
 |     | EDA                                   |
