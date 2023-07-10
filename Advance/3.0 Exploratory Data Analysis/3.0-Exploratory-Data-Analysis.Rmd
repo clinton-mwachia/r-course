@@ -1,11 +1,13 @@
 ---
 title: "Fundermentals of R"
-subtitle: "Advanced R - 3.0 Exploratory Data Analysis"
 author: "Prepared By Clinton Moshe Mwachia"
 date: "`r Sys.Date()`"
-output: 
+output:
+  pdf_document:
+    toc: yes
   html_document:
-    toc: true
+    toc: yes
+subtitle: "Advanced R - 3.0 Exploratory Data Analysis"
 ---
 
 ```{r setup, include=FALSE}
