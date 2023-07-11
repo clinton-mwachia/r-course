@@ -1,0 +1,306 @@
+---
+title: "Fundermentals of R"
+subtitle: "Advanced R - 4.0 Machine Learning - Linear Models"
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# loading the required libraries
+library(tidyverse)
+library(gt)
+library(mice)
+library(caret)
+```
+
+## Introduction
+
+Machine learning is a powerful approach to extract insights and make predictions from data. In this lesson, we will explore how to implement machine learning using linear models in R. We will cover the entire process, from loading and cleaning the data to model training, evaluation, and making predictions.
+
+The lesson aims to predict the sale price of a house using other features provided.
+
+*NOTE: THE STEPS PROVIDED HERE ARE NOT THE ONLY WAY OF DOING ML, YOU SHOULD TRY DIFFERENT APPROACHES AND THEN CHOOSE THE BEST FOR YOUR DATA.*
+
+## Data Loading
+
+The lesson uses the `House Prices - Advanced Regression Techniques` data obtained from **Kaggle** website. The data is split into train set, used for training the model and test set, used for testing the model.
+
+```{r data-loading}
+# loading the training data
+train = read.csv("data/train.csv")
+
+# see all columns of the data
+#glimpse(train)
+```
+
+The data has 81 variables and 1460 observations, we will use the variables: *SalePrice*, *YrSold*, *GarageArea*, *GarageYrBlt*, *YearBuilt*, *LotArea*, and *LotFrontage* for our analysis and modelling.
+
+```{r select-cols}
+# the columns
+cols = c("SalePrice", "YrSold", "LotFrontage", "LotArea", "YearBuilt",
+         "GarageArea", "GarageYrBlt")
+
+# filtering the columns
+train_updated = train %>%
+  select(all_of(cols))
+```
+
+## Data Cleaning
+
+Data cleaning is an important step to ensure that the data is in the right format and free from errors or missing values. Cleaning may involve handling missing data, transforming variables, or removing outliers.
+
+### Missing Data
+
+```{r helper-fn}
+# helper function to calculate na percentages of each columns
+calc_na = function(data){
+  
+    na_val = colSums(is.na(data)) / nrow(data)
+  
+  return(na_val*100)
+}
+```
+
+
+```{r missing-data}
+# checking missing data
+calc_na(train_updated)
+```
+
+The variables `Lot Fontage` and `Garage Year Built` contains NA values of 17.7% and 5.5% respectively, the other variables have no missing data.
+
+We will impute the columns with missing data
+
+```{r impute-na}
+imp_model <- mice(train_updated, method = "pmm", m = 5)
+
+imputed_data <- complete(imp_model)
+
+# head of the data
+head(imputed_data)
+```
+
+
+```{r confirm-na}
+# confirming that the imputation worked
+calc_na(imputed_data)
+```
+
+## Exploratory Data Analysis
+
+To better understand our data, we will perform data visualizations to answer the following questions: -
+
+
+      1. Are old houses cheaper or more expensive?
+      2. Does a large lot area increase the sale price?
+      3. Which year has the highest average sale price?
+      4. Houses with large garages are more expensive?
+      
+Let's get started.
+
+### Are old houses cheaper or more expensive?
+
+To answer this question, we will plot the year build of the house verses the sale price. This will us know the relationship between the year the house was built and the sale price.
+
+```{r saleprice-yearbuilt}
+imputed_data %>%
+  select(SalePrice, YearBuilt) %>%
+  arrange(YearBuilt) %>%
+  ggplot(aes(x=YearBuilt, y=SalePrice)) +
+    geom_point() +
+    geom_smooth(method = "lm") +
+    theme_bw() +
+    ggtitle("Sale Price changes by Year of the house")
+```
+
+**CONCLUSION:** HOUSES THAT ARE RECENTLY BUILT ARE MORE EXPENSIVE COMPARED TO THOSE THAT ARE BUILD A LONG TIME AGO.
+
+### Does a large lot area increase the sale price?
+
+```{r saleprice-lotArea}
+imputed_data %>%
+  select(SalePrice, LotArea) %>%
+  ggplot(aes(x=LotArea, y=SalePrice)) +
+    geom_point() +
+    geom_smooth(method = "lm") +
+    theme_bw() +
+    ggtitle("Sale Price changes by house lot Area")
+```
+
+**CONCLUSION:** THE SALE PRICE OF A HOUSE INCREASES WITH THE LOT AREA. A HOUSE WITH A LARGE LOT AREA IS EXPENSIVE COMPARED TO A HOUSE WITH A SMALL LOT AREA.
+
+### Which year has the highest average sale price?
+
+```{r saleprice-yrsold}
+imputed_data %>%
+  select(SalePrice, YrSold) %>%
+  group_by(YrSold) %>%
+  summarise(
+    avg_salePrice = mean(SalePrice)
+  ) %>%
+  ggplot(aes(x=YrSold, y=avg_salePrice)) +
+    geom_point() +
+    geom_line() +
+    theme_bw() +
+    ylab("Average Sale Price") +
+    ylab("Year Sold") +
+    ggtitle("House Sale Price average by Year Sold")
+```
+
+**CONCLUSION:** HOUSES THAT WERE SOLD ON 2006 AND 2007, HAD THE HIGHEST AVERAGE SALE PRICES AS COMPARED TO THE OTHER YEARS.
+
+### Houses with large garages are more expensive?
+
+```{r saleprice-GarageA}
+imputed_data %>%
+  select(SalePrice, GarageArea) %>%
+  ggplot(aes(x=GarageArea, y=SalePrice)) +
+    geom_point() +
+    geom_smooth(method = "lm") +
+    theme_bw() +
+    ggtitle("Sale Price changes by Garage Area")
+```
+
+**CONCLUSION:** AS THE GARAGE AREA INCREASES, THE SALE PRICE OF THE HOUSE ALSO INCREASES. THIS IMPLIES THAT HOUSES WITH A BIG GARAGE AREA IS MORE EXPENSIVE COMPARED TO A HOUSE WITH A SMALL GARAGE.
+
+## Modelelling (MODEL 1)
+
+### Data Splitting
+
+```{r}
+# split index
+# 80% train data, 20% test data
+index = createDataPartition(imputed_data$SalePrice, p=0.8,list = FALSE)
+
+# train data
+train_data = imputed_data[index,]
+
+# test data
+test_data = imputed_data[-index,]
+```
+
+### Fitting The Model
+
+```{r model-1}
+# fit the model
+lm = lm(SalePrice~., data = train_data)
+
+# model summary
+summary(lm)
+```
+
+### Model Plots
+
+```{r}
+par(mfrow=c(2,2))
+plot(lm)
+```
+
+### Making Predictions
+
+```{r}
+# making the predictions
+pred = predict(lm, newdata = test_data)
+
+# Root Mean Squared Error (RMSE) of the MODEL.
+rmse <- sqrt(mean((pred - test_data$SalePrice)^2))
+
+rmse
+```
+
+The interpretation of what constitutes a "good" value for RMSE depends on the specific context and the scale of the target variable. In general, a lower RMSE indicates better model performance, as it signifies smaller differences between the predicted values and the actual values. However, there is no universally defined threshold for a "good" RMSE value that applies to all situations.
+
+To assess the goodness of an RMSE value, it's helpful to consider the scale and context of the problem you are addressing. You can compare the RMSE to the range of the target variable or the variability in the data. Additionally, it can be beneficial to compare the RMSE of different models or variations of the same model to determine which one performs better.
+
+It's important to note that the notion of a "good" RMSE value is relative and can vary depending on the specific domain, application, and the goals of your analysis. Therefore, it is recommended to interpret the RMSE in conjunction with other evaluation metrics and domain knowledge to make informed decisions about model performance.
+
+## Modelelling (MODEL 2)
+
+### Data Splitting
+
+```{r}
+# scalling the data
+scaled_data = imputed_data %>%
+  select(-SalePrice) %>%
+  scale() %>%
+  as.data.frame()
+
+# combining the data
+imputed_scaled_data = cbind(scaled_data, SalePrice=imputed_data$SalePrice)
+
+# split index
+# 80% train data, 20% test data
+index2 = createDataPartition(imputed_scaled_data$SalePrice, p=0.8,list = FALSE)
+
+# train data
+train_scaled_data = imputed_scaled_data[index2,]
+
+# test data
+test_scaled_data = imputed_scaled_data[-index2,]
+```
+
+### Fitting The Model
+
+```{r model-2}
+# fit the model
+lm2 = lm(SalePrice~., data = train_scaled_data)
+
+# model summary
+summary(lm2)
+```
+
+### Model Plots
+
+```{r}
+par(mfrow=c(2,2))
+plot(lm2)
+```
+
+### Making Predictions
+
+```{r}
+# making the predictions
+pred2 = predict(lm2, newdata = test_scaled_data)
+
+# Root Mean Squared Error (RMSE) of the MODEL.
+rmse2 <- sqrt(mean((pred2 - test_scaled_data$SalePrice)^2))
+
+rmse2
+```
+
+## rmse values
+
+MODEL: `r rmse`
+
+MODEL 2: `r rmse2`
+
+MODEL 2 HAS A MUCH LOWER RMSE COMPARED TO MODEL 1. WE WILL USE MODEL 2 FOR PREDICTIONS
+
+## Final Model Predictions
+
+```{r}
+# loading the test data
+test = read.csv("data/test.csv")
+
+# selecting columns of interest
+cols2 = c("YrSold", "LotFrontage", "LotArea", "YearBuilt",
+         "GarageArea", "GarageYrBlt")
+
+test = test %>%
+  select(all_of(cols2))
+
+# SCALING THE VALUES
+test_scaled = test %>%
+  scale() %>%
+  as.data.frame()
+
+# making the predictions
+pred = predict(lm2,newdata = test_scaled)
+```
+
+CONCLUSION: BASED ON OUR ANALYSIS, MODEL 2 IS THE BEST. THERE ARE MANY WAYS OF IMPROVING THIS MODEL BUT FOR THE SAKE OF THIS LESSON, PLEASE PROCEED TO THE ASSIGNMENT.
