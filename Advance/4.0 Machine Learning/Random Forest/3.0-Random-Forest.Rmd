@@ -1,0 +1,262 @@
+---
+title: "Fundermentals of R"
+subtitle: "Advanced R - 4.0 Machine Learning - Random Forest"
+author: "Prepared By Clinton Moshe Mwachia"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# loading libraries
+library(tidyverse)
+library(mice) # missing data imputation
+library(viridis) # fill plots with colors
+library(caret) # data splitting
+library(sjPlot) # print model summary as a plot
+library(randomForest)
+```
+
+## Introduction
+
+Random Forest is a powerful machine learning algorithm that combines the predictions of multiple decision trees to improve accuracy and robustness. In this lesson, we will explore how to implement machine learning using Random Forest in R, using the Titanic dataset as an example. We will cover the entire process, including data loading, cleaning, visualization, splitting, model training, evaluation, and making predictions.
+
+## The Data
+
+The sinking of the Titanic is one of the most infamous shipwrecks in history.
+
+On April 15, 1912, during her maiden voyage, the widely considered "unsinkable" RMS Titanic sank after colliding with an iceberg. Unfortunately, there weren't enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew.
+
+While there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others.
+
+In this challenge, we will build a predictive model that answers the question: "what sorts of people were more likely to survive?" using passenger data (ie name, age, gender, socio-economic class, etc). We will use the titanic dataset in this lesson, you can learn more from the kaggle website.
+
+## Data Loading
+
+The dataset consists of the train and test datasets. We will use the training dataset to train and test our model and the best model will be used to make final predictions using the test set.
+
+The data dictionary:
+
+| Variable | Definition                                | Key                                            |
+|---------------|---------------------------|------------------------------|
+| Survival | Survival                                  | 0 = No, 1 = Yes                                |
+| pclass   | Ticket class                              | 1 = 1st, 2 = 2nd, 3 = 3rd                      |
+| Sex      | Sex                                       | male, female                                   |
+| Age      | Age in years                              |                                                |
+| sibsp    | \# of siblings/spouses aboard the Titanic |                                                |
+| parch    | \# of parents/children aboard the Titanic |                                                |
+| ticket   | Ticket number                             |                                                |
+| fare     | Passenger fare                            |                                                |
+| cabin    | Cabin number                              |                                                |
+| embarked | Port of Embarkation                       | C = Cherbourg, Q = Queenstown, S = Southampton |
+
+: Data Dictionary
+
+```{r data-loading}
+# loading the train data
+train = read.csv("data/train.csv")
+
+# subset columns you need
+train_updated = train %>%
+  select(-c(PassengerId, Name, SibSp, Parch, Ticket, Cabin, Embarked))
+
+# data summary
+summary(train_updated)
+
+# na count
+colSums(is.na(train_updated))
+```
+
+## Data Cleaning
+
+### Missing Data
+
+```{r handle-na}
+# define the imputation model
+imp_model <- mice(train_updated, method = "pmm", m = 5)
+
+# get complete data
+imputed_data <- complete(imp_model)
+
+colSums(is.na(imputed_data))
+```
+
+### Data Types
+
+The data types of all variables are wrongly labeled except for Age and Fare. We will convert the data types of Survived, PClass and Sex into factors.
+
+```{r data-types}
+# converting data types to factors
+imputed_data = imputed_data %>%
+  mutate(
+    Survived = as.factor(Survived),
+    Pclass = as.factor(Pclass),
+    Sex = as.factor(Sex)
+  )
+
+
+# data summary
+summary(imputed_data)
+```
+
+## Exploratory Data Analysis
+
+### Survival rate by passenger class
+
+```{r surv-by-pclass}
+imputed_data %>%
+  mutate(
+    Survived = ifelse(Survived == 0, "No", "Yes"),
+    Pclass = ifelse(Pclass == 1, "Upper", 
+                    ifelse(Pclass == 2, "Middle", "Lower"))
+  ) %>%
+  ggplot(aes(x = Pclass, fill = Survived)) +
+  geom_bar(position = "dodge") +
+  scale_fill_viridis(discrete = T) +
+  labs(title = "Survival rate by passenger class",
+       subtitle = "Data Source: Kaggle Titanic dataset",
+       x = "Passenger class",
+       y = "Survival rate",
+       fill = "Survived") +
+  theme_bw()
+
+```
+
+This plot shows the survival rate for passengers in each class. As you can see, passengers in first class had the highest survival rate, followed by passengers in second class. Passengers in third class had the lowest survival rate.
+
+### Age Distribution of Survivors
+
+```{r survivors-age-dist}
+imputed_data %>%
+  mutate(
+    Survived = ifelse(Survived == 0, "No", "Yes")
+  ) %>%
+  filter(Survived == "Yes") %>%
+  ggplot(aes(x = Age)) +
+  geom_histogram(binwidth = 10) +
+  labs(title = "Age Distribution of Survivors",
+       x = "Age",
+       y = "Number of Survivors") +
+  theme_bw()
+```
+
+This plot shows the age distribution of survivors. As you can see, there were more survivors in the younger age groups. This is likely because children and young adults were more likely to be given priority for lifeboats.
+
+### Fare Paid by Passenger Class
+
+```{r fare-by-pclass}
+imputed_data %>%
+  mutate(
+    Pclass = ifelse(Pclass == 1, "Upper", 
+                    ifelse(Pclass == 2, "Middle", "Lower"))
+  ) %>%
+  ggplot(aes(x = Pclass, y = Fare)) +
+  geom_boxplot() +
+  labs(title = "Fare Paid by Passenger Class",
+       x = "Passenger Class",
+       y = "Fare") +
+  theme_bw()
+```
+
+This plot shows the distribution of fare paid by passenger class. As you can see, passengers in first class paid the highest fares, followed by passengers in second class. Passengers in third class paid the lowest fares.
+
+### Survival Rate by Sex
+
+```{r surv-by-sex}
+imputed_data %>%
+  mutate(
+    Survived = ifelse(Survived == 0, "No", "Yes")
+  ) %>%
+  ggplot(aes(x = Sex, fill = Survived)) +
+  geom_bar(position = "dodge") +
+  scale_fill_viridis(discrete = T) +
+  labs(title = "Survival Rate by Sex",
+       x = "Sex",
+       y = "Survival Rate",
+       fill = "Survived") +
+  theme_bw()
+```
+
+This plot shows the survival rate for passengers by sex. As you can see, female passengers had a higher survival rate than male passengers. This is likely because women and children were more likely to be given priority for lifeboats.
+
+### Survival Rate by Age and Sex
+
+```{r surv-age-sex}
+imputed_data %>%
+  mutate(
+    Survived = ifelse(Survived == 0, "No", "Yes")
+  ) %>%
+  ggplot(aes(x = Age, fill = Survived)) +
+  geom_density(alpha = 0.2) +
+  facet_wrap(~Sex) +
+  labs(title = "Survival Rate by Age and Sex",
+       x = "Age",
+       y = "Density",
+       fill = "Survived")
+
+```
+
+This plot shows the survival rate for passengers by age and sex. As you can see, female passengers had a higher survival rate than male passengers at all ages. However, the survival rate for female passengers was particularly high in the younger age groups.
+
+## Modelling
+
+### Splitting the Data
+
+We will split the data into: -
+
+      1. Training Data (80%).
+      2. Validation Data (20%).
+      
+```{r data-splitting}
+# splitting index
+index = createDataPartition(imputed_data$Survived, p=0.8, list = FALSE)
+
+# training data
+training = imputed_data[index,]
+
+# validation data
+validation = imputed_data[-index,]
+```
+
+### Fitting Base model
+
+```{r base-model}
+# Random Forest model training
+model <- randomForest(Survived ~ ., data = training, importance=TRUE)
+
+# model summary
+model
+```
+
+### Predictions and Evaluation
+
+```{r pred}
+# predictions
+pred = predict(model, newdata = validation, type = "response")
+
+# confusion matrix
+mt = table(validation$Survived,pred)
+
+confusionMatrix(mt)
+```
+
+The base model achieved an accuracy of `r confusionMatrix(mt)$overall[['Accuracy']]`.
+
+### Model Variable Importance
+
+To visualize the variable importance in a Random Forest model, you can use the `varImpPlot()` function from the `randomForest` package in R. This function provides a graphical representation of the importance of each variable in the model.
+
+```{r var-imp}
+varImpPlot(model)
+```
+
+The `varImpPlot()` function generates a plot that displays the variable importance scores, typically represented by the Mean Decrease Accuracy or Mean Decrease Gini. The higher the score, the more important the variable is for the model's performance. The plot helps identify the most influential variables in the Random Forest model.
+
+It's worth noting that variable importance is based on how much a variable contributes to the model's performance in terms of predictive accuracy or Gini impurity. It does not indicate the direction or nature of the relationship between the variables and the target variable. If you need to understand the relationship or directionality, you may consider additional analysis or visualizations specific to the variables of interest.
+
+CONGRATULATIONS ON FINISHING YOUR LESSON, PLEASE PROCEED TO THE ASSIGNMENT.
+
+
