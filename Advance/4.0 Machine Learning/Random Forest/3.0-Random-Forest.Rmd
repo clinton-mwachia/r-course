@@ -16,7 +16,6 @@ library(tidyverse)
 library(mice) # missing data imputation
 library(viridis) # fill plots with colors
 library(caret) # data splitting
-library(sjPlot) # print model summary as a plot
 library(randomForest)
 ```
 
