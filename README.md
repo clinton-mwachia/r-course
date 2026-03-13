@@ -1,160 +1,410 @@
-# R Course Curriculum
+# R Data Science Course
 
-## Beginner
+A complete **Beginner → Advanced R Programming and Data Science curriculum** designed to teach practical data analysis, statistics, visualization, and machine learning using **R**.
 
-| ![]()1 | Introduction to R & RStudio    |
-|--------|--------------------------------|
-|        | Introduction to R.             |
-|        | Installation of R and RStudio. |
-|        | Testing The Installation.      |
-|        | RStudio Interface.             |
-|        | R Files.                       |
-|        | Why R?                         |
-|        | R Help                         |
-| 2      | ***Data Structures***          |
-|        | Vectors                        |
-|        | Lists                          |
-|        | Matrices                       |
-|        | Arrays                         |
-|        | Data Frames                    |
-|        | Factors                        |
-|        | **Bonus**                      |
-|        | Comments                       |
-|        | Variables                      |
-|        | Strings                        |
-| 3      | ***Conditional Statements***   |
-|        | If Statement                   |
-|        | If else Statement              |
-|        | Else If statement              |
-|        | Next Statement                 |
-|        | Break Statement                |
-|        | While Loop                     |
-|        | For Loops                      |
-| 4      | ***Functions***                |
-|        | Build-in Functions             |
-|        | User-Defined Functions         |
-|        | Apply Functions                |
-|        | R Packages                     |
-| 5      | ***R Operators***              |
-|        | Arithmetic                     |
-|        | Relational                     |
-|        | Assignment                     |
-|        | Logical                        |
-|        | Miscellaneous                  |
+This repository contains lessons, examples, assignments, and datasets that guide learners from **basic R programming to advanced machine learning and data science workflows**.
 
-# Intermediate
+---
 
-| 1   | Data                                                                                         |
-|-----|----------------------------------------------------------------------------------------------|
-|     | In Build Data                                                                                |
-|     | User-created Data                                                                            |
-|     | working directory                                                                            |
-|     | read.table                                                                                   |
-|     | read.csv                                                                                     |
-|     | read.delim                                                                                   |
-|     | RData                                                                                        |
-|     | JSON                                                                                         |
-|     | Joining data                                                                                 |
-|     | **Assignment**: *read_xlsx, joining data (cbind,rbind)*                                      |
-|     | **Bonus**                                                                                    |
-|     | writing to files.                                                                            |
-| 2   | **Statistical Analysis**                                                                     |
-|     | Mean, Mode and Median                                                                        |
-|     | Min, Max, SD.                                                                                |
-|     | Quartiles                                                                                    |
-|     | Summary Statistics                                                                           |
-|     | frequency distribution                                                                       |
-|     | **Assignement:** correlation coef, variance, skewness, Range, Kurtosis, inter-quatile range. |
-| 3   | **Probability Distributions**                                                                |
-|     | Normal                                                                                       |
-|     | Binomial                                                                                     |
-|     | Poisson                                                                                      |
-|     | Exponential                                                                                  |
-|     | Chi-square                                                                                   |
-|     | **Assignement**: Uniform distribution.                                                       |
-| 4   | **Hypothesis Testing**                                                                       |
-|     | One-sample t test                                                                            |
-|     | Two-sample t test                                                                            |
-|     | Normality Test                                                                               |
-|     | Confidence Interval                                                                          |
-|     | Sign Test (non-parametric)                                                                   |
-|     | Wilcoxon Signed-Rank Test (non-parametric)                                                   |
-|     | Kruskal-Wallis Rank Sum Test (non-parametric)                                                |
-| 5   | **DataViz Intro**                                                                            |
-|     | Scatter Plots                                                                                |
-|     | Line Plots                                                                                   |
-|     | Pie Charts                                                                                   |
-|     | Bar Plots                                                                                    |
-|     | Box Plot                                                                                     |
+# Course Overview
 
-# **Advanced**
+This course is divided into **three major levels**:
 
-| 1   | Data Cleaning                         |
-|-----|---------------------------------------|
-|     | Handling Missing data                 |
-|     | Handling duplicate Data               |
-|     | Outliers                              |
-|     | Removing unnecessary columns/rows     |
-| 2   | **Data Transformation**               |
-|     | Normalization                         |
-|     | Standardization                       |
-|     | Aggregation                           |
-|     | One data type to another              |
-|     | Mutating columns.                     |
-|     | **Reshaping Data**                    |
-|     | Joining Rows and Columns.             |
-|     | Merging Data Frames                   |
-|     | Melting Data Frames                   |
-|     | Casting Data Frames                   |
-| 3   | **Exploratory Data Analysis**         |
-|     | Correlation (Scatter plot etc)        |
-|     | Bar Plot                              |
-|     | Histogram                             |
-|     | Grouped                               |
-|     | Box Plot                              |
-|     | Line Plot                             |
-|     | Violin Plot                           |
-|     | Many More                             |
-| 4   | **Machine Learning**                  |
-|     | Loading the Data                      |
-|     | EDA                                   |
-|     | Data Preparation/Cleaning             |
-|     | Data Splitting                        |
-|     | Multi-Collinearity                    |
-|     | Model Training                        |
-|     | Predictions and Evaluation (roc, auc) |
-|     | Model Tuning                          |
-|     | Model Re-Training.                    |
-|     | Final Model                           |
-|     | Prediction using Test Data.           |
-|     | **Models**                            |
-|     | Linear Model                          |
-|     | Logistic Regression                   |
-|     | Random Forest                         |
-|     | Decision Tree                         |
-|     | Support Vector Machines               |
-|     | Clustering                            |
-|     | **Ensemble Models**                   |
-|     | Bagging                               |
-|     | Boosting                              |
-| 5   | **Association mining**                |
-|     | The Data                              |
-|     | Measuring strength of a rule          |
-|     | Most frequent item                    |
-|     | Recommendation rules                  |
-|     | Control number of rules output        |
-|     | Remove redundant rules                |
-|     | Find rules related to certain items   |
-| 6   | **Dimensional Reduction**             |
-|     | Introduction to PCA                   |
-|     | EigenValues and EigenVectors          |
-|     | Loading the data                      |
-|     | Compute the Principal Components      |
-|     | Plotting PCA                          |
-|     | Interpretation of results             |
+1. Beginner – R Programming Fundamentals
+2. Intermediate – Data Analysis & Statistics
+3. Advanced – Data Science & Machine Learning
 
-**Later On:**
+By the end of the course, students will be able to:
 
-1.  Comprehensive Tidyverse.
-2.  Comprehensive TidyModels.
-3.  Comprehensive Shiny.
+* Write efficient R programs
+* Perform statistical analysis
+* Clean and transform datasets
+* Visualize data
+* Build machine learning models
+* Perform exploratory data analysis
+* Create reproducible reports
+
+---
+
+# Tools & Technologies
+
+This course uses the following tools:
+
+* **R**
+* **RStudio**
+* **Tidyverse**
+* **ggplot2**
+* **tidymodels**
+* **Shiny**
+
+---
+
+# Course Structure
+
+## Beginner Level – R Fundamentals
+
+### 1. Introduction to R
+
+* What is R
+* Installing R
+* Installing RStudio
+* RStudio Interface
+* Running R scripts
+* Getting help in R
+* Installing packages
+
+---
+
+### 2. Data Structures
+
+* Vectors
+* Lists
+* Matrices
+* Arrays
+* Data Frames
+* Factors
+
+Bonus:
+
+* Comments
+* Variables
+* Strings
+
+---
+
+### 3. Control Structures
+
+* If statements
+* If-else statements
+* Else-if statements
+* For loops
+* While loops
+* Break and Next statements
+
+---
+
+### 4. Functions
+
+* Built-in functions
+* User-defined functions
+* Apply family functions
+
+  * `apply`
+  * `lapply`
+  * `sapply`
+  * `tapply`
+
+---
+
+### 5. R Operators
+
+* Arithmetic
+* Relational
+* Assignment
+* Logical
+* Miscellaneous
+
+---
+
+# Intermediate Level – Data Analysis
+
+## 1. Working with Data
+
+Data sources:
+
+* Built-in datasets
+* User-created datasets
+
+File formats:
+
+* CSV
+* Excel
+* JSON
+* RData
+
+Functions:
+
+* `read.csv`
+* `read.table`
+* `read.delim`
+
+Data manipulation:
+
+* Joining datasets
+* `cbind`
+* `rbind`
+
+Assignments:
+
+* Reading Excel files
+* Joining datasets
+
+---
+
+## 2. Statistical Analysis
+
+Topics include:
+
+* Mean
+* Median
+* Mode
+* Standard deviation
+* Variance
+* Quartiles
+* Summary statistics
+* Frequency distributions
+
+Assignments:
+
+* Correlation coefficient
+* Skewness
+* Kurtosis
+* Range
+* Interquartile range
+
+---
+
+## 3. Probability Distributions
+
+* Normal distribution
+* Binomial distribution
+* Poisson distribution
+* Exponential distribution
+* Chi-square distribution
+* Uniform distribution
+
+---
+
+## 4. Hypothesis Testing
+
+* One-sample t-test
+* Two-sample t-test
+* Normality test
+* Confidence intervals
+
+Non-parametric tests:
+
+* Sign test
+* Wilcoxon signed-rank test
+* Kruskal-Wallis test
+
+---
+
+## 5. Data Visualization
+
+Using **ggplot2**.
+
+Charts covered:
+
+* Scatter plots
+* Line plots
+* Pie charts
+* Bar plots
+* Box plots
+* Histograms
+
+---
+
+# Advanced Level – Data Science
+
+## 1. Data Cleaning
+
+* Handling missing data
+* Handling duplicate data
+* Detecting outliers
+* Removing unnecessary columns
+
+---
+
+## 2. Data Transformation
+
+* Normalization
+* Standardization
+* Aggregation
+* Data type conversion
+* Feature engineering
+
+Reshaping data:
+
+* Melting data
+* Casting data
+* Merging data frames
+
+---
+
+## 3. Exploratory Data Analysis (EDA)
+
+Topics include:
+
+* Correlation analysis
+* Scatter plots
+* Histograms
+* Box plots
+* Violin plots
+* Grouped analysis
+
+---
+
+## 4. Machine Learning
+
+Using **tidymodels**.
+
+Machine learning workflow:
+
+1. Load data
+2. Exploratory data analysis
+3. Data cleaning
+4. Feature engineering
+5. Train-test split
+6. Model training
+7. Model evaluation
+8. Hyperparameter tuning
+9. Final model
+
+Models covered:
+
+* Linear Regression
+* Logistic Regression
+* Decision Trees
+* Random Forest
+* Support Vector Machines
+* Clustering
+
+Ensemble models:
+
+* Bagging
+* Boosting
+
+---
+
+## 5. Association Rule Mining
+
+Using **arules**.
+
+Topics include:
+
+* Frequent itemsets
+* Support
+* Confidence
+* Lift
+* Recommendation rules
+
+---
+
+## 6. Dimensionality Reduction
+
+Using **Principal Component Analysis (PCA)**.
+
+Topics:
+
+* Eigenvalues
+* Eigenvectors
+* Computing principal components
+* PCA visualization
+* Interpretation
+
+---
+
+# Advanced Topics
+
+## Tidyverse Deep Dive
+
+Working with:
+
+* **dplyr**
+* **tidyr**
+
+---
+
+## Reproducible Research
+
+Using **R Markdown** to generate:
+
+* Reports
+* Dashboards
+* Documentation
+
+---
+
+## Building Web Applications
+
+Using **Shiny** to create:
+
+* Interactive dashboards
+* Data apps
+* Visualization tools
+
+---
+
+# Repository Structure
+
+```
+r-course/
+│
+├── beginner/
+│   ├── introduction
+│   ├── data_structures
+│   ├── operators
+│   ├── control_structures
+│   └── functions
+│
+├── intermediate/
+│   ├── data
+│   ├── statistics
+│   ├── probability
+│   ├── hypothesis_testing
+│   └── visualization
+│
+├── advanced/
+│   ├── data_cleaning
+│   ├── data_transformation
+│   ├── eda
+│   ├── machine_learning
+│   └── dimensional_reduction
+│
+├── datasets/
+│
+└── projects/
+```
+
+---
+
+# Prerequisites
+
+Basic knowledge of:
+
+* Mathematics
+* Statistics
+* Programming concepts (optional but helpful)
+
+---
+
+# Learning Outcomes
+
+After completing this course, you will be able to:
+
+* Perform full data analysis workflows
+* Build machine learning models in R
+* Visualize data professionally
+* Clean and transform real-world datasets
+* Build reproducible reports
+* Develop data-driven applications
+
+---
+
+# Contributions
+
+Contributions are welcome.
+
+You can contribute by:
+
+* Improving examples
+* Adding datasets
+* Creating exercises
+* Adding projects
+
+---
+
+# License
+
+This project is open-source and available under the **MIT License**.
